@@ -232,7 +232,7 @@ export default {
     },
     //获取图元信息
     getPicInfo(it) {
-      sessionStorage.setItem("optionType", it.id);
+      this.$store.commit("changePencelType", it.id);
     }
   }
 };
