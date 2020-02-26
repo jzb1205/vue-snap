@@ -969,7 +969,7 @@
       <cge:Layer_Ref ObjectName="Substation_Layer"/>
       </metadata>
  </g>
- <g id="PD_30000000_271374">
+ <!-- <g id="PD_30000000_271374">
      <polygon class="lkv110" style="fill:none" stroke-linecap="round" stroke="rgb(168,0,0)" stroke-width="0.0911767352507172"  points="172.375427625878,408.66681413839 183.998615954744,408.66681413839 183.998615954744,401.37267531832 172.375427625878,401.37267531832 172.375427625878,408.66681413839 "/>
       <metadata>
       <cge:PSR_Ref ObjectID="PD_30000000_271374" ObjectName="110kV璧山变电站" PSRType="zf01" GlobeID="C10DF4B1-E081-48B6-9D2B-BD7920E5DF84-00035" />
@@ -2907,7 +2907,7 @@
       <cge:GLink_Ref ObjectID="PD_36000000_7306909"/>
       <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
       </metadata>
- </g>
+ </g> -->
  <g id="PD_30600000_795623">
      <use class="kv10" x="693.194027438995" y="568.421451237523" width="0.98" height="0.2" transform="rotate(-90,693.194027438995,568.421451237523) translate(693.194027438995,568.421451237523) scale(3.34934945818961,3.34934945818961) translate(-694.174027438995,-568.621451237523)" xlink:href="#Disconnector_30600000_4050010@1" bound="693.194027438995,568.421451237523,694.174027438995,568.621451237523"/>
      <polyline class="lkv10" stroke-width="0.125" points="693.194027438995,566.944388126461 693.194027438995,566.597916532505" visibility="visible" />
@@ -3029,7 +3029,7 @@
       <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
       </metadata>
  </g>
- <g id="PD_30600000_602165">
+ <!-- <g id="PD_30600000_602165">
      <use class="kv10" x="634.574809997482" y="505.954492999943" width="0.97" height="0.18" transform="rotate(-90,634.574809997482,505.954492999943) translate(634.574809997482,505.954492999943) scale(3.38387883404724,3.38387883404724) translate(-635.544809997482,-506.134492999943)" xlink:href="#Disconnector_30600000_4110010@1" bound="634.574809997482,505.954492999943,635.544809997482,506.134492999943"/>
      <polyline class="lkv10" stroke-width="0.125" points="634.574809997482,504.477429888882 634.574809997482,504.130958294926" visibility="visible" />
      <polyline class="lkv10" stroke-width="0.125" points="634.574809997482,507.431556111005 634.574809997482,507.778027705537" visibility="visible" />
@@ -15177,7 +15177,7 @@
         <cge:PSR_Ref ObjectID="TXT-PD_30200003_440442"/>
         <cge:Layer_Ref ObjectName="Text_Layer"/>
       </metadata>
-  </g>
+  </g> -->
   <g id="TXT-PD_30200003_477512">
       <text style="text-anchor:middle" x="370.300679010798" y="675.794780460529" font-size="0.693234953458253" font-family="宋体" fill="rgb(255,255,255)">7#专变</text>
       <text style="text-anchor:middle" x="370.300679010798" y="676.720532158361" font-size="0.693234953458253" font-family="宋体" fill="rgb(255,255,255)">200</text>

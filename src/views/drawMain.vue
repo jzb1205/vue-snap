@@ -19,16 +19,43 @@
     </div>
     <div id="workarea">
       <!-- 放一些属性操作div -->
-      <div id="editor-container">
-        <div>fdasdfsafdagraer</div>
-      </div>
+      <transition name="el-fade-in">
+        <div id="editor-container" v-show="optionPanlBool">
+          <p>
+            <i
+              class="el-icon-close"
+              @click="optionPanlBool = !optionPanlBool"
+            ></i>
+          </p>
+          <ul class="optionPanl">
+            <li
+              class="optionPanlItem"
+              @click="optionPanlBool = !optionPanlBool"
+            >
+              旋转90度
+            </li>
+            <li
+              class="optionPanlItem"
+              @click="optionPanlBool = !optionPanlBool"
+            >
+              放大
+            </li>
+            <li
+              class="optionPanlItem"
+              @click="optionPanlBool = !optionPanlBool"
+            >
+              缩小
+            </li>
+          </ul>
+        </div>
+      </transition>
       <!-- 负责显示轮廓线、选中框、拖拽控制点等  svg#canvas-->
       <div id="svgroot">
         <svg
           id="svgContent"
           width="1200"
-          height="900"
-          viewBox="0 0 1200 900"
+          height="750"
+          viewBox="0 0 1200 750"
           @click="mysvgClick"
         ></svg>
       </div>
@@ -37,7 +64,9 @@
 </template>
 
 <script>
-import common from "./draw/basePel/index";
+import common from "./../draw/basePel/index";
+import pel from "./../draw/pel/index";
+import Event from "./../event/index";
 export default {
   name: "drawMainWrap",
   data() {
@@ -84,7 +113,8 @@ export default {
       ],
       bgRect: null, //背景svg占位对象
       initRectMain: null, //主体svg占位对象
-      curpelType: ""
+      curpelType: "", //当前点击图元类型
+      optionPanlBool: false //操作弹窗bool
     };
   },
   created() {
@@ -100,27 +130,8 @@ export default {
       return this.$store.state.bgColor;
     }
   },
-  watch: {
-    backgroundColor() {
-      this.$store.commit("changebgColor", this.backgroundColor);
-      this.bgRect.attr({
-        fill: this.backgroundColor
-      });
-    }
-  },
   methods: {
-    //点击svg外框 添加拖动事件
-    cancelBH() {
-      let that = this;
-      let svg = document.querySelector("#svgContent");
-      svg.addEventListener(
-        "click",
-        function(e) {
-          that.svgContent.drag();
-        },
-        false
-      );
-    },
+    //初始化
     init() {
       this.svgContent = Snap("#svgContent");
       this.cancelBH();
@@ -132,16 +143,28 @@ export default {
         svgContent.addEventListener("mousewheel", this.svgScaleOption, false);
       }
     },
+    //点击svg外框 添加拖动事件
+    cancelBH() {
+      let that = this;
+      let svg = document.querySelector("#svgContent");
+      svg.addEventListener(
+        "click",
+        function() {
+          // that.svgContent.drag();
+        },
+        false
+      );
+    },
     //创建背景图元
     createInitSvg() {
-      let w = document.body.clientWidth - 240;
-      let h = document.body.clientHeight - 63;
+      let w = document.body.clientWidth;
+      let h = document.body.clientHeight;
       let option = {
         svgObj: this.svgContent,
         x: 0,
         y: 0,
-        w: w * 3,
-        h: h * 3,
+        w: w,
+        h: h,
         rx: 0,
         ry: 0,
         attr: {
@@ -183,11 +206,11 @@ export default {
             attr: {
               stroke: "#000",
               strokeWidth: 1,
-              cursor: "pointer"
+              cursor: "pointer",
+              optionType: "text"
             }
           };
-          let text = new common.Text(option);
-          text.create().mousedown(function(e) {
+          new common.Text(option).create().mousedown(function(e) {
             e.stopPropagation();
             that.svgContent.undrag();
             this.drag();
@@ -205,11 +228,11 @@ export default {
               strokeWidth: 2,
               strokeDasharray: "",
               cursor: "pointer",
-              fill: "red"
+              fill: "red",
+              optionType: "commonline"
             }
           };
-          let commonline = new common.Line(option);
-          commonline.create().mousedown(function(e) {
+          new common.Line(option).create().mousedown(function(e) {
             e.stopPropagation();
             that.svgContent.undrag();
             this.drag();
@@ -227,11 +250,11 @@ export default {
               strokeWidth: 2,
               strokeDasharray: "5,5",
               cursor: "pointer",
-              fill: "red"
+              fill: "red",
+              optionType: "dashLine1"
             }
           };
-          let dashLine1 = new common.Line(option);
-          dashLine1.create().mousedown(function(e) {
+          new common.Line(option).create().mousedown(function(e) {
             e.stopPropagation();
             that.svgContent.undrag();
             this.drag();
@@ -249,11 +272,11 @@ export default {
               strokeWidth: 2,
               strokeDasharray: "10,10",
               cursor: "pointer",
-              fill: "red"
+              fill: "red",
+              optionType: "dashLine2"
             }
           };
-          let dashLine2 = new common.Line(option);
-          dashLine2.create().mousedown(function(e) {
+          new common.Line(option).create().mousedown(function(e) {
             e.stopPropagation();
             that.svgContent.undrag();
             this.drag();
@@ -271,11 +294,11 @@ export default {
               strokeWidth: 2,
               strokeDasharray: "20,10,5,5,5,10",
               cursor: "pointer",
-              fill: "red"
+              fill: "red",
+              optionType: "dashLine3"
             }
           };
-          let dashLine3 = new common.Line(option);
-          dashLine3.create().mousedown(function(e) {
+          new common.Line(option).create().mousedown(function(e) {
             e.stopPropagation();
             that.svgContent.undrag();
             this.drag();
@@ -289,46 +312,40 @@ export default {
               stroke: "#000",
               fill: "#fff",
               strokeWidth: 1,
-              cursor: "pointer"
+              cursor: "pointer",
+              optionType: "polyline"
             }
           };
-          let polyline = new common.Polyline(option);
-          polyline.create().mousedown(function(e) {
+          new common.Polyline(option).create().mousedown(function(e) {
             e.stopPropagation();
             that.svgContent.undrag();
             this.drag();
           });
           break;
-
-        case "polygon":
-          break;
-
-        case "path":
-          break;
         case "circle":
           option = {
             svgObj: this.svgContent,
-            cx: x + 100,
-            cy: y + 100,
-            r: 40,
+            cx: x + 50,
+            cy: y + 50,
+            r: 100,
             attr: {
               stroke: "#000",
               strokeWidth: 1,
               fill: "#fff",
               cursor: "pointer",
-              type: "circle"
+              type: "circle",
+              optionType: "circle",
+              id: "PD_30200003_450982"
             }
           };
-          let circle = new common.Circle(option);
-          let m = new Snap.Matrix();
-          let circle1 = circle.create();
-          m.scale(this.svgMag, this.svgMag);
-          circle1.transform(m);
-          circle1.mousedown(function(e) {
-            e.stopPropagation();
-            that.svgContent.undrag();
-            this.drag();
-          });
+          new common.Circle(option)
+            .create()
+            .click(function() {
+              Event.click(this);
+            })
+            .dblclick(function(e) {
+              that.openAttrOptionPanl(e);
+            });
           break;
         case "ellipse":
           option = {
@@ -341,12 +358,19 @@ export default {
               stroke: "#000",
               strokeWidth: 1,
               fill: "#fff",
-              cursor: "pointer"
+              cursor: "pointer",
+              optionType: "ellipse"
               // transform:new Snap.Matrix(2,0,0,1,50,50)
             }
           };
-          let ellipse = new common.Ellipse(option);
-          ellipse.create().drag();
+          new common.Ellipse(option)
+            .create()
+            .click(function() {
+              Event.click(this);
+            })
+            .dblclick(function(e) {
+              that.openAttrOptionPanl(e);
+            });
           break;
         case "rect":
           option = {
@@ -361,61 +385,53 @@ export default {
               stroke: "#000",
               strokeWidth: 1,
               fill: "#fff",
-              cursor: "pointer"
+              cursor: "pointer",
+              optionType: "rect"
             }
           };
-          let rect = new common.Rect(option);
-          rect.create().mousedown(function(e) {
+          new common.Rect(option).create().mousedown(function(e) {
             e.stopPropagation();
             that.svgContent.undrag();
             this.drag();
           });
           break;
         case "byq":
-          let PolyLineOption = {
+          option = {
             svgObj: this.svgContent,
-            data: [x + 80, y + 80, x + 110, y + 60, x + 140, y + 80],
-            attr: {
-              stroke: "#bd524c",
-              fill: "none",
-              strokeWidth: 3,
-              cursor: "pointer"
+            polyLineOption: {
+              data: [x + 80, y + 80, x + 110, y + 60, x + 140, y + 80],
+              attr: {
+                stroke: "#bd524c",
+                fill: "none",
+                strokeWidth: 3
+              }
+            },
+            pathOption: {
+              data: `M${x + 83} ${y + 84}L${x + 110} ${y + 67}L${x + 137} ${y +
+                84}L${x + 137} ${y + 117}L${x + 84} ${y + 117}L${x + 83} ${y +
+                83}Z`,
+              attr: {
+                stroke: "#bd524c",
+                fill: "#fff",
+                strokeWidth: 2
+              }
+            },
+            lightningOption: {
+              data: `M${x + 97} ${y + 93}L${x + 123} ${y + 81}L${x + 110} ${y +
+                93}L${x + 124} ${y + 93}L${x + 97} ${y + 110}L${x + 113} ${y +
+                93}Z`,
+              attr: {
+                stroke: "#bd524c",
+                fill: "#bd524c",
+                strokeWidth: 2
+              }
             }
           };
-          let polyline1 = new common.Polyline(PolyLineOption).create();
-          let pathOption = {
-            svgObj: this.svgContent,
-            data: `M${x + 83} ${y + 84}L${x + 110} ${y + 67}L${x + 137} ${y +
-              84}L${x + 137} ${y + 117}L${x + 84} ${y + 117}L${x + 83} ${y +
-              83}Z`,
-            attr: {
-              stroke: "#bd524c",
-              fill: "#fff",
-              strokeWidth: 2,
-              cursor: "pointer"
-            }
-          };
-          let path = new common.Path(pathOption).create();
-          let lightningOption = {
-            svgObj: this.svgContent,
-            data: `M${x + 97} ${y + 93}L${x + 123} ${y + 81}L${x + 110} ${y +
-              93}L${x + 124} ${y + 93}L${x + 97} ${y + 110}L${x + 113} ${y +
-              93}Z`,
-            attr: {
-              stroke: "#bd524c",
-              fill: "#bd524c",
-              strokeWidth: 2,
-              cursor: "pointer"
-            }
-          };
-          let lightning = new common.Path(lightningOption).create();
-          this.svgContent.paper
-            .g(polyline1, path, lightning)
-            .mousedown(function(e) {
-              e.stopPropagation();
-              that.svgContent.undrag();
-              this.drag();
-            });
+          new pel.BYQ(option).create().mousedown(function(e) {
+            e.stopPropagation();
+            that.svgContent.undrag();
+            this.drag();
+          });
           break;
         default:
           break;
@@ -426,12 +442,17 @@ export default {
       this.create(event);
       this.$store.commit("changePencelType", "");
     },
-    //导图svg
+    //导入svg图
     snapLoad(svgUrl) {
       let that = this;
       Snap.load(svgUrl, function(g) {
         that.svgContent.append(g);
       });
+      setTimeout(function() {
+        // console.log(document.querySelector("#svg"));
+        let layer = document.querySelector("#PD_30200003_450982");
+        // console.log(layer);
+      }, 3000);
     },
     //获取导入svg图片本地路径
     preview(event) {
@@ -460,12 +481,12 @@ export default {
       // e.preventDefault();
       // e.stopImmediatePropagation();
       if (e.wheelDelta === -120 || e.detail === 3) {
-        this.svgMag -= 0.2;
+        this.svgMag -= 0.5;
         if (this.svgMag < this.svgMagMin) {
           this.svgMag = this.svgMagMin;
         }
       } else if (e.wheelDelta === 120 || e.detail === -3) {
-        this.svgMag += 0.2;
+        this.svgMag += 0.5;
         if (this.svgMag > this.svgMagMax) {
           this.svgMag = this.svgMagMax;
         }
@@ -486,6 +507,23 @@ export default {
         type: "text/plain;charset=utf-8"
       });
       saveAs(file);
+    },
+    //打开属性操作框
+    openAttrOptionPanl(e) {
+      this.$nextTick(function() {
+        this.optionPanlBool = true;
+        let optionPanl = document.querySelector("#editor-container");
+        optionPanl.style.top = e.clientY - 100 + "px";
+        optionPanl.style.left = e.clientX - 220 + "px";
+      });
+    }
+  },
+  watch: {
+    backgroundColor() {
+      this.$store.commit("changebgColor", this.backgroundColor);
+      this.bgRect.attr({
+        fill: this.backgroundColor
+      });
     }
   }
 };
@@ -517,5 +555,27 @@ svg {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 100;
+}
+#editor-container {
+  position: absolute;
+  width: 120px;
+  height: auto;
+  z-index: 1000;
+  background: #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 20px;
+  p {
+    text-align: right;
+  }
+  ul {
+    li {
+      line-height: 35px;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
 }
 </style>

@@ -1,3 +1,7 @@
+html,body,ul,div,li,p{
+    margin:0;
+    padding:0;
+}
 html {
     height: 100%;
     width: 100%;
@@ -9,7 +13,6 @@ body {
     height: 100%;
     width: 100%;
 }
-
 .el-container {
     height: 100%;
     width: 100%;
@@ -19,6 +22,9 @@ body {
 .el-aside {
     padding: 0 15px;
     border-right: 1px solid #ccc;
+}
+li{
+    list-style: none;
 }
 
 /*滚动条样式*/

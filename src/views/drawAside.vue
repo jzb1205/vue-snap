@@ -82,9 +82,19 @@
           </svg>
         </div>
       </el-collapse-item>
-      <el-collapse-item title="开关" name="2">
+      <el-collapse-item title="变压器" name="2">
         <div
           v-for="it in dataList.byqList"
+          :key="it.id"
+          @click="getPicInfo(it)"
+          class="pelStyle"
+        >
+          <img :src="it.img" />
+        </div>
+      </el-collapse-item>
+      <el-collapse-item title="开关" name="7">
+        <div
+          v-for="it in dataList.kgList"
           :key="it.id"
           @click="getPicInfo(it)"
           class="pelStyle"
@@ -110,11 +120,6 @@
         <div>手车刀闸（合）</div>
         <div>手车刀闸（试验/检修）</div>
         <div>手车刀闸（分）</div>
-      </el-collapse-item>
-      <el-collapse-item title="变压器" name="7">
-        <div>10kV-380V双绕组变压器</div>
-        <div>柱上变压器（专用变</div>
-        <div>柱上变压器（公用变）</div>
       </el-collapse-item>
       <el-collapse-item title="断路器" name="8">
         <div>柱上断路器（合）</div>
@@ -219,6 +224,13 @@ export default {
         byqList: [
           {
             id: "byq",
+            img: require("../suorce/iconpoint/byq1.png")
+          }
+        ],
+        kgList: [
+          {
+            id: "sckg-flsb",
+            name: "手车开关（分/冷备）",
             img: require("../suorce/iconpoint/byq1.png")
           }
         ]
