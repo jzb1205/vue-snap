@@ -53,9 +53,9 @@
       <div id="svgroot">
         <svg
           id="svgContent"
-          width="1200"
-          height="750"
-          viewBox="0 0 1200 750"
+          :width="svgOpt.width"
+          :height="svgOpt.height"
+          :viewBox="svgOpt.viewBox"
           @click="mysvgClick"
         ></svg>
       </div>
@@ -67,6 +67,7 @@
 import common from "./../draw/basePel/index";
 import pel from "./../draw/pel/index";
 import Event from "./../event/index";
+import Symbol from "./../draw/symbol/index";
 export default {
   name: "drawMainWrap",
   data() {
@@ -114,12 +115,22 @@ export default {
       bgRect: null, //背景svg占位对象
       initRectMain: null, //主体svg占位对象
       curpelType: "", //当前点击图元类型
-      optionPanlBool: false //操作弹窗bool
+      optionPanlBool: false, //操作弹窗bool
+      svgOpt: {
+        width: document.body.clientWidth,
+        height: document.body.clientHeight,
+        viewBox: `0 0 ${document.body.clientWidth} ${document.body.clientHeight}`
+      },
+      symbolList: {
+        Terminal: null,
+        Breaker: null
+      }
     };
   },
   created() {
     this.$nextTick(function() {
       this.init();
+      this.initSymbol(); //初始化symbol列表
     });
   },
   computed: {
@@ -131,9 +142,82 @@ export default {
     }
   },
   methods: {
+    //初始化symbol列表
+    initSymbol() {
+      //端子
+      let option = {
+        svgObj: this.svgContent
+      };
+      // this.symbolList.Terminal = new Symbol.Terminal(option).create();
+      // this.symbolList.Breaker = new Symbol.Breaker(option).create().add(
+      //   new Symbol.Terminal({
+      //     svgObj: this.svgContent,
+      //     cx: 50,
+      //     cy: 50,
+      //     r: 8
+      //   })
+      //     .create()
+      //     .use()
+      // );
+      // new Symbol.Terminal({
+      //   svgObj: this.svgContent,
+      //   cx: 50,
+      //   cy: 50,
+      //   r: 8
+      // })
+      //   .create()
+      //   .use();
+      let a = new Symbol.Terminal({
+        svgObj: this.svgContent,
+        cx: 50,
+        cy: 120,
+        r: 8
+      }).create();
+
+      let b = a.use();
+      console.log(b);
+      b.click(function() {
+        console.log(this);
+      });
+      // b.paper.transform = new Snap.Matrix(1, 0, 0, 1, 50, 120);
+      // .attr({
+      //   transform: new Snap.Matrix(1, 0, 0, 1, 50, 120)
+      // })
+      // .click(function() {
+      //   console.log(this);
+      // });
+      // new Symbol.Terminal({
+      //   svgObj: this.svgContent,
+      //   cx: 50,
+      //   cy: 120,
+      //   r: 8
+      // })
+      //   .create()
+      //   .use();
+      // this.symbolList.Breaker.add(
+      // );
+      // 开关
+      // this.symbolList.Breaker.use();
+    },
     //初始化
     init() {
-      this.svgContent = Snap("#svgContent");
+      this.svgContent = Snap("#svgContent").click(function() {
+        this.attr({
+          cursor: "pointer"
+        });
+      });
+      // console.log(this.svgContent);
+      // var c = this.svgContent.paper.el("symbol", {
+      //   id: "abc"
+      // });
+      // // and the same as
+      // var c1 = this.svgContent.paper.el("circle", {
+      //   cx: 10,
+      //   cy: 10,
+      //   r: 10
+      // });
+      // c.add(c1);
+      // c.use();
       this.cancelBH();
       this.createInitSvg();
       let svgContent = document.querySelector("#svgContent");
@@ -143,6 +227,25 @@ export default {
         svgContent.addEventListener("mousewheel", this.svgScaleOption, false);
       }
     },
+    // createTerminal(x, y) {
+    //   //端子绘制数据
+    //   let option = {
+    //     svgObj: this.svgContent,
+    //     cx: x + 50,
+    //     cy: y + 50,
+    //     r: 10,
+    //     attr: {
+    //       stroke: "#000",
+    //       strokeWidth: 1,
+    //       fill: "#fff",
+    //       cursor: "pointer",
+    //       type: "circle",
+    //       optionType: "circle",
+    //       id: "terminal"
+    //     }
+    //   };
+    //   this.terminal = new common.Circle(option).create();
+    // },
     //点击svg外框 添加拖动事件
     cancelBH() {
       let that = this;
@@ -150,7 +253,8 @@ export default {
       svg.addEventListener(
         "click",
         function() {
-          // that.svgContent.drag();
+          // console.log("svg");
+          that.svgContent.drag();
         },
         false
       );
@@ -196,6 +300,10 @@ export default {
       let x = e.pageX - 320;
       let y = e.pageY - 140;
       let option = null;
+      // if (!this.terminal) {
+      //   this.createTerminal(x, y);
+      // }
+      //绘制图元
       switch (this.optionType) {
         case "text":
           option = {
@@ -210,11 +318,19 @@ export default {
               optionType: "text"
             }
           };
-          new common.Text(option).create().mousedown(function(e) {
-            e.stopPropagation();
-            that.svgContent.undrag();
-            this.drag();
-          });
+          new common.Text(option)
+            .create()
+            .mousedown(function(e) {
+              e.stopPropagation();
+              that.svgContent.undrag();
+              this.drag();
+            })
+            .click(function(e) {
+              Event.click(this);
+            })
+            .dblclick(function(e) {
+              that.openAttrOptionPanl(e);
+            });
           break;
         case "commonline":
           option = {
@@ -232,11 +348,19 @@ export default {
               optionType: "commonline"
             }
           };
-          new common.Line(option).create().mousedown(function(e) {
-            e.stopPropagation();
-            that.svgContent.undrag();
-            this.drag();
-          });
+          new common.Line(option)
+            .create()
+            .mousedown(function(e) {
+              e.stopPropagation();
+              that.svgContent.undrag();
+              this.drag();
+            })
+            .click(function(e) {
+              Event.click(this);
+            })
+            .dblclick(function(e) {
+              that.openAttrOptionPanl(e);
+            });
           break;
         case "dashLine1":
           option = {
@@ -254,11 +378,19 @@ export default {
               optionType: "dashLine1"
             }
           };
-          new common.Line(option).create().mousedown(function(e) {
-            e.stopPropagation();
-            that.svgContent.undrag();
-            this.drag();
-          });
+          new common.Line(option)
+            .create()
+            .mousedown(function(e) {
+              e.stopPropagation();
+              that.svgContent.undrag();
+              this.drag();
+            })
+            .click(function(e) {
+              Event.click(this);
+            })
+            .dblclick(function(e) {
+              that.openAttrOptionPanl(e);
+            });
           break;
         case "dashLine2":
           option = {
@@ -276,11 +408,19 @@ export default {
               optionType: "dashLine2"
             }
           };
-          new common.Line(option).create().mousedown(function(e) {
-            e.stopPropagation();
-            that.svgContent.undrag();
-            this.drag();
-          });
+          new common.Line(option)
+            .create()
+            .mousedown(function(e) {
+              e.stopPropagation();
+              that.svgContent.undrag();
+              this.drag();
+            })
+            .click(function(e) {
+              Event.click(this);
+            })
+            .dblclick(function(e) {
+              that.openAttrOptionPanl(e);
+            });
           break;
         case "dashLine3":
           option = {
@@ -298,11 +438,19 @@ export default {
               optionType: "dashLine3"
             }
           };
-          new common.Line(option).create().mousedown(function(e) {
-            e.stopPropagation();
-            that.svgContent.undrag();
-            this.drag();
-          });
+          new common.Line(option)
+            .create()
+            .mousedown(function(e) {
+              e.stopPropagation();
+              that.svgContent.undrag();
+              this.drag();
+            })
+            .click(function(e) {
+              Event.click(this);
+            })
+            .dblclick(function(e) {
+              that.openAttrOptionPanl(e);
+            });
           break;
         case "polyline":
           option = {
@@ -316,36 +464,56 @@ export default {
               optionType: "polyline"
             }
           };
-          new common.Polyline(option).create().mousedown(function(e) {
-            e.stopPropagation();
-            that.svgContent.undrag();
-            this.drag();
-          });
-          break;
-        case "circle":
-          option = {
-            svgObj: this.svgContent,
-            cx: x + 50,
-            cy: y + 50,
-            r: 100,
-            attr: {
-              stroke: "#000",
-              strokeWidth: 1,
-              fill: "#fff",
-              cursor: "pointer",
-              type: "circle",
-              optionType: "circle",
-              id: "PD_30200003_450982"
-            }
-          };
-          new common.Circle(option)
+          new common.Polyline(option)
             .create()
-            .click(function() {
+            .mousedown(function(e) {
+              e.stopPropagation();
+              that.svgContent.undrag();
+              this.drag();
+            })
+            .click(function(e) {
               Event.click(this);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
             });
+          break;
+        case "circle":
+          // option = {
+          //   svgObj: this.svgContent,
+          //   cx: x + 50,
+          //   cy: y + 50,
+          //   r: 20,
+          //   attr: {
+          //     stroke: "#000",
+          //     strokeWidth: 1,
+          //     fill: "#fff",
+          //     cursor: "pointer",
+          //     display: "none",
+          //     id: "PD_30200003_450982"
+          //   }
+          // };
+          // let c = new common.Circle(option)
+          //   .create()
+          //   .use()
+          //   .attr({
+          //     display: "block",
+          //     id: "abvc"
+          //   })
+          //   .mousedown(function(e) {
+          //     e.stopPropagation();
+          //     that.svgContent.undrag();
+          //     this.drag();
+          //   })
+          //   .click(function(e) {
+          //     Event.click(this);
+          //   })
+          //   .dblclick(function(e) {
+          //     that.openAttrOptionPanl(e);
+          //   });
+
+          // console.log(that.svgContent);
+          that.a.use();
           break;
         case "ellipse":
           option = {
@@ -365,7 +533,12 @@ export default {
           };
           new common.Ellipse(option)
             .create()
-            .click(function() {
+            .mousedown(function(e) {
+              e.stopPropagation();
+              that.svgContent.undrag();
+              this.drag();
+            })
+            .click(function(e) {
               Event.click(this);
             })
             .dblclick(function(e) {
@@ -389,11 +562,19 @@ export default {
               optionType: "rect"
             }
           };
-          new common.Rect(option).create().mousedown(function(e) {
-            e.stopPropagation();
-            that.svgContent.undrag();
-            this.drag();
-          });
+          new common.Rect(option)
+            .create()
+            .mousedown(function(e) {
+              e.stopPropagation();
+              that.svgContent.undrag();
+              this.drag();
+            })
+            .click(function(e) {
+              Event.click(this);
+            })
+            .dblclick(function(e) {
+              that.openAttrOptionPanl(e);
+            });
           break;
         case "byq":
           option = {
@@ -427,11 +608,113 @@ export default {
               }
             }
           };
-          new pel.BYQ(option).create().mousedown(function(e) {
-            e.stopPropagation();
-            that.svgContent.undrag();
-            this.drag();
-          });
+          new pel.BYQ(option)
+            .create()
+            .mousedown(function(e) {
+              e.stopPropagation();
+              that.svgContent.undrag();
+              this.drag();
+            })
+            .click(function(e) {
+              Event.click(this);
+            })
+            .dblclick(function(e) {
+              that.openAttrOptionPanl(e);
+            });
+          break;
+        case "kg":
+          option = {
+            svgObj: this.svgContent,
+            attr: {
+              stroke: "#000",
+              strokeWidth: 2,
+              strokeDasharray: "",
+              cursor: "pointer",
+              fill: "red",
+              optionType: "commonline"
+            },
+            lineData1: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 150,
+              y2: y + 50
+            },
+            lineData2: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 10,
+              y2: y + 50
+            },
+            lineData3: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 150,
+              y2: y + 50
+            },
+            lineData4: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 150,
+              y2: y + 50
+            },
+            lineData5: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 150,
+              y2: y + 50
+            },
+            lineData6: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 150,
+              y2: y + 50
+            },
+            lineData7: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 150,
+              y2: y + 50
+            },
+            lineData8: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 150,
+              y2: y + 50
+            },
+            lineData9: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 150,
+              y2: y + 50
+            },
+            lineData10: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 150,
+              y2: y + 50
+            },
+            rectData: {
+              x: x + 75,
+              y: y + 75,
+              w: 50,
+              h: 50,
+              rx: 0,
+              ry: 0
+            }
+          };
+          new pel.BYQ(option)
+            .create()
+            .mousedown(function(e) {
+              e.stopPropagation();
+              that.svgContent.undrag();
+              this.drag();
+            })
+            .click(function(e) {
+              Event.click(this);
+            })
+            .dblclick(function(e) {
+              that.openAttrOptionPanl(e);
+            });
           break;
         default:
           break;
@@ -446,6 +729,7 @@ export default {
     snapLoad(svgUrl) {
       let that = this;
       Snap.load(svgUrl, function(g) {
+        that.svgContent.clear(); //导出事清空svg
         that.svgContent.append(g);
       });
       setTimeout(function() {
