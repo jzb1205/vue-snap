@@ -112,10 +112,7 @@ export default {
         viewBox: `0 0 ${document.body.clientWidth} ${document.body.clientHeight}`
       },
       symbolList: {
-        BYQ_ZS: null, //柱上变压器（公用变)
-        BYQ_SRZ_110_10: null, //110kV-10kV双绕组变压器
-        BYQ_SRZ_35_10: null, //35kV-10kV双绕组变压器
-        BYQ_SRZ_10_380: null //10kV-380V双绕组变压器
+        Breaker: null
       },
       curOptPel: null
     };
@@ -137,63 +134,12 @@ export default {
   methods: {
     //初始化symbol列表
     initSymbol() {
+      let that = this;
       //端子
       let option = {
         svgObj: this.svgContent
       };
-      /**
-       * 柱上变压器（公用变)
-       */
-      option.data = {
-        //左边绘制默认数据
-        lcx: 45,
-        lcy: 20,
-        lcr: 10,
-        ll: "M20 20L35 20",
-        //右边绘制默认数据
-        rcx: 55,
-        rcy: 20,
-        rcr: 10,
-        rl: "M65 20L80 20"
-      };
-      option.attr = {
-        //左边默认样式参数
-        lStroke: "#0dceff",
-        lStrokeWidth: 2,
-        lFill: "#d7b09e",
-        //右边默认样式参数
-        rStroke: "#c05b56",
-        rStrokeWidth: 2,
-        rFill: "rgba(0,0,0,0)"
-      };
-      this.symbolList.BYQ_ZS = new Symbol.BYQ_ZS(option).create();
-      /**
-       * 110kV-10kV双绕组变压器
-       */
-      option.id = "BYQ_SRZ_110_10";
-      option.data = {
-        //左边绘制默认数据
-        lcx: 40,
-        lcy: 20,
-        lcr: 15,
-        ll: "M5 20L25 20",
-        //右边绘制默认数据
-        rcx: 60,
-        rcy: 20,
-        rcr: 15,
-        rl: "M75 20L95 20"
-      };
-      option.attr = {
-        //左边默认样式参数
-        lStroke: "#0dceff",
-        lStrokeWidth: 2,
-        lFill: "rgba(0,0,0,0)",
-        //右边默认样式参数
-        rStroke: "#f15668",
-        rStrokeWidth: 2,
-        rFill: "rgba(0,0,0,0)"
-      };
-      this.symbolList.BYQ_SRZ_110_10 = new Symbol.BYQ_ZS(option).create();
+      this.Breaker = new Symbol.Breaker(option).create();
     },
     //初始化
     init() {
@@ -202,6 +148,7 @@ export default {
           cursor: "pointer"
         });
       });
+      console.log(this.svgContent);
       this.cancelBH();
       this.createInitSvg();
       let svgContent = document.querySelector("#svgContent");
@@ -218,6 +165,7 @@ export default {
       svg.addEventListener(
         "click",
         function() {
+          // console.log("svg");
           that.svgContent.drag();
         },
         false
@@ -466,7 +414,7 @@ export default {
             attr: {
               stroke: "rgb(0,200,255)",
               strokeWidth: 1,
-              fill: "rgba(0,0,0,0)",
+              fill: "none",
               cursor: "pointer",
               id: "t1"
             }
@@ -479,7 +427,7 @@ export default {
             attr: {
               stroke: "rgb(0,200,255)",
               strokeWidth: 1,
-              fill: "rgba(0,0,0,0)",
+              fill: "none",
               cursor: "pointer"
             },
             id: "t2"
@@ -487,11 +435,9 @@ export default {
           t1 = new common.Circle(t1Option).create();
           t2 = new common.Circle(t2Option).create();
           let c = this.svgContent.paper
-            .g(that.symbolList.Breaker.use(), t1, t2)
+            .g(this.Breaker.use(), t1, t2)
             .attr({
-              id: "156516",
-              width: 20,
-              height: 100
+              id: "156516"
             })
             .drag();
           c.mousedown(function(e) {
@@ -622,54 +568,99 @@ export default {
             });
           break;
         case "kg":
-          break;
-        case "BYQ_ZS":
-          this.svgContent.paper
-            .g(that.symbolList.BYQ_ZS.use())
-            .attr({
-              id: "156516",
-              width: 20,
-              height: 100
-            })
+          option = {
+            svgObj: this.svgContent,
+            attr: {
+              stroke: "#000",
+              strokeWidth: 2,
+              strokeDasharray: "",
+              cursor: "pointer",
+              fill: "red",
+              optionType: "commonline"
+            },
+            lineData1: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 150,
+              y2: y + 50
+            },
+            lineData2: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 10,
+              y2: y + 50
+            },
+            lineData3: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 150,
+              y2: y + 50
+            },
+            lineData4: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 150,
+              y2: y + 50
+            },
+            lineData5: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 150,
+              y2: y + 50
+            },
+            lineData6: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 150,
+              y2: y + 50
+            },
+            lineData7: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 150,
+              y2: y + 50
+            },
+            lineData8: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 150,
+              y2: y + 50
+            },
+            lineData9: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 150,
+              y2: y + 50
+            },
+            lineData10: {
+              x1: x + 100,
+              y1: y + 100,
+              x2: x + 150,
+              y2: y + 50
+            },
+            rectData: {
+              x: x + 75,
+              y: y + 75,
+              w: 50,
+              h: 50,
+              rx: 0,
+              ry: 0
+            }
+          };
+          new pel.BYQ(option)
+            .create()
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
               this.drag();
             })
             .click(function(e) {
-              that.curOptPel = this;
               console.log(this);
               Event.click(this);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
             });
-
-          console.log(that.svgContent);
-          break;
-        case "BYQ_SRZ_110_10":
-          this.svgContent.paper
-            .g(that.symbolList.BYQ_SRZ_110_10.use())
-            .attr({
-              id: "156516",
-              width: 20,
-              height: 100
-            })
-            .mousedown(function(e) {
-              e.stopPropagation();
-              that.svgContent.undrag();
-              this.drag();
-            })
-            .click(function(e) {
-              that.curOptPel = this;
-              console.log(this);
-              Event.click(this);
-            })
-            .dblclick(function(e) {
-              that.openAttrOptionPanl(e);
-            });
-
-          console.log(that.svgContent);
           break;
         default:
           break;

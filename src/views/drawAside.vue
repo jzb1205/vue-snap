@@ -88,11 +88,14 @@
           :key="it.id"
           @click="getPicInfo(it)"
           class="pelStyle"
+          @mouseenter="getId(it)"
+          @mouseout="getId"
         >
           <img :src="it.img" />
+          <p class="noticeText" v-show="curId === it.id">{{ it.name }}</p>
         </div>
       </el-collapse-item>
-      <el-collapse-item title="开关" name="7">
+      <el-collapse-item title="开关" name="3">
         <div
           v-for="it in dataList.kgList"
           :key="it.id"
@@ -101,36 +104,6 @@
         >
           <img :src="it.img" />
         </div>
-      </el-collapse-item>
-      <el-collapse-item title="断路器" name="3">
-        <div>断路器（合）</div>
-        <div>断路器（分</div>
-      </el-collapse-item>
-      <el-collapse-item title="电压互感器" name="4">
-        <div>三绕组电压互感器</div>
-        <div>双绕组电压互感器</div>
-      </el-collapse-item>
-      <el-collapse-item title="负荷开关" name="5">
-        <div>负荷开关（合）</div>
-        <div>负荷开关（分）</div>
-      </el-collapse-item>
-      <el-collapse-item title="刀闸" name="6">
-        <div>接地刀闸（合）</div>
-        <div>接地刀闸（分）</div>
-        <div>手车刀闸（合）</div>
-        <div>手车刀闸（试验/检修）</div>
-        <div>手车刀闸（分）</div>
-      </el-collapse-item>
-      <el-collapse-item title="断路器" name="8">
-        <div>柱上断路器（合）</div>
-        <div>柱上断路器（分）</div>
-      </el-collapse-item>
-      <el-collapse-item title="熔断器" name="9">
-        <div>跌落式熔断器（合）</div>
-        <div>跌落式熔断器（分）</div>
-      </el-collapse-item>
-      <el-collapse-item title="终端头" name="10">
-        <div>站内终端头</div>
       </el-collapse-item>
     </el-collapse>
   </div>
@@ -142,6 +115,7 @@ export default {
   data() {
     return {
       activeNames: ["1"],
+      curId: "",
       dataList: {
         common: [
           {
@@ -223,8 +197,24 @@ export default {
         ],
         byqList: [
           {
-            id: "byq",
-            img: require("../suorce/iconpoint/byq1.png")
+            id: "BYQ_ZS",
+            name: "柱上变压器（公用变）",
+            img: require("../suorce/iconpoint/BYQ_ZS.png")
+          },
+          {
+            id: "BYQ_SRZ_110_10",
+            name: "110kV-10kV双绕组变压器",
+            img: require("../suorce/iconpoint/BYQ_ZS.png")
+          },
+          {
+            id: "BYQ_SRZ_35_10",
+            name: "35kV-10kV双绕组变压器",
+            img: require("../suorce/iconpoint/BYQ_ZS.png")
+          },
+          {
+            id: "BYQ_SRZ_10_380",
+            name: "10kV-380V双绕组变压器",
+            img: require("../suorce/iconpoint/BYQ_ZS.png")
           }
         ],
         kgList: [
@@ -244,7 +234,11 @@ export default {
     },
     //获取图元信息
     getPicInfo(it) {
+      console.log(it);
       this.$store.commit("changePencelType", it.id);
+    },
+    getId(it) {
+      this.curId = (it && it.id) || "";
     }
   }
 };
@@ -254,6 +248,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  position: relative;
 }
 .commonItem {
   flex: 1;
@@ -262,13 +257,24 @@ export default {
 }
 .pelStyle {
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  // width: 50px;
+  // height: 50px;
   cursor: pointer;
   img {
     width: 35px;
     height: 35px;
     margin: 7px 7px 8px 8px;
+    z-index: 1;
+  }
+  .noticeText {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    z-index: 2;
+    padding: 4px;
+    background: #f2f2f2;
+    border: 1px solid #ddd;
+    color: #666;
   }
 }
 .text {
