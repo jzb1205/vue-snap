@@ -121,7 +121,8 @@ export default {
         KG_FHKG_H: null, //负荷开关（合）
         KG_FHKG_F: null //负荷开关（分）
       },
-      curOptPel: null
+      curOptPel: null,
+      lineOrid: []
     };
   },
   created() {
@@ -471,7 +472,8 @@ export default {
               this.drag();
             })
             .click(function(e) {
-              Event.click(this);
+              that.curOptPel = this;
+              Event.click(that.svgContent, this);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
@@ -501,7 +503,8 @@ export default {
               this.drag();
             })
             .click(function(e) {
-              Event.click(this);
+              that.curOptPel = this;
+              Event.click(that.svgContent, this);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
@@ -531,7 +534,8 @@ export default {
               this.drag();
             })
             .click(function(e) {
-              Event.click(this);
+              that.curOptPel = this;
+              Event.click(that.svgContent, this);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
@@ -561,7 +565,8 @@ export default {
               this.drag();
             })
             .click(function(e) {
-              Event.click(this);
+              that.curOptPel = this;
+              Event.click(that.svgContent, this);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
@@ -591,7 +596,8 @@ export default {
               this.drag();
             })
             .click(function() {
-              Event.click(this);
+              that.curOptPel = this;
+              Event.click(that.svgContent, this);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
@@ -617,7 +623,8 @@ export default {
               this.drag();
             })
             .click(function() {
-              Event.click(this);
+              that.curOptPel = this;
+              Event.click(that.svgContent, this);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
@@ -646,8 +653,7 @@ export default {
             })
             .click(function() {
               that.curOptPel = this;
-              console.log(this);
-              Event.click(this);
+              Event.click(that.svgContent, this);
             })
             .hover(
               function() {
@@ -697,7 +703,8 @@ export default {
               this.drag();
             })
             .click(function() {
-              Event.click(this);
+              that.curOptPel = this;
+              Event.click(that.svgContent, this);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
@@ -728,7 +735,8 @@ export default {
               this.drag();
             })
             .click(function() {
-              Event.click(this);
+              that.curOptPel = this;
+              Event.click(that.svgContent, this);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
@@ -774,11 +782,8 @@ export default {
               this.drag();
             })
             .click(function() {
-              this.attr({
-                id: "abc"
-              });
-              console.log(this);
-              Event.click(this);
+              that.curOptPel = this;
+              Event.click(that.svgContent, this);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
@@ -801,8 +806,7 @@ export default {
             })
             .click(function(e) {
               that.curOptPel = this;
-              console.log(this);
-              Event.click(this);
+              Event.click(that.svgContent, this);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
@@ -823,8 +827,7 @@ export default {
             })
             .click(function(e) {
               that.curOptPel = this;
-              console.log(this);
-              Event.click(this);
+              Event.click(that.svgContent, this);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
@@ -846,8 +849,7 @@ export default {
             })
             .click(function(e) {
               that.curOptPel = this;
-              console.log(this);
-              Event.click(this);
+              Event.click(that.svgContent, this);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
@@ -868,8 +870,7 @@ export default {
             })
             .click(function(e) {
               that.curOptPel = this;
-              console.log(this);
-              Event.click(this);
+              Event.click(that.svgContent, this);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
@@ -892,8 +893,7 @@ export default {
             })
             .click(function(e) {
               that.curOptPel = this;
-              console.log(this);
-              Event.click(this);
+              Event.click(that.svgContent, this);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
@@ -916,8 +916,7 @@ export default {
             })
             .click(function(e) {
               that.curOptPel = this;
-              console.log(this);
-              Event.click(this);
+              Event.click(that.svgContent, this);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
@@ -939,8 +938,7 @@ export default {
             })
             .click(function(e) {
               that.curOptPel = this;
-              console.log(this);
-              Event.click(this);
+              Event.click(that.svgContent, this);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
@@ -961,11 +959,8 @@ export default {
               this.drag();
             })
             .click(function() {
-              var innerSnap = Snap(document.querySelector("#KG_FHKG_F"));
-              innerSnap.select("circle").attr({
-                fill: "red"
-              });
-              Event.click(this);
+              that.curOptPel = this;
+              Event.click(that.svgContent, this);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);

@@ -60,7 +60,6 @@ class KG_DLQ {
         strokeWidth: this.attr.mStrokeWidth,
         fill: this.attr.mFill
       });
-    console.log(mR);
     let rl = this.svgObj.paper.path(this.data.rl).attr({
       stroke: this.attr.rStroke,
       strokeWidth: this.attr.rStrokeWidth

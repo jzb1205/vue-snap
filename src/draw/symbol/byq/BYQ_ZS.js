@@ -28,10 +28,19 @@ class BYQ_ZS {
       rcx: option.data.rcx || 60,
       rcy: option.data.rcy || 20,
       rcr: option.data.rcr || 15,
-      rl: option.data.rl || "M75 20L95 20"
+      rl: option.data.rl || "M75 20L95 20",
+      //端子绘制数据
+      tcx1: option.data.tcx1 || 15,
+      tcy1: option.data.tcy1 || 20,
+      tcr1: option.data.tcr1 || 5,
+      tcx2: option.data.tcx2 || 85,
+      tcy2: option.data.tcy2 || 20,
+      tcr2: option.data.tcr2 || 5
+      //端子连接线数据
     };
   }
   create() {
+    let that = this;
     //symbol绘制外框
     let byq_zs = this.svgObj.paper.el("symbol", {
       id: this.id,
@@ -63,10 +72,43 @@ class BYQ_ZS {
       stroke: this.attr.rStroke,
       strokeWidth: this.attr.rStrokeWidth
     });
+    //端子
+    let t1 = this.svgObj.paper
+      .circle(this.data.tcx1, this.data.tcy1, this.data.tcr1)
+      .attr({
+        id: "teminal1",
+        stroke: this.attr.lStroke,
+        strokeWidth: this.attr.lStrokeWidth,
+        fill: "rgba(0,0,0,0)"
+      });
+    let t2 = this.svgObj.paper
+      .circle(this.data.tcx2, this.data.tcy1, this.data.tcr1)
+      .attr({
+        id: "teminal2",
+        stroke: this.attr.lStroke,
+        strokeWidth: this.attr.lStrokeWidth,
+        fill: "rgba(0,0,0,0)"
+      });
+    let ployLine = this.svgObj.paper
+      .polyline([90, 20, 115, 20, 110, 15, 115, 20, 110, 25])
+      .attr({
+        stroke: "red",
+        strokeWidth: 1,
+        fill: "rgba(0,0,0,0)"
+      })
+      .mousedown(function() {
+        this.parent().undrag();
+        that.svgObj.undrag();
+        this.drag();
+        // console.log();
+      });
     byq_zs.add(lc);
     byq_zs.add(rc);
     byq_zs.add(ll);
     byq_zs.add(lr);
+    byq_zs.add(t1);
+    byq_zs.add(t2);
+    byq_zs.add(ployLine);
     return byq_zs;
   }
 }
