@@ -107,15 +107,19 @@ export default {
       curpelType: "", //当前点击图元类型
       optionPanlBool: false, //操作弹窗bool
       svgOpt: {
-        width: document.body.clientWidth,
-        height: document.body.clientHeight,
+        width: "100%",
+        height: "100%",
         viewBox: `0 0 ${document.body.clientWidth} ${document.body.clientHeight}`
       },
       symbolList: {
         BYQ_ZS: null, //柱上变压器（公用变)
         BYQ_SRZ_110_10: null, //110kV-10kV双绕组变压器
         BYQ_SRZ_35_10: null, //35kV-10kV双绕组变压器
-        BYQ_SRZ_10_380: null //10kV-380V双绕组变压器
+        BYQ_SRZ_10_380: null, //10kV-380V双绕组变压器
+        KG_DLQ_H: null, //断路器（合）
+        KG_DLQ_F: null, //断路器（分）
+        KG_FHKG_H: null, //负荷开关（合）
+        KG_FHKG_F: null //负荷开关（分）
       },
       curOptPel: null
     };
@@ -144,6 +148,7 @@ export default {
       /**
        * 柱上变压器（公用变)
        */
+      option.symbolId = "2030020";
       option.data = {
         //左边绘制默认数据
         lcx: 45,
@@ -171,6 +176,7 @@ export default {
        * 110kV-10kV双绕组变压器
        */
       option.id = "BYQ_SRZ_110_10";
+      option.symbolId = "4020050";
       option.data = {
         //左边绘制默认数据
         lcx: 40,
@@ -194,6 +200,184 @@ export default {
         rFill: "rgba(0,0,0,0)"
       };
       this.symbolList.BYQ_SRZ_110_10 = new Symbol.BYQ_ZS(option).create();
+      /**
+       * 35kV-10kV双绕组变压器
+       */
+      option.id = "BYQ_SRZ_35_10";
+      option.symbolId = "4020051";
+      option.data = {
+        //左边绘制默认数据
+        lcx: 40,
+        lcy: 20,
+        lcr: 15,
+        ll: "M5 20L25 20",
+        //右边绘制默认数据
+        rcx: 60,
+        rcy: 20,
+        rcr: 15,
+        rl: "M75 20L95 20"
+      };
+      option.attr = {
+        //左边默认样式参数
+        lStroke: "#b54842",
+        lStrokeWidth: 2,
+        lFill: "rgba(0,0,0,0)",
+        //右边默认样式参数
+        rStroke: "#ffff4a",
+        rStrokeWidth: 2,
+        rFill: "rgba(0,0,0,0)"
+      };
+      this.symbolList.BYQ_SRZ_35_10 = new Symbol.BYQ_ZS(option).create();
+      /**
+       * 10kV-380kV双绕组变压器
+       */
+      option.id = "BYQ_SRZ_10_380";
+      option.symbolId = "4020052";
+      option.data = {
+        //左边绘制默认数据
+        lcx: 40,
+        lcy: 20,
+        lcr: 15,
+        ll: "M5 20L25 20",
+        //右边绘制默认数据
+        rcx: 60,
+        rcy: 20,
+        rcr: 15,
+        rl: "M75 20L95 20"
+      };
+      option.attr = {
+        //左边默认样式参数
+        lStroke: "#06ccfe",
+        lStrokeWidth: 2,
+        lFill: "rgba(0,0,0,0)",
+        //右边默认样式参数
+        rStroke: "#b94c46",
+        rStrokeWidth: 2,
+        rFill: "rgba(0,0,0,0)"
+      };
+      this.symbolList.BYQ_SRZ_10_380 = new Symbol.BYQ_ZS(option).create();
+      /**
+       * 断路器（合）
+       */
+      option.id = "KG_DLQ_H";
+      option.symbolId = "2040010";
+      option.data = {
+        //左边线绘制默认数据
+        ll: "M5 20L20 20",
+        //中间矩形绘制默认数据
+        mRx: 20,
+        mRy: 12,
+        mRw: 30,
+        mRh: 15,
+        mRrx: 0,
+        mRry: 0,
+        //右边线绘制默认数据
+        rl: "M50 20L65 20"
+      };
+      option.attr = {
+        //左边线默认样式参数
+        lStroke: "#b94842",
+        lStrokeWidth: 2,
+        //中间矩形默认样式参数
+        mStroke: "#b94842",
+        mStrokeWidth: 2,
+        mFill: "#b94842",
+        //右边线默认样式参数
+        rStroke: "#b94842",
+        rStrokeWidth: 2
+      };
+      this.symbolList.KG_DLQ_H = new Symbol.KG_DLQ(option).create();
+      /**
+       * 断路器（分）
+       */
+      option.id = "KG_DLQ_F";
+      option.symbolId = "2040011";
+      option.data = {
+        //左边线绘制默认数据
+        ll: "M5 20L20 20",
+        //中间矩形绘制默认数据
+        mRx: 20,
+        mRy: 12,
+        mRw: 30,
+        mRh: 15,
+        mRrx: 0,
+        mRry: 0,
+        //右边线绘制默认数据
+        rl: "M50 20L65 20"
+      };
+      option.attr = {
+        //左边线默认样式参数
+        lStroke: "#b94842",
+        lStrokeWidth: 2,
+        //中间矩形默认样式参数
+        mStroke: "#b94842",
+        mStrokeWidth: 2,
+        mFill: "rgba(0,0,0,0)",
+        //右边线默认样式参数
+        rStroke: "#b94842",
+        rStrokeWidth: 2
+      };
+      this.symbolList.KG_DLQ_F = new Symbol.KG_DLQ(option).create();
+      /**
+       * 负荷开关（合）
+       */
+      option.id = "KG_FHKG_H";
+      option.symbolId = "2050010";
+      option.data = {
+        //斜线默认样式参数
+        ll: [10, 40, 20, 40, 55, 20],
+        //中间圆绘制默认数据
+        cx: 48,
+        cy: 36,
+        r: 8,
+        //右边线绘制默认数据
+        rl1: "M55 36L75 36",
+        rl2: "M58 25L58 46"
+      };
+      option.attr = {
+        //斜线默认样式参数
+        xStroke: "#b94842",
+        xStrokeWidth: 2,
+        xFill: "rgba(0,0,0,0)",
+        //中间圆默认样式参数
+        mStroke: "#b94842",
+        mStrokeWidth: 2,
+        mFill: "rgba(0,0,0,0)",
+        //右边竖线和横线默认样式参数
+        rStroke: "#b94842",
+        rStrokeWidth: 2
+      };
+      this.symbolList.KG_FHKG_H = new Symbol.KG_FHKG(option).create();
+      /**
+       * 负荷开关（分）
+       */
+      option.id = "KG_FHKG_F";
+      option.symbolId = "2050011";
+      option.data = {
+        //斜线默认样式参数
+        ll: [10, 40, 20, 40, 48, 15],
+        //中间圆绘制默认数据
+        cx: 48,
+        cy: 36,
+        r: 8,
+        //右边线绘制默认数据
+        rl1: "M55 36L75 36",
+        rl2: "M58 25L58 46"
+      };
+      option.attr = {
+        //斜线默认样式参数
+        xStroke: "#b94842",
+        xStrokeWidth: 2,
+        xFill: "rgba(0,0,0,0)",
+        //中间圆默认样式参数
+        mStroke: "#b94842",
+        mStrokeWidth: 2,
+        mFill: "rgba(0,0,0,0)",
+        //右边竖线和横线默认样式参数
+        rStroke: "#b94842",
+        rStrokeWidth: 2
+      };
+      this.symbolList.KG_FHKG_F = new Symbol.KG_FHKG(option).create();
     },
     //初始化
     init() {
@@ -264,11 +448,6 @@ export default {
       let x = e.pageX - 320;
       let y = e.pageY - 140;
       let option = null;
-      let t1 = null; //端子1
-      let t1Option = null; //端子1参数
-      let t2 = null; //端子2
-      let t2Option = null; //端子2参数
-
       //绘制图元
       switch (this.optionType) {
         case "text":
@@ -411,7 +590,7 @@ export default {
               that.svgContent.undrag();
               this.drag();
             })
-            .click(function(e) {
+            .click(function() {
               Event.click(this);
             })
             .dblclick(function(e) {
@@ -424,7 +603,7 @@ export default {
             data: [x + 80, y + 40, x + 80, y + 100, x + 150, y + 100],
             attr: {
               stroke: "#000",
-              fill: "#fff",
+              fill: "rgba(0,0,0,0)",
               strokeWidth: 1,
               cursor: "pointer",
               optionType: "polyline"
@@ -437,7 +616,7 @@ export default {
               that.svgContent.undrag();
               this.drag();
             })
-            .click(function(e) {
+            .click(function() {
               Event.click(this);
             })
             .dblclick(function(e) {
@@ -453,62 +632,46 @@ export default {
             attr: {
               stroke: "#b94842",
               strokeWidth: 1,
-              fill: "#fff",
+              fill: "rgba(0,0,0,0)",
               cursor: "pointer",
               id: ""
             }
           };
-          t1Option = {
-            svgObj: this.svgContent,
-            cx: 50,
-            cy: 50,
-            r: 8,
-            attr: {
-              stroke: "rgb(0,200,255)",
-              strokeWidth: 1,
-              fill: "rgba(0,0,0,0)",
-              cursor: "pointer",
-              id: "t1"
-            }
-          };
-          t2Option = {
-            svgObj: this.svgContent,
-            cx: 50,
-            cy: 120,
-            r: 8,
-            attr: {
-              stroke: "rgb(0,200,255)",
-              strokeWidth: 1,
-              fill: "rgba(0,0,0,0)",
-              cursor: "pointer"
-            },
-            id: "t2"
-          };
-          t1 = new common.Circle(t1Option).create();
-          t2 = new common.Circle(t2Option).create();
-          let c = this.svgContent.paper
-            .g(that.symbolList.Breaker.use(), t1, t2)
-            .attr({
-              id: "156516",
-              width: 20,
-              height: 100
+          new common.Circle(option)
+            .create()
+            .mousedown(function(e) {
+              e.stopPropagation();
+              that.svgContent.undrag();
+              this.drag();
             })
-            .drag();
-          c.mousedown(function(e) {
-            e.stopPropagation();
-            that.svgContent.undrag();
-            this.drag();
-          })
-            .click(function(e) {
+            .click(function() {
               that.curOptPel = this;
               console.log(this);
               Event.click(this);
             })
+            .hover(
+              function() {
+                // 移入
+                this.attr(
+                  {
+                    fill: "#00f" // 蓝色
+                  },
+                  1000
+                );
+              },
+              function() {
+                // 移出
+                this.animate(
+                  {
+                    fill: "#f00" // 红色
+                  },
+                  1000
+                );
+              }
+            )
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
             });
-
-          console.log(that.svgContent);
           break;
         case "ellipse":
           option = {
@@ -520,7 +683,7 @@ export default {
             attr: {
               stroke: "#000",
               strokeWidth: 1,
-              fill: "#fff",
+              fill: "rgba(0,0,0,0)",
               cursor: "pointer",
               optionType: "ellipse"
               // transform:new Snap.Matrix(2,0,0,1,50,50)
@@ -533,7 +696,7 @@ export default {
               that.svgContent.undrag();
               this.drag();
             })
-            .click(function(e) {
+            .click(function() {
               Event.click(this);
             })
             .dblclick(function(e) {
@@ -552,7 +715,7 @@ export default {
             attr: {
               stroke: "#000",
               strokeWidth: 1,
-              fill: "#fff",
+              fill: "rgba(0,0,0,0)",
               cursor: "pointer",
               optionType: "rect"
             }
@@ -564,7 +727,7 @@ export default {
               that.svgContent.undrag();
               this.drag();
             })
-            .click(function(e) {
+            .click(function() {
               Event.click(this);
             })
             .dblclick(function(e) {
@@ -588,7 +751,7 @@ export default {
                 83}Z`,
               attr: {
                 stroke: "#bd524c",
-                fill: "#fff",
+                fill: "rgba(0,0,0,0)",
                 strokeWidth: 2
               }
             },
@@ -610,7 +773,7 @@ export default {
               that.svgContent.undrag();
               this.drag();
             })
-            .click(function(e) {
+            .click(function() {
               this.attr({
                 id: "abc"
               });
@@ -644,8 +807,6 @@ export default {
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
             });
-
-          console.log(that.svgContent);
           break;
         case "BYQ_SRZ_110_10":
           this.svgContent.paper
@@ -669,7 +830,147 @@ export default {
               that.openAttrOptionPanl(e);
             });
 
-          console.log(that.svgContent);
+          break;
+        case "BYQ_SRZ_35_10":
+          this.svgContent.paper
+            .g(that.symbolList.BYQ_SRZ_35_10.use())
+            .attr({
+              id: "156516",
+              width: 20,
+              height: 100
+            })
+            .mousedown(function(e) {
+              e.stopPropagation();
+              that.svgContent.undrag();
+              this.drag();
+            })
+            .click(function(e) {
+              that.curOptPel = this;
+              console.log(this);
+              Event.click(this);
+            })
+            .dblclick(function(e) {
+              that.openAttrOptionPanl(e);
+            });
+          break;
+        case "BYQ_SRZ_10_380":
+          this.svgContent.paper
+            .g(that.symbolList.BYQ_SRZ_10_380.use())
+            .attr({
+              id: "156516",
+              width: 20,
+              height: 100
+            })
+            .mousedown(function(e) {
+              e.stopPropagation();
+              that.svgContent.undrag();
+              this.drag();
+            })
+            .click(function(e) {
+              that.curOptPel = this;
+              console.log(this);
+              Event.click(this);
+            })
+            .dblclick(function(e) {
+              that.openAttrOptionPanl(e);
+            });
+
+          break;
+
+        case "KG_DLQ_H":
+          this.svgContent.paper
+            .g(that.symbolList.KG_DLQ_H.use())
+            .attr({
+              id: "156516",
+              width: 20,
+              height: 100
+            })
+            .mousedown(function(e) {
+              e.stopPropagation();
+              that.svgContent.undrag();
+              this.drag();
+            })
+            .click(function(e) {
+              that.curOptPel = this;
+              console.log(this);
+              Event.click(this);
+            })
+            .dblclick(function(e) {
+              that.openAttrOptionPanl(e);
+            });
+
+          break;
+
+        case "KG_DLQ_F":
+          this.svgContent.paper
+            .g(that.symbolList.KG_DLQ_F.use())
+            .attr({
+              id: "156516",
+              width: 20,
+              height: 100
+            })
+            .mousedown(function(e) {
+              e.stopPropagation();
+              that.svgContent.undrag();
+              this.drag();
+            })
+            .click(function(e) {
+              that.curOptPel = this;
+              console.log(this);
+              Event.click(this);
+            })
+            .dblclick(function(e) {
+              that.openAttrOptionPanl(e);
+            });
+
+          break;
+        case "KG_FHKG_H":
+          this.svgContent.paper
+            .g(that.symbolList.KG_FHKG_H.use())
+            .attr({
+              id: "156516",
+              width: 20,
+              height: 100
+            })
+            .mousedown(function(e) {
+              e.stopPropagation();
+              that.svgContent.undrag();
+              this.drag();
+            })
+            .click(function(e) {
+              that.curOptPel = this;
+              console.log(this);
+              Event.click(this);
+            })
+            .dblclick(function(e) {
+              that.openAttrOptionPanl(e);
+            });
+
+          break;
+        case "KG_FHKG_F":
+          this.svgContent.paper
+            .g(that.symbolList.KG_FHKG_F.use())
+            .attr({
+              id: "15651615" + Math.random() * 0.1,
+              width: 20,
+              height: 100
+            })
+            .mousedown(function(e) {
+              e.stopPropagation();
+              that.svgContent.undrag();
+              this.drag();
+            })
+            .click(function() {
+              var innerSnap = Snap(document.querySelector("#KG_FHKG_F"));
+              innerSnap.select("circle").attr({
+                fill: "red"
+              });
+              Event.click(this);
+            })
+            .dblclick(function(e) {
+              that.openAttrOptionPanl(e);
+            });
+
           break;
         default:
           break;
@@ -687,14 +988,9 @@ export default {
         that.svgContent.clear(); //导出事清空svg
         that.svgContent.append(g);
       });
-      // setTimeout(function() {
-      // console.log(document.querySelector("#svg"));
-      // let layer = document.querySelector("#PD_30200003_450982");
-      // console.log(layer);
-      // }, 3000);
     },
     //获取导入svg图片本地路径
-    preview(event) {
+    preview() {
       this.snapLoad(
         this.getObjectURL(document.getElementById("svgImport").files[0])
       );
@@ -757,14 +1053,12 @@ export default {
       });
     },
     rotateDeg() {
-      console.log(this.curOptPel.transform());
       let m = new Snap.Matrix();
       m.rotate(-90, 100, 100);
       this.curOptPel.transform(m);
       this.optionPanlBool = !this.optionPanlBool;
     },
     scaleNum(num) {
-      console.log(this.curOptPel.transform());
       let m = new Snap.Matrix();
       m.scale(num, num, 100, 100);
       this.curOptPel.transform(m);

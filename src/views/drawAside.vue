@@ -199,29 +199,44 @@ export default {
           {
             id: "BYQ_ZS",
             name: "柱上变压器（公用变）",
-            img: require("../suorce/iconpoint/BYQ_ZS.png")
+            img: require("../assets/img/byq/BYQ_ZS.png")
           },
           {
             id: "BYQ_SRZ_110_10",
             name: "110kV-10kV双绕组变压器",
-            img: require("../suorce/iconpoint/BYQ_ZS.png")
+            img: require("../assets/img/byq/BYQ_SRZ_110_10.png")
           },
           {
             id: "BYQ_SRZ_35_10",
             name: "35kV-10kV双绕组变压器",
-            img: require("../suorce/iconpoint/BYQ_ZS.png")
+            img: require("../assets/img/byq/BYQ_SRZ_35_10.png")
           },
           {
             id: "BYQ_SRZ_10_380",
             name: "10kV-380V双绕组变压器",
-            img: require("../suorce/iconpoint/BYQ_ZS.png")
+            img: require("../assets/img/byq/BYQ_SRZ_10_380.png")
           }
         ],
         kgList: [
           {
-            id: "sckg-flsb",
-            name: "手车开关（分/冷备）",
-            img: require("../suorce/iconpoint/byq1.png")
+            id: "KG_DLQ_H",
+            name: "断路器（合）",
+            img: require("../assets/img/kg/KG_DLQ_H.png")
+          },
+          {
+            id: "KG_DLQ_F",
+            name: "断路器（分）",
+            img: require("../assets/img/kg/KG_DLQ_F.png")
+          },
+          {
+            id: "KG_FHKG_H",
+            name: "断路器（合）",
+            img: require("../assets/img/kg/KG_FHKG_H.png")
+          },
+          {
+            id: "KG_FHKG_F",
+            name: "断路器（分）",
+            img: require("../assets/img/kg/KG_FHKG_F.png")
           }
         ]
       }

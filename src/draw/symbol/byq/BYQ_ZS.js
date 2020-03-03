@@ -7,34 +7,35 @@ class BYQ_ZS {
   constructor(option) {
     this.svgObj = option.svgObj || null;
     this.id = option.id || "BYQ_ZS";
-    this.attr = option.attr || {
+    this.symbolId = option.symbolId || "";
+    this.attr = {
       //左边默认样式参数
-      lStroke: "#0dceff",
-      lStrokeWidth: 2,
-      lFill: "#d7b09e",
+      lStroke: option.attr.lStroke || "#0dceff",
+      lStrokeWidth: option.attr.lStrokeWidth || 2,
+      lFill: option.attr.lFill || "#d7b09e",
       //右边默认样式参数
-      rStroke: "#c05b56",
-      rStrokeWidth: 2,
-      rFill: "rgba(0,0,0,0)"
+      rStroke: option.attr.rStroke || "#c05b56",
+      rStrokeWidth: option.attr.rStrokeWidth || 2,
+      rFill: option.attr.rFill || "rgba(0,0,0,0)"
     };
-    this.data = option.data || {
+    this.data = {
       //左边绘制默认数据
-      lcx: 40,
-      lcy: 20,
-      lcr: 15,
-      ll: "M5 20L25 20",
+      lcx: option.data.lcx || 40,
+      lcy: option.data.lcy || 20,
+      lcr: option.data.lcr || 15,
+      ll: option.data.ll || "M5 20L25 20",
       //右边绘制默认数据
-      rcx: 60,
-      rcy: 20,
-      rcr: 15,
-      rl: "M75 20L95 20"
+      rcx: option.data.rcx || 60,
+      rcy: option.data.rcy || 20,
+      rcr: option.data.rcr || 15,
+      rl: option.data.rl || "M75 20L95 20"
     };
   }
   create() {
     //symbol绘制外框
     let byq_zs = this.svgObj.paper.el("symbol", {
       id: this.id,
-      symbolId: "2030020"
+      symbolId: this.symbolId
     });
     //左圆
     let lc = this.svgObj.paper
