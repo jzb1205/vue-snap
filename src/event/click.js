@@ -7,13 +7,10 @@ let a = [];
  * @returns
  */
 const click = function(svgContent, obj) {
-  console.log(svgContent);
-  console.log(obj.getBBox());
   if (a.length > 2) {
     a.shift();
     a.shift();
   }
-  console.log(obj.getBBox());
   a.push(obj.getBBox().cx);
   a.push(obj.getBBox().cy);
   if (a.length === 4 && a[0] !== a[2] && a[1] !== a[3]) {
@@ -44,7 +41,9 @@ const click = function(svgContent, obj) {
         optionType: "polyline"
       }
     };
-    new common.Polyline(option).create().click(function() {
+    new common.Polyline(option).create().click(function(e) {
+      e.preventDefault();
+
       this.drag();
       svgContent.undrag();
     });

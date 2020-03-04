@@ -1,6 +1,6 @@
 <template>
   <div class="drawMainWrap">
-    <div>
+    <div class="importAndExport">
       <input
         type="file"
         id="svgImport"
@@ -9,13 +9,6 @@
         @change="preview($event)"
       />
       <el-button @click="downLoad">导出</el-button>
-      <!-- 背景色 -->
-      <el-color-picker
-        v-model="backgroundColor"
-        show-alpha
-        :predefine="predefineColors"
-      >
-      </el-color-picker>
     </div>
     <div id="workarea">
       <!-- 放一些属性操作div -->
@@ -31,10 +24,10 @@
             <li class="optionPanlItem" @click="rotateDeg">
               旋转90度
             </li>
-            <li class="optionPanlItem" @click="scaleNum(2)">
+            <li class="optionPanlItem" @click="scale(2)">
               放大
             </li>
-            <li class="optionPanlItem" @click="scaleNum(0.5)">
+            <li class="optionPanlItem" @click="scale(0.5)">
               缩小
             </li>
           </ul>
@@ -84,7 +77,6 @@ export default {
           tyle: "color"
         }
       ],
-      backgroundColor: "rgba(32, 48, 94, 0.1)",
       predefineColors: [
         //默认预选颜色
         "#ff4500",
@@ -122,7 +114,13 @@ export default {
         KG_FHKG_F: null //负荷开关（分）
       },
       curOptPel: null,
-      lineOrid: []
+      lineOrid: [],
+      rotateNum: 0, //旋转角度
+      curPoint: {
+        x: 0,
+        y: 0
+      },
+      scaleNum: 1
     };
   },
   created() {
@@ -132,11 +130,25 @@ export default {
     });
   },
   computed: {
+    //当前图元操作类型
     optionType() {
       return this.$store.state.pencelType || "";
     },
+    //svg背景色
     bgColor() {
       return this.$store.state.bgColor;
+    },
+    //画笔颜色
+    strokeColor() {
+      return this.$store.state.lineColor;
+    },
+    //画笔粗细
+    strokeWidth() {
+      return this.$store.state.lineWidth;
+    },
+    //填充颜色
+    fillColor() {
+      return this.$store.state.fillColor;
     }
   },
   methods: {
@@ -445,10 +457,12 @@ export default {
     //创建图形
     create() {
       let that = this;
+      let svgroot = document.querySelector("#svgroot");
       let e = event || window.event;
       let x = e.pageX - 320;
       let y = e.pageY - 140;
       let option = null;
+      let pel = null;
       //绘制图元
       switch (this.optionType) {
         case "text":
@@ -464,8 +478,16 @@ export default {
               optionType: "text"
             }
           };
-          new common.Text(option)
-            .create()
+          pel = new common.Text(option).create();
+          pel.mouseover(function() {
+            document.oncontextmenu = function(e) {
+              e.preventDefault();
+              console.log(pel);
+              that.curOptPel = pel;
+              that.optionPanlBool = true;
+            };
+          });
+          pel
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -495,8 +517,16 @@ export default {
               optionType: "commonline"
             }
           };
-          new common.Line(option)
-            .create()
+          pel = new common.Line(option).create();
+          pel.mouseover(function() {
+            document.oncontextmenu = function(e) {
+              e.preventDefault();
+              console.log(pel);
+              that.curOptPel = pel;
+              that.optionPanlBool = true;
+            };
+          });
+          pel
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -526,8 +556,16 @@ export default {
               optionType: "dashLine1"
             }
           };
-          new common.Line(option)
-            .create()
+          pel = new common.Line(option).create();
+          pel.mouseover(function() {
+            document.oncontextmenu = function(e) {
+              e.preventDefault();
+              console.log(pel);
+              that.curOptPel = pel;
+              that.optionPanlBool = true;
+            };
+          });
+          pel
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -557,8 +595,16 @@ export default {
               optionType: "dashLine2"
             }
           };
-          new common.Line(option)
-            .create()
+          pel = new common.Line(option).create();
+          pel.mouseover(function() {
+            document.oncontextmenu = function(e) {
+              e.preventDefault();
+              console.log(pel);
+              that.curOptPel = pel;
+              that.optionPanlBool = true;
+            };
+          });
+          pel
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -588,8 +634,16 @@ export default {
               optionType: "dashLine3"
             }
           };
-          new common.Line(option)
-            .create()
+          pel = new common.Line(option).create();
+          pel.mouseover(function() {
+            document.oncontextmenu = function(e) {
+              e.preventDefault();
+              console.log(pel);
+              that.curOptPel = pel;
+              that.optionPanlBool = true;
+            };
+          });
+          pel
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -615,8 +669,16 @@ export default {
               optionType: "polyline"
             }
           };
-          new common.Polyline(option)
-            .create()
+          pel = new common.Polyline(option).create();
+          pel.mouseover(function() {
+            document.oncontextmenu = function(e) {
+              e.preventDefault();
+              console.log(pel);
+              that.curOptPel = pel;
+              that.optionPanlBool = true;
+            };
+          });
+          pel
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -644,8 +706,16 @@ export default {
               id: ""
             }
           };
-          new common.Circle(option)
-            .create()
+          pel = new common.Circle(option).create();
+          pel.mouseover(function() {
+            document.oncontextmenu = function(e) {
+              e.preventDefault();
+              console.log(pel);
+              that.curOptPel = pel;
+              that.optionPanlBool = true;
+            };
+          });
+          pel
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -695,8 +765,16 @@ export default {
               // transform:new Snap.Matrix(2,0,0,1,50,50)
             }
           };
-          new common.Ellipse(option)
-            .create()
+          pel = new common.Ellipse(option).create();
+          pel.mouseover(function() {
+            document.oncontextmenu = function(e) {
+              e.preventDefault();
+              console.log(pel);
+              that.curOptPel = pel;
+              that.optionPanlBool = true;
+            };
+          });
+          pel
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -727,8 +805,16 @@ export default {
               optionType: "rect"
             }
           };
-          new common.Rect(option)
-            .create()
+          pel = new common.Rect(option).create();
+          pel.mouseover(function() {
+            document.oncontextmenu = function(e) {
+              e.preventDefault();
+              console.log(pel);
+              that.curOptPel = pel;
+              that.optionPanlBool = true;
+            };
+          });
+          pel
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -741,68 +827,39 @@ export default {
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
             });
-          break;
-        case "byq":
-          option = {
-            svgObj: this.svgContent,
-            polyLineOption: {
-              data: [x + 80, y + 80, x + 110, y + 60, x + 140, y + 80],
-              attr: {
-                stroke: "#bd524c",
-                fill: "none",
-                strokeWidth: 3
-              }
-            },
-            pathOption: {
-              data: `M${x + 83} ${y + 84}L${x + 110} ${y + 67}L${x + 137} ${y +
-                84}L${x + 137} ${y + 117}L${x + 84} ${y + 117}L${x + 83} ${y +
-                83}Z`,
-              attr: {
-                stroke: "#bd524c",
-                fill: "rgba(0,0,0,0)",
-                strokeWidth: 2
-              }
-            },
-            lightningOption: {
-              data: `M${x + 97} ${y + 93}L${x + 123} ${y + 81}L${x + 110} ${y +
-                93}L${x + 124} ${y + 93}L${x + 97} ${y + 110}L${x + 113} ${y +
-                93}Z`,
-              attr: {
-                stroke: "#bd524c",
-                fill: "#bd524c",
-                strokeWidth: 2
-              }
-            }
-          };
-          new pel.BYQ(option)
-            .create()
-            .mousedown(function(e) {
-              e.stopPropagation();
-              that.svgContent.undrag();
-              this.drag();
-            })
-            .click(function() {
-              that.curOptPel = this;
-              Event.click(that.svgContent, this);
-            })
-            .dblclick(function(e) {
-              that.openAttrOptionPanl(e);
-            });
-          break;
-        case "kg":
           break;
         case "BYQ_ZS":
-          this.svgContent.paper
-            .g(that.symbolList.BYQ_ZS.use())
-            .attr({
-              id: "156516",
-              width: 20,
-              height: 100
-            })
+          pel = this.svgContent.paper.g(that.symbolList.BYQ_ZS.use()).attr({
+            id: "156516",
+            width: 20,
+            height: 100
+          });
+          pel.mouseover(function() {
+            document.oncontextmenu = function(e) {
+              e.preventDefault();
+              that.curOptPel = pel;
+              that.openAttrOptionPanl(e);
+              that.curPoint.x = pel.getBBox().cx;
+              that.curPoint.y = pel.getBBox().cy;
+              that.optionPanlBool = true;
+            };
+          });
+          pel
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
-              this.drag();
+              this
+                .drag
+                // function() {
+                //   console.log("onmove", this);
+                // },
+                // function() {
+                //   console.log("OnStart", this);
+                // },
+                // function() {
+                //   console.log("onend", this.getBBox());
+                // }
+                ();
             })
             .click(function(e) {
               that.curOptPel = this;
@@ -813,13 +870,22 @@ export default {
             });
           break;
         case "BYQ_SRZ_110_10":
-          this.svgContent.paper
+          pel = this.svgContent.paper
             .g(that.symbolList.BYQ_SRZ_110_10.use())
             .attr({
               id: "156516",
               width: 20,
               height: 100
-            })
+            });
+          pel.mouseover(function() {
+            document.oncontextmenu = function(e) {
+              e.preventDefault();
+              console.log(pel);
+              that.curOptPel = pel;
+              that.optionPanlBool = true;
+            };
+          });
+          pel
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -835,13 +901,22 @@ export default {
 
           break;
         case "BYQ_SRZ_35_10":
-          this.svgContent.paper
+          pel = this.svgContent.paper
             .g(that.symbolList.BYQ_SRZ_35_10.use())
             .attr({
               id: "156516",
               width: 20,
               height: 100
-            })
+            });
+          pel.mouseover(function() {
+            document.oncontextmenu = function(e) {
+              e.preventDefault();
+              console.log(pel);
+              that.curOptPel = pel;
+              that.optionPanlBool = true;
+            };
+          });
+          pel
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -856,13 +931,21 @@ export default {
             });
           break;
         case "BYQ_SRZ_10_380":
-          this.svgContent.paper
+          pel = this.svgContent.paper
             .g(that.symbolList.BYQ_SRZ_10_380.use())
             .attr({
               id: "156516",
               width: 20,
               height: 100
-            })
+            });
+          pel.mouseover(function() {
+            document.oncontextmenu = function(e) {
+              e.preventDefault();
+              that.curOptPel = pel;
+              that.optionPanlBool = true;
+            };
+          });
+          pel
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -879,13 +962,20 @@ export default {
           break;
 
         case "KG_DLQ_H":
-          this.svgContent.paper
-            .g(that.symbolList.KG_DLQ_H.use())
-            .attr({
-              id: "156516",
-              width: 20,
-              height: 100
-            })
+          pel = this.svgContent.paper.g(that.symbolList.KG_DLQ_H.use()).attr({
+            id: "156516",
+            width: 20,
+            height: 100
+          });
+          pel.mouseover(function() {
+            document.oncontextmenu = function(e) {
+              e.preventDefault();
+              console.log(pel);
+              that.curOptPel = pel;
+              that.optionPanlBool = true;
+            };
+          });
+          pel
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -902,13 +992,20 @@ export default {
           break;
 
         case "KG_DLQ_F":
-          this.svgContent.paper
-            .g(that.symbolList.KG_DLQ_F.use())
-            .attr({
-              id: "156516",
-              width: 20,
-              height: 100
-            })
+          pel = this.svgContent.paper.g(that.symbolList.KG_DLQ_F.use()).attr({
+            id: "156516",
+            width: 20,
+            height: 100
+          });
+          pel.mouseover(function() {
+            document.oncontextmenu = function(e) {
+              e.preventDefault();
+              console.log(pel);
+              that.curOptPel = pel;
+              that.optionPanlBool = true;
+            };
+          });
+          pel
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -924,13 +1021,20 @@ export default {
 
           break;
         case "KG_FHKG_H":
-          this.svgContent.paper
-            .g(that.symbolList.KG_FHKG_H.use())
-            .attr({
-              id: "156516",
-              width: 20,
-              height: 100
-            })
+          pel = this.svgContent.paper.g(that.symbolList.KG_FHKG_H.use()).attr({
+            id: "156516",
+            width: 20,
+            height: 100
+          });
+          pel.mouseover(function() {
+            document.oncontextmenu = function(e) {
+              e.preventDefault();
+              console.log(pel);
+              that.curOptPel = pel;
+              that.optionPanlBool = true;
+            };
+          });
+          pel
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -946,13 +1050,20 @@ export default {
 
           break;
         case "KG_FHKG_F":
-          this.svgContent.paper
-            .g(that.symbolList.KG_FHKG_F.use())
-            .attr({
-              id: "15651615" + Math.random() * 0.1,
-              width: 20,
-              height: 100
-            })
+          pel = this.svgContent.paper.g(that.symbolList.KG_FHKG_F.use()).attr({
+            id: "15651615" + Math.random() * 0.1,
+            width: 20,
+            height: 100
+          });
+          pel.mouseover(function() {
+            document.oncontextmenu = function(e) {
+              e.preventDefault();
+              console.log(pel);
+              that.curOptPel = pel;
+              that.optionPanlBool = true;
+            };
+          });
+          pel
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -1008,14 +1119,14 @@ export default {
     //svg缩放
     svgScaleOption(e) {
       let m = new Snap.Matrix();
-      // e.preventDefault();
-      // e.stopImmediatePropagation();
       if (e.wheelDelta === -120 || e.detail === 3) {
+        e.preventDefault();
         this.svgMag -= 0.5;
         if (this.svgMag < this.svgMagMin) {
           this.svgMag = this.svgMagMin;
         }
       } else if (e.wheelDelta === 120 || e.detail === -3) {
+        e.preventDefault();
         this.svgMag += 0.5;
         if (this.svgMag > this.svgMagMax) {
           this.svgMag = this.svgMagMax;
@@ -1049,22 +1160,29 @@ export default {
     },
     rotateDeg() {
       let m = new Snap.Matrix();
-      m.rotate(-90, 100, 100);
+      this.rotateNum -= 90;
+      m.rotate(this.rotateNum, this.curPoint.x, this.curPoint.y);
       this.curOptPel.transform(m);
       this.optionPanlBool = !this.optionPanlBool;
     },
-    scaleNum(num) {
+    scale(num) {
       let m = new Snap.Matrix();
-      m.scale(num, num, 100, 100);
+      if (num === 2) {
+        this.scaleNum += 0.5;
+      } else {
+        this.scaleNum -= 0.5;
+      }
+      console.log(this.scaleNum);
+      m.scale(this.scaleNum, this.scaleNum, this.curPoint.x, this.curPoint.y);
       this.curOptPel.transform(m);
       this.optionPanlBool = !this.optionPanlBool;
     }
   },
   watch: {
-    backgroundColor() {
-      this.$store.commit("changebgColor", this.backgroundColor);
+    bgColor() {
+      console.log(123);
       this.bgRect.attr({
-        fill: this.backgroundColor
+        fill: this.bgColor
       });
     }
   }
@@ -1073,12 +1191,24 @@ export default {
 <style lang="less" scoped>
 .drawMainWrap {
   position: absolute;
-  width: calc(100% - 40px);
-  height: calc(100% - 65px);
+  width: 100%;
+  height: calc(100% - 40px);
+}
+.importAndExport {
+  height: 40px;
+  line-height: 40px;
+  background: #1d272e;
+}
+#svgImport {
+  margin: 0 20px;
+}
+input[type="file"] {
+  color: #fff;
 }
 #workarea {
   width: 100%;
   height: 100%;
+  background: #000;
   position: absolute;
   overflow: auto;
 }

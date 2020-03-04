@@ -4,12 +4,12 @@
       <el-collapse-item title="通用" name="1">
         <div v-for="it in dataList.common" :key="it.id" class="commonItem">
           <div v-if="it.id === 'text'" @click="getPicInfo(it)" class="text">
-            Text
+            T
           </div>
           <svg
-            width="35"
+            width="60"
             v-else
-            height="35"
+            height="60"
             version="1.1"
             @click="getPicInfo(it)"
             xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,9 @@
               :y1="it.y1"
               :x2="it.x2"
               :y2="it.y2"
-              :style="it.style"
+              :stroke="it.style.stroke"
+              :strokeWidth="it.style.strokeWidth"
+              :fill="it.style.fill"
             />
             <line
               v-if="it.id === 'dashLine1'"
@@ -123,76 +125,98 @@ export default {
           },
           {
             id: "commonline",
-            x1: 0,
-            y1: 35,
-            x2: 35,
-            y2: 0,
-            style: "stroke:rgb(99,99,99);stroke-width:1"
+            x1: 5,
+            y1: 55,
+            x2: 55,
+            y2: 5,
+            style: {
+              stroke: "#fff",
+              strokeWidth: 1,
+              fill: "#1f272f"
+            }
           },
           {
             id: "dashLine1",
-            x1: 0,
-            y1: 35,
-            x2: 35,
-            y2: 0,
-            style: "stroke:rgb(99,99,99);stroke-width:1",
+            x1: 5,
+            y1: 55,
+            x2: 55,
+            y2: 5,
+            style: {
+              stroke: "#fff",
+              strokeWidth: 1,
+              fill: "#1f272f"
+            },
             dasharray: "5,5"
           },
           {
             id: "dashLine2",
-            x1: 0,
-            y1: 35,
-            x2: 35,
-            y2: 0,
-            style: "stroke:rgb(99,99,99);stroke-width:1",
+            x1: 5,
+            y1: 55,
+            x2: 55,
+            y2: 5,
+            style: {
+              stroke: "#fff",
+              strokeWidth: 1,
+              fill: "#1f272f"
+            },
             dasharray: "10,10"
           },
           {
             id: "dashLine3",
-            x1: 0,
-            y1: 35,
-            x2: 35,
-            y2: 0,
-            style: "stroke:rgb(99,99,99);stroke-width:1",
+            x1: 5,
+            y1: 55,
+            x2: 55,
+            y2: 5,
+            style: {
+              stroke: "#fff",
+              strokeWidth: 1,
+              fill: "#1f272f"
+            },
             dasharray: "8,4,1,1,1,4"
           },
           {
             id: "polyline",
-            points: "2,2 2,33 33,33",
-            style: "stroke:rgb(99,99,99);stroke-width:2;fill:white;"
+            points: "2,2 2,55 55,55",
+            style: {
+              stroke: "#fff",
+              strokeWidth: 1,
+              fill: "#1f272f"
+            }
           },
-          // {
-          //   id:'polygon',
-          //   points:'2,2 2,33 33,33',
-          //   style:'stroke:rgb(99,99,99);stroke-width:2;fill:white;',
-          // },
-          // {
-          //   id:'path',
-          //   points:'2,2 2,33 33,26 33,0',
-          //   style:'stroke:rgb(99,99,99);stroke-width:2;fill:white;',
-          // },
           {
             id: "circle",
-            cx: 17,
-            cy: 17,
-            r: 16,
-            style: "stroke:rgb(99,99,99);stroke-width:2;fill:white;"
-          },
-          {
-            id: "ellipse",
-            cx: 17,
-            cy: 17,
-            rx: 16,
-            ry: 12,
-            style: "stroke:rgb(99,99,99);stroke-width:2;fill:white;"
+            cx: 27,
+            cy: 27,
+            r: 26,
+            style: {
+              stroke: "#fff",
+              strokeWidth: 1,
+              fill: "#1f272f"
+            }
           },
           {
             id: "rect",
             x: 2,
             y: 2,
-            width: 30,
-            height: 30,
-            style: "stroke:rgb(99,99,99);stroke-width:2;fill:white;"
+            width: 52,
+            height: 52,
+            style: {
+              stroke: "#fff",
+              strokeWidth: 1,
+              fill: "#1f272f"
+            }
+          },
+          {
+            id: "ellipse",
+            cx: 27,
+            cy: 27,
+            rx: 26,
+            ry: 18,
+            style: {
+              stroke: "#fff",
+              strokeWidth: 1,
+              fill: "#1f272f"
+            }
           }
         ],
         byqList: [
@@ -260,25 +284,26 @@ export default {
 </script>
 <style lang="less" scoped>
 /deep/.el-collapse-item__content {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
   position: relative;
 }
 .commonItem {
-  flex: 1;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
   cursor: pointer;
-  margin: 8px;
+  margin: 2px;
+  position: relative;
 }
 .pelStyle {
+  width: 53px;
+  height: 53px;
+  margin: 2px;
   display: inline-block;
-  // width: 50px;
-  // height: 50px;
   cursor: pointer;
   img {
-    width: 35px;
-    height: 35px;
-    margin: 7px 7px 8px 8px;
+    width: 53px;
+    height: 53px;
+    margin: 2px;
     z-index: 1;
   }
   .noticeText {
@@ -294,7 +319,14 @@ export default {
 }
 .text {
   cursor: pointer;
+  position: absolute;
+  width: 53px;
+  height: 53px;
+  color: #fff;
+  font-size: 24px;
   text-align: center;
-  line-height: 35px;
+  line-height: 60px;
+  border: 1px solid rgba(62, 74, 82);
+  background: #2a353d;
 }
 </style>

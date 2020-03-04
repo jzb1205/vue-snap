@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <el-container>
-      <el-aside width="200px">
+      <el-aside width="240px">
         <draw-aside></draw-aside>
       </el-aside>
       <el-container>
@@ -9,6 +9,7 @@
           <draw-main></draw-main>
         </el-main>
       </el-container>
+      <attrOpt></attrOpt>
     </el-container>
   </div>
 </template>
@@ -16,20 +17,21 @@
 <script>
 import drawAside from "./views/drawAside";
 import drawMain from "./views/drawMain";
+import attrOpt from "./views/attrOpt";
 export default {
   components: {
     drawAside,
-    drawMain
+    drawMain,
+    attrOpt
   },
   data() {
-    return {
-    };
+    return {};
   },
-  mounted(){
-    document.querySelector('.el-aside').style.height = document.body.clientHeight + 'px'
+  mounted() {
+    document.querySelector(".el-aside").style.height =
+      document.body.clientHeight + "px";
   },
-  methods: {
-  }
+  methods: {}
 };
 </script>
 <style lang="less">
@@ -39,7 +41,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
 }
-.el-main{
-  overflow:hidden;
+.el-main {
+  overflow: hidden;
 }
 </style>
