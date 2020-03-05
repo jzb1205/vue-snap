@@ -1,6 +1,6 @@
 <template>
   <div class="drawMainWrap">
-    <div class="importAndExport">
+    <div class="importAndExport" @click="optionPanlBool = false">
       <input
         type="file"
         id="svgImport"
@@ -18,7 +18,13 @@
         class="el-icon-d-arrow-left fr toggle"
       ></i>
     </div>
-    <div id="workarea">
+    <div
+      id="workarea"
+      v-loading="loading"
+      element-loading-text="拼命加载中"
+      element-loading-spinner="el-icon-loading"
+      element-loading-background="rgba(0, 0, 0)"
+    >
       <!-- 放一些属性操作div -->
       <transition name="el-fade-in">
         <div id="editor-container" v-show="optionPanlBool">
@@ -114,7 +120,9 @@ export default {
         x: 0,
         y: 0
       },
-      scaleNum: 1 //svg缩放倍数
+      scaleNum: 1, //svg缩放倍数
+      loading: false, //导入svg时样式
+      importBgObj: null //导入时 的背景对象
     };
   },
   created() {
@@ -433,7 +441,11 @@ export default {
           fill: this.bgColor
         }
       };
+      let g = this.svgContent.paper.g().attr({
+        id: "BackGround_Layer"
+      });
       this.bgRect = new common.Rect(option).create();
+      g.add(this.bgRect);
     },
     createSvgDom() {
       //清楚所有svg元素
@@ -453,6 +465,7 @@ export default {
     },
     //创建图形
     create() {
+      debugger;
       let that = this;
       let e = event || window.event;
       let x = e.pageX - 320;
@@ -772,10 +785,19 @@ export default {
             //   that.curPoint.y = e.pageY;
             //   console.log(that.curPoint.x, that.aheadPoint.x);
             //   console.log(that.curPoint.y, that.aheadPoint.y);
-            //   m.translate(that.curPoint.x, that.curPoint.y);
+            //   let x = 0;
+            //   let y = 0;
+            //   if (that.svgMag > 0) {
+            //     x = (that.curPoint.x - that.aheadPoint.x) * that.svgMag;
+            //     y = (that.curPoint.y - that.aheadPoint.y) * that.svgMag;
+            //   } else {
+            //     x = (that.curPoint.x - that.aheadPoint.x) / that.svgMag;
+            //     y = (that.curPoint.y - that.aheadPoint.y) / that.svgMag;
+            //   }
+            //   m.translate(x, y);
             //   this.transform(m);
-            // that.aheadPoint.x = that.curPoint.x;
-            // that.aheadPoint.y = that.curPoint.y;
+            //   that.aheadPoint.x = that.curPoint.x;
+            //   that.aheadPoint.y = that.curPoint.y;
             // })
             .mousedown(function(e) {
               e.stopPropagation();
@@ -1011,14 +1033,55 @@ export default {
     //导入svg图
     snapLoad(svgUrl) {
       let that = this;
+      this.loading = true;
+      this.bgRect = null; //清空非导入型背景对象
+      //导入时 先删除已有的 svg#svgContent
+      let svgroot = document.querySelector("#svgroot");
+      let svgContent = svgroot.querySelector("#svgContent");
+      if (svgContent) {
+        svgroot.removeChild(svgContent);
+      }
       Snap.load(
         svgUrl,
         function(g) {
+          let gL = g.selectAll("g");
+          that.svgContent.clear();
+          gL.items.map(it => {
+            if (it.node.id === "BackGround_Layer") {
+              that.importBgObj = it.select("rect");
+            }
+            return that.EventWrap(it);
+          });
+          // document.querySelector("#svgroot").removeChild("svg");
+          this.appendChild(g.node);
           that.svgContent.clear(); //导出事清空svg
-          that.svgContent.append(g);
         },
-        that.importClick()
+        document.querySelector("#svgroot")
       );
+      setTimeout(() => {
+        //导入完成时 给新的svg加上id=svgroot 并转化为svg对象
+        let svgroot = document.querySelector("#svgroot");
+        let importSvgContent = svgroot.querySelector("svg");
+        importSvgContent.id = "svgContent";
+
+        this.loading = false;
+        this.svgContent = Snap("#svgContent");
+        this.svgContent.mousemove(function() {
+          console.log(this);
+          this.drag();
+          this.attr({
+            cursor: "pointer",
+            fill: "red"
+          });
+        });
+        this.cancelBH();
+        let svgContent = document.querySelector("#svgContent");
+        if (document.attachEvent) {
+          svgContent.attachEvent("onmousewheel", this.svgScaleOption);
+        } else {
+          svgContent.addEventListener("mousewheel", this.svgScaleOption, false);
+        }
+      }, 10000);
     },
     //获取导入svg图片本地路径
     preview() {
@@ -1099,10 +1162,14 @@ export default {
         this.scaleNum -= 0.5;
       }
       console.log(this.scaleNum);
+      if (this.scaleNum <= 0) {
+        this.scaleNum = 0.5;
+      }
       m.scale(this.scaleNum, this.scaleNum, this.curPoint.x, this.curPoint.y);
       this.curOptPel.transform(m);
       this.optionPanlBool = !this.optionPanlBool;
     },
+    //右键菜单事件
     contextMenu(obj) {
       let that = this;
       document.oncontextmenu = function(e) {
@@ -1112,19 +1179,45 @@ export default {
         that.openAttrOptionPanl(e);
       };
     },
+    //属性面板打开和关闭
     changeAttrPalToggle() {
       this.$store.commit("changeAttrPalToggle", true);
     },
-    importClick() {
-      let PD_30500000_543224 = document.querySelector("#PD_30500000_543224");
-      console.log(PD_30500000_543224);
+    EventWrap(obj) {
+      let that = this;
+      obj
+        .mouseover(function() {
+          that.contextMenu(this);
+        })
+        .mousedown(function(e) {
+          e.stopPropagation();
+          if (this.node.id !== "BackGround_Layer") {
+            //背景不用拖动
+            that.svgContent.undrag();
+            this.drag();
+          }
+        })
+        .click(function(e) {
+          that.curOptPel = this;
+          Event.click(that.svgContent, this);
+        })
+        .dblclick(function(e) {
+          that.openAttrOptionPanl(e);
+        });
     }
   },
   watch: {
     bgColor() {
-      this.bgRect.attr({
-        fill: this.bgColor
-      });
+      if (this.bgRect) {
+        this.bgRect.attr({
+          fill: this.bgColor
+        });
+      }
+      if (this.importBgObj) {
+        this.importBgObj.attr({
+          fill: this.bgColor
+        });
+      }
     }
   }
 };

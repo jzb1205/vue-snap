@@ -273,7 +273,6 @@ export default {
     },
     //获取图元信息
     getPicInfo(it) {
-      console.log(it);
       this.$store.commit("changePencelType", it.id);
     },
     getId(it) {

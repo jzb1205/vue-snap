@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1272.6000001977" height="900" viewBox="0 0 1272.6000001977 900" coordinateExtent="119.99883653741 29.9969463000312 120.00668763559 30.0024987032688" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  xmlns:cge="http://iec.ch/TC57/2005/SVG-schema#" preserveAspectRatio="xMidYMid">
+<defs>
+<style type="text/css">
+<![CDATA[
+	symbol{overflow:visible}
+	.lkv1000 {fill:none;stroke:rgb(0,0,255)}
+	.kv1000 {fill:rgb(0,0,255);stroke:rgb(0,0,255);stroke-width:1}
+	.lkv750 {fill:none;stroke:rgb(250,128,10)}
+	.kv750 {fill:rgb(250,128,10);stroke:rgb(250,128,10);stroke-width:1}
+	.lkv500 {fill:none;stroke:rgb(255,0,0)}
+	.kv500 {fill:rgb(255,0,0);stroke:rgb(255,0,0);stroke-width:1}
+	.lkv330 {fill:none;stroke:rgb(30,144,255)}
+	.kv330 {fill:rgb(30,144,255);stroke:rgb(30,144,255);stroke-width:1}
+	.lkv220 {fill:none;stroke:rgb(128,0,128)}
+	.kv220 {fill:rgb(128,0,128);stroke:rgb(128,0,128);stroke-width:1}
+	.lkv110 {fill:none;stroke:rgb(240,65,85)}
+	.kv110 {fill:rgb(240,65,85);stroke:rgb(240,65,85);stroke-width:1}
+	.lkv66 {fill:none;stroke:rgb(255,204,0)}
+	.kv66 {fill:rgb(255,204,0);stroke:rgb(255,204,0);stroke-width:1}
+	.lkv35 {fill:none;stroke:rgb(255,255,0)}
+	.kv35 {fill:rgb(255,255,0);stroke:rgb(255,255,0);stroke-width:1}
+	.lkv20 {fill:none;stroke:rgb(226,172,6)}
+	.kv20 {fill:rgb(226,172,6);stroke:rgb(226,172,6);stroke-width:1}
+	.lkv15.75 {fill:none;stroke:rgb(0,128,0)}
+	.kv15.75 {fill:rgb(0,128,0);stroke:rgb(0,128,0);stroke-width:1}
+	.lkv13.8 {fill:none;stroke:rgb(0,210,0)}
+	.kv13.8 {fill:rgb(0,210,0);stroke:rgb(0,210,0);stroke-width:1}
+	.lkv10 {fill:none;stroke:rgb(185,72,66)}
+	.kv10 {fill:rgb(185,72,66);stroke:rgb(185,72,66);stroke-width:1}
+	.lkv6 {fill:none;stroke:rgb(0,0,139)}
+	.kv6 {fill:rgb(0,0,139);stroke:rgb(0,0,139);stroke-width:1}
+	.lkv3 {fill:none;stroke:rgb(0,100,0)}
+	.kv3 {fill:rgb(0,100,0);stroke:rgb(0,100,0);stroke-width:1}
+	.lv380 {fill:none;stroke:rgb(0,204,255)}
+	.v380 {fill:rgb(0,204,255);stroke:rgb(0,204,255);stroke-width:1}
+	.lv220 {fill:none;stroke:rgb(176,164,227)}
+	.v220 {fill:rgb(176,164,227);stroke:rgb(176,164,227);stroke-width:1}
+	.lv110 {fill:none;stroke:rgb(192,192,192)}
+	.v110 {fill:rgb(192,192,192);stroke:rgb(192,192,192);stroke-width:1}
+	.lvdc {fill:none;stroke:rgb(98,49,49)}
+	.vdc {fill:rgb(98,49,49);stroke:rgb(98,49,49);stroke-width:1}
+	]]>
+</style>
+<!-- 定义端子terminal -->
+<symbol id="terminal" >
+    <circle style="fill:none" stroke="rgb(0,200,255)" stroke-width="0.02" cx="0" cy="0" r="0.08"/>
+</symbol>
+<!-- 定义图元4100013:手车开关（分/冷备）--> 
+<symbol id="Breaker_30500000_4100013@2" viewBox="0 0 0.95 0.20">
+    <line stroke="4343993" stroke-width="0.020000" x1="-0.400000" y1="0.000000" x2="-0.230000" y2="0.000000" transform="translate(0.95, 0.20) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="0.230000" y1="0.000000" x2="0.420000" y2="0.000000" transform="translate(0.95, 0.20) " />
+    <rect style="fill:none" stroke="4343993" stroke-width="0.020000" x="-0.100000" y="-0.220000" width="0.200000" height="0.440000" transform="translate(0.95, 0.20) rotate(90.00)" />
+    <line stroke="4343993" stroke-width="0.020000" x1="-0.340000" y1="0.000000" x2="-0.400000" y2="0.090000" transform="translate(0.95, 0.20) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="-0.340000" y1="0.000000" x2="-0.390000" y2="-0.080000" transform="translate(0.95, 0.20) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="-0.410000" y1="0.000000" x2="-0.470000" y2="0.090000" transform="translate(0.95, 0.20) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="-0.410000" y1="0.000000" x2="-0.470000" y2="-0.080000" transform="translate(0.95, 0.20) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="0.420000" y1="0.000000" x2="0.480000" y2="-0.090000" transform="translate(0.95, 0.20) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="0.420000" y1="0.000000" x2="0.480000" y2="0.090000" transform="translate(0.95, 0.20) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="0.340000" y1="0.000000" x2="0.400000" y2="-0.090000" transform="translate(0.95, 0.20) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="0.340000" y1="0.000000" x2="0.400000" y2="0.090000" transform="translate(0.95, 0.20) " />
+    <!-- 定义端子位置 -->
+    <use x="0.4275" y="0" terminal-index="1" type="0" transform="translate(0.95,0.20)" xlink:href="#terminal"/>
+    <use x="-0.4275" y="0" terminal-index="2" type="0" transform="translate(0.95,0.20)" xlink:href="#terminal"/>
+</symbol>
+<!-- 定义图元4110010:手车刀闸（合）--> 
+<symbol id="Disconnector_30600000_4110010@1" viewBox="0 0 0.97 0.18">
+    <line stroke="4343993" stroke-width="0.020000" x1="-0.480000" y1="0.000000" x2="0.460000" y2="0.000000" transform="translate(0.97, 0.18) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="0.480000" y1="0.000000" x2="0.420000" y2="0.090000" transform="translate(0.97, 0.18) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="0.480000" y1="0.000000" x2="0.430000" y2="-0.080000" transform="translate(0.97, 0.18) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="0.410000" y1="0.000000" x2="0.350000" y2="0.090000" transform="translate(0.97, 0.18) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="0.410000" y1="0.000000" x2="0.350000" y2="-0.080000" transform="translate(0.97, 0.18) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="-0.410000" y1="0.000000" x2="-0.350000" y2="-0.090000" transform="translate(0.97, 0.18) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="-0.410000" y1="0.000000" x2="-0.350000" y2="0.090000" transform="translate(0.97, 0.18) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="-0.490000" y1="0.000000" x2="-0.430000" y2="-0.090000" transform="translate(0.97, 0.18) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="-0.490000" y1="0.000000" x2="-0.430000" y2="0.090000" transform="translate(0.97, 0.18) " />
+    <!-- 定义端子位置 -->
+    <use x="0.4365" y="0" terminal-index="1" type="0" transform="translate(0.97,0.18)" xlink:href="#terminal"/>
+    <use x="-0.4365" y="0" terminal-index="2" type="0" transform="translate(0.97,0.18)" xlink:href="#terminal"/>
+</symbol>
+<!-- 定义图元4110011:手车刀闸（分）--> 
+<symbol id="Disconnector_30600000_4110011@0" viewBox="0 0 0.96 0.18">
+    <line stroke="4343993" stroke-width="0.020000" x1="-0.420000" y1="0.000000" x2="0.420000" y2="0.000000" transform="translate(0.96, 0.18) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="-0.350000" y1="0.000000" x2="-0.410000" y2="0.090000" transform="translate(0.96, 0.18) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="-0.350000" y1="0.000000" x2="-0.400000" y2="-0.080000" transform="translate(0.96, 0.18) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="-0.420000" y1="0.000000" x2="-0.480000" y2="0.090000" transform="translate(0.96, 0.18) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="-0.420000" y1="0.000000" x2="-0.480000" y2="-0.080000" transform="translate(0.96, 0.18) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="0.420000" y1="0.000000" x2="0.480000" y2="-0.090000" transform="translate(0.96, 0.18) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="0.420000" y1="0.000000" x2="0.480000" y2="0.090000" transform="translate(0.96, 0.18) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="0.340000" y1="0.000000" x2="0.400000" y2="-0.090000" transform="translate(0.96, 0.18) " />
+    <line stroke="4343993" stroke-width="0.020000" x1="0.340000" y1="0.000000" x2="0.400000" y2="0.090000" transform="translate(0.96, 0.18) " />
+    <!-- 定义端子位置 -->
+    <use x="0.432" y="0" terminal-index="1" type="0" transform="translate(0.96,0.18)" xlink:href="#terminal"/>
+    <use x="-0.432" y="0" terminal-index="2" type="0" transform="translate(0.96,0.18)" xlink:href="#terminal"/>
+</symbol>
+<!-- 定义图元4050010:隔离开关（合）--> 
+<symbol id="Disconnector_30600000_4050010@1" viewBox="0 0 0.98 0.20">
+    <line stroke="4343993" stroke-linecap="round" stroke-width="0.020000" x1="0.490000" y1="0.000000" x2="0.240000" y2="0.000000" transform="translate(0.98, 0.20) " />
+    <line stroke="4343993" stroke-linecap="round" stroke-width="0.020000" x1="-0.240000" y1="0.000000" x2="-0.490000" y2="0.000000" transform="translate(0.98, 0.20) " />
+    <line stroke="4343993" stroke-linecap="round" stroke-width="0.020000" x1="0.240000" y1="-0.100000" x2="0.240000" y2="0.100000" transform="translate(0.98, 0.20) " />
+    <line stroke="4343993" stroke-linecap="round" stroke-width="0.020000" x1="-0.240000" y1="0.000000" x2="0.230000" y2="-0.100000" transform="translate(0.98, 0.20) " />
+    <!-- 定义端子位置 -->
+    <use x="0.441" y="0" terminal-index="1" type="0" transform="translate(0.98,0.20)" xlink:href="#terminal"/>
+    <use x="-0.441" y="0" terminal-index="2" type="0" transform="translate(0.98,0.20)" xlink:href="#terminal"/>
+</symbol>
+</defs>
+<g id="BackGround_Layer">
+    <rect x="0" y="0" width="1272.6000001977" height="900" fill="rgb(0,0,0)" />
+</g>
+ <g id="PD_30500000_543224">
+     <use class="kv10" x="276.850528474627" y="508.861127878473" width="100.95" height="100.2" transform="rotate(-90,276.850528474627,508.861127878473) translate(276.850528474627,508.861127878473) scale(3.45511838844823,3.45511838844823) translate(-277.800528474627,-509.061127878473)" xlink:href="#Breaker_30500000_4100013@2" bound="276.850528474627,508.861127878473,277.800528474627,509.061127878473"/>
+     <polyline class="lkv10" stroke-width="10.125" points="276.850528474627,507.384064767411 276.850528474627,507.037593173455" visibility="visible" />
+     <polyline class="lkv10" stroke-width="10.125" points="276.850528474627,510.338190989534 276.850528474627,510.68466258349" visibility="visible" />
+      <metadata>
+      <cge:PSR_Ref ObjectID="PD_30500000_543224" ObjectName="10kV 大旺桥开闭所分段920开关" PSRType="0305" GlobeID="3972613aaf8a398aa366b186db0167397191313ef0" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_36000000_7825550"/>
+      <cge:GLink_Ref ObjectID="PD_36000000_7900806"/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+      </metadata>
+ </g>
+<!--  
+ <g id="PD_30600000_795623">
+     <use class="kv10" x="693.194027438995" y="568.421451237523" width="0.98" height="0.2" transform="rotate(-90,693.194027438995,568.421451237523) translate(693.194027438995,568.421451237523) scale(3.34934945818961,3.34934945818961) translate(-694.174027438995,-568.621451237523)" xlink:href="#Disconnector_30600000_4050010@1" bound="693.194027438995,568.421451237523,694.174027438995,568.621451237523"/>
+     <polyline class="lkv10" stroke-width="0.125" points="693.194027438995,566.944388126461 693.194027438995,566.597916532505" visibility="visible" />
+     <polyline class="lkv10" stroke-width="0.125" points="693.194027438995,569.898514348584 693.194027438995,570.24498594254" visibility="visible" />
+      <metadata>
+      <cge:PSR_Ref ObjectID="PD_30600000_795623" ObjectName="10kV 1#PT6917刀闸" PSRType="0306" GlobeID="e10406fdf58a398aa2575da7e80157e10263c632d6" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_36000000_7306902"/>
+      <cge:GLink_Ref ObjectID="PD_36000000_7306906"/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+      </metadata>
+ </g>
+ <g id="PD_30600000_602174">
+     <use class="kv10" x="687.092609500598" y="505.954492999943" width="0.98" height="0.2" transform="rotate(-90,687.092609500598,505.954492999943) translate(687.092609500598,505.954492999943) scale(3.34934945818961,3.34934945818961) translate(-688.072609500598,-506.154492999943)" xlink:href="#Disconnector_30600000_4050010@1" bound="687.092609500598,505.954492999943,688.072609500598,506.154492999943"/>
+     <polyline class="lkv10" stroke-width="0.125" points="687.092609500598,504.477429888882 687.092609500598,504.130958294926" visibility="visible" />
+     <polyline class="lkv10" stroke-width="0.125" points="687.092609500598,507.431556111005 687.092609500598,507.778027705537" visibility="visible" />
+      <metadata>
+      <cge:PSR_Ref ObjectID="PD_30600000_602174" ObjectName="10kV北城丽景开闭所6926刀闸" PSRType="0306" GlobeID="C639FB1E-31C2-44CD-A44E-6EA9EABEA88A-12153" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_36000000_7266984"/>
+      <cge:GLink_Ref ObjectID="PD_36000000_7266985"/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+      </metadata>
+ </g>
+ <g id="PD_30600000_602198">
+     <use class="kv10" x="682.7161262104" y="505.954492999943" width="0.96" height="0.18" transform="rotate(-90,682.7161262104,505.954492999943) translate(682.7161262104,505.954492999943) scale(3.4191275719019,3.4191275719019) translate(-683.6761262104,-506.134492999943)" xlink:href="#Disconnector_30600000_4110011@0" bound="682.7161262104,505.954492999943,683.6761262104,506.134492999943"/>
+     <polyline class="lkv10" stroke-width="0.125" points="682.7161262104,504.477429888882 682.7161262104,504.130958294926" visibility="visible" />
+     <polyline class="lkv10" stroke-width="0.125" points="682.7161262104,507.431556111005 682.7161262104,507.778027705537" visibility="visible" />
+      <metadata>
+      <cge:PSR_Ref ObjectID="PD_30600000_602198" ObjectName="10kV北城丽景开闭所备用625接地手车刀闸" PSRType="0306" GlobeID="C639FB1E-31C2-44CD-A44E-6EA9EABEA88A-12160" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_36000000_7266983"/>
+      <cge:GLink_Ref ObjectID="PD_36000000_7266982"/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+      </metadata>
+ </g>
+ <g id="PD_30600000_602173">
+     <use class="kv10" x="678.339642917897" y="505.954492999943" width="0.98" height="0.2" transform="rotate(-90,678.339642917897,505.954492999943) translate(678.339642917897,505.954492999943) scale(3.34934945818961,3.34934945818961) translate(-679.319642917897,-506.154492999943)" xlink:href="#Disconnector_30600000_4050010@1" bound="678.339642917897,505.954492999943,679.319642917897,506.154492999943"/>
+     <polyline class="lkv10" stroke-width="0.125" points="678.339642917897,504.477429888882 678.339642917897,504.130958294926" visibility="visible" />
+     <polyline class="lkv10" stroke-width="0.125" points="678.339642917897,507.431556111005 678.339642917897,507.778027705537" visibility="visible" />
+      <metadata>
+      <cge:PSR_Ref ObjectID="PD_30600000_602173" ObjectName="10kV北城丽景开闭所6927刀闸" PSRType="0306" GlobeID="C639FB1E-31C2-44CD-A44E-6EA9EABEA88A-12146" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_36000000_7266980"/>
+      <cge:GLink_Ref ObjectID="PD_36000000_7266981"/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+      </metadata>
+ </g>
+ <g id="PD_30600000_602172">
+     <use class="kv10" x="673.963159627699" y="505.954492999943" width="0.96" height="0.18" transform="rotate(-90,673.963159627699,505.954492999943) translate(673.963159627699,505.954492999943) scale(3.4191275719019,3.4191275719019) translate(-674.923159627699,-506.134492999943)" xlink:href="#Disconnector_30600000_4110011@0" bound="673.963159627699,505.954492999943,674.923159627699,506.134492999943"/>
+     <polyline class="lkv10" stroke-width="0.125" points="673.963159627699,504.477429888882 673.963159627699,504.130958294926" visibility="visible" />
+     <polyline class="lkv10" stroke-width="0.125" points="673.963159627699,507.431556111005 673.963159627699,507.778027705537" visibility="visible" />
+      <metadata>
+      <cge:PSR_Ref ObjectID="PD_30600000_602172" ObjectName="10kV北城丽景开闭所624接地手车刀闸" PSRType="0306" GlobeID="C639FB1E-31C2-44CD-A44E-6EA9EABEA88A-12139" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_36000000_7266978"/>
+      <cge:GLink_Ref ObjectID="PD_36000000_7266979"/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+      </metadata>
+ </g>
+ <g id="PD_30600000_602171">
+     <use class="kv10" x="669.586676335196" y="505.954492999943" width="0.97" height="0.18" transform="rotate(-90,669.586676335196,505.954492999943) translate(669.586676335196,505.954492999943) scale(3.38387883404724,3.38387883404724) translate(-670.556676335196,-506.134492999943)" xlink:href="#Disconnector_30600000_4110010@1" bound="669.586676335196,505.954492999943,670.556676335196,506.134492999943"/>
+     <polyline class="lkv10" stroke-width="0.125" points="669.586676335196,504.477429888882 669.586676335196,504.130958294926" visibility="visible" />
+     <polyline class="lkv10" stroke-width="0.125" points="669.586676335196,507.431556111005 669.586676335196,507.778027705537" visibility="visible" />
+      <metadata>
+      <cge:PSR_Ref ObjectID="PD_30600000_602171" ObjectName="10kV北城丽景开闭所623接地手车刀闸" PSRType="0306" GlobeID="C639FB1E-31C2-44CD-A44E-6EA9EABEA88A-12132" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_36000000_7266977"/>
+      <cge:GLink_Ref ObjectID="PD_36000000_7266988"/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+      </metadata>
+ </g>
+ <g id="PD_30600000_602170">
+     <use class="kv10" x="665.210193042694" y="505.954492999943" width="0.97" height="0.18" transform="rotate(-90,665.210193042694,505.954492999943) translate(665.210193042694,505.954492999943) scale(3.38387883404724,3.38387883404724) translate(-666.180193042694,-506.134492999943)" xlink:href="#Disconnector_30600000_4110010@1" bound="665.210193042694,505.954492999943,666.180193042694,506.134492999943"/>
+     <polyline class="lkv10" stroke-width="0.125" points="665.210193042694,504.477429888882 665.210193042694,504.130958294926" visibility="visible" />
+     <polyline class="lkv10" stroke-width="0.125" points="665.210193042694,507.431556111005 665.210193042694,507.778027705537" visibility="visible" />
+      <metadata>
+      <cge:PSR_Ref ObjectID="PD_30600000_602170" ObjectName="10kV北城丽景开闭所622接地手车刀闸" PSRType="0306" GlobeID="C639FB1E-31C2-44CD-A44E-6EA9EABEA88A-12125" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_36000000_7266953"/>
+      <cge:GLink_Ref ObjectID="PD_36000000_7266954"/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+      </metadata>
+ </g>
+ <g id="PD_30600000_602169">
+     <use class="kv10" x="660.833709750192" y="505.954492999943" width="0.96" height="0.18" transform="rotate(-90,660.833709750192,505.954492999943) translate(660.833709750192,505.954492999943) scale(3.4191275719019,3.4191275719019) translate(-661.793709750192,-506.134492999943)" xlink:href="#Disconnector_30600000_4110011@0" bound="660.833709750192,505.954492999943,661.793709750192,506.134492999943"/>
+     <polyline class="lkv10" stroke-width="0.125" points="660.833709750192,504.477429888882 660.833709750192,504.130958294926" visibility="visible" />
+     <polyline class="lkv10" stroke-width="0.125" points="660.833709750192,507.431556111005 660.833709750192,507.778027705537" visibility="visible" />
+      <metadata>
+      <cge:PSR_Ref ObjectID="PD_30600000_602169" ObjectName="10kV北城丽景开闭所备用621接地手车刀闸" PSRType="0306" GlobeID="C639FB1E-31C2-44CD-A44E-6EA9EABEA88A-12118" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_36000000_7266952"/>
+      <cge:GLink_Ref ObjectID="PD_36000000_7266991"/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+      </metadata>
+ </g>
+ <g id="PD_30600000_789518">
+     <use class="kv10" x="630.19832670498" y="505.954492999943" width="0.98" height="0.2" transform="rotate(-90,630.19832670498,505.954492999943) translate(630.19832670498,505.954492999943) scale(3.34934945818961,3.34934945818961) translate(-631.17832670498,-506.154492999943)" xlink:href="#Disconnector_30600000_4050010@1" bound="630.19832670498,505.954492999943,631.17832670498,506.154492999943"/>
+     <polyline class="lkv10" stroke-width="0.125" points="630.19832670498,504.477429888882 630.19832670498,504.130958294926" visibility="visible" />
+     <polyline class="lkv10" stroke-width="0.125" points="630.19832670498,507.431556111005 630.19832670498,507.778027705537" visibility="visible" />
+      <metadata>
+      <cge:PSR_Ref ObjectID="PD_30600000_789518" ObjectName="10kV北城丽景开闭612刀闸" PSRType="0306" GlobeID="C639FB1E-31C2-44CD-A44E-6EA9EABEA88A-12069" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_36000000_7269742"/>
+      <cge:GLink_Ref ObjectID="PD_36000000_7269798"/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+      </metadata>
+ </g>
+ <g id="PD_30600000_602167">
+     <use class="kv10" x="643.327776582487" y="505.954492999943" width="0.96" height="0.18" transform="rotate(-90,643.327776582487,505.954492999943) translate(643.327776582487,505.954492999943) scale(3.4191275719019,3.4191275719019) translate(-644.287776582487,-506.134492999943)" xlink:href="#Disconnector_30600000_4110011@0" bound="643.327776582487,505.954492999943,644.287776582487,506.134492999943"/>
+     <polyline class="lkv10" stroke-width="0.125" points="643.327776582487,504.477429888882 643.327776582487,504.130958294926" visibility="visible" />
+     <polyline class="lkv10" stroke-width="0.125" points="643.327776582487,507.431556111005 643.327776582487,507.778027705537" visibility="visible" />
+      <metadata>
+      <cge:PSR_Ref ObjectID="PD_30600000_602167" ObjectName="10kV北城丽景开闭所备用615接地手车刀闸" PSRType="0306" GlobeID="C639FB1E-31C2-44CD-A44E-6EA9EABEA88A-12104" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_36000000_7266946"/>
+      <cge:GLink_Ref ObjectID="PD_36000000_7266947"/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+      </metadata>
+ </g>
+ <g id="PD_30600000_602166">
+     <use class="kv10" x="638.951293289985" y="505.954492999943" width="0.97" height="0.18" transform="rotate(-90,638.951293289985,505.954492999943) translate(638.951293289985,505.954492999943) scale(3.38387883404724,3.38387883404724) translate(-639.921293289985,-506.134492999943)" xlink:href="#Disconnector_30600000_4110010@1" bound="638.951293289985,505.954492999943,639.921293289985,506.134492999943"/>
+     <polyline class="lkv10" stroke-width="0.125" points="638.951293289985,504.477429888882 638.951293289985,504.130958294926" visibility="visible" />
+     <polyline class="lkv10" stroke-width="0.125" points="638.951293289985,507.431556111005 638.951293289985,507.778027705537" visibility="visible" />
+      <metadata>
+      <cge:PSR_Ref ObjectID="PD_30600000_602166" ObjectName="10kV北城丽景开闭所614接地手车刀闸" PSRType="0306" GlobeID="C639FB1E-31C2-44CD-A44E-6EA9EABEA88A-12097" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_36000000_7266944"/>
+      <cge:GLink_Ref ObjectID="PD_36000000_7266945"/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+      </metadata>
+ </g> -->
+</svg>
+
