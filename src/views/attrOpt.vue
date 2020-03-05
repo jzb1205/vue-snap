@@ -1,6 +1,9 @@
 <template>
-  <div class="attrOpt">
-    <p class="title">属性控制</p>
+  <div class="attrOpt" v-show="attrPalToggle">
+    <p class="title">
+      <span>属性控制</span>
+      <i @click="changeAttrPalToggle" class="el-icon-d-arrow-right fr"></i>
+    </p>
     <ul>
       <li>
         <span>背景颜色：</span>
@@ -73,6 +76,14 @@ export default {
   methods: {
     handleChange(val) {
       console.log(val);
+    },
+    changeAttrPalToggle() {
+      this.$store.commit("changeAttrPalToggle", false);
+    }
+  },
+  computed: {
+    attrPalToggle() {
+      return this.$store.state.attrPalToggle;
     }
   },
   watch: {
@@ -102,6 +113,10 @@ export default {
     color: #b8b8b8;
     font-size: 14px;
     line-height: 40px;
+    i {
+      line-height: 40px;
+      cursor: pointer;
+    }
   }
   ul {
     width: 200px;

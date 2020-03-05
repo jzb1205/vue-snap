@@ -8,7 +8,15 @@
         @click="snapLoad"
         @change="preview($event)"
       />
-      <el-button @click="downLoad">导出</el-button>
+      <div @click="downLoad" class="downLoad">
+        <img src="./../assets/img/item/export.png" alt="" />
+        <span>导出</span>
+      </div>
+      <i
+        v-if="!attrPalToggle"
+        @click="changeAttrPalToggle"
+        class="el-icon-d-arrow-left fr toggle"
+      ></i>
     </div>
     <div id="workarea">
       <!-- 放一些属性操作div -->
@@ -51,6 +59,7 @@
 import common from "./../draw/basePel/index";
 import Event from "./../event/index";
 import Symbol from "./../draw/symbol/index";
+import { setTimeout } from "timers";
 export default {
   name: "drawMainWrap",
   data() {
@@ -60,23 +69,6 @@ export default {
       svgMag: 1, //svg放大倍数
       svgMagMin: 0.1, //svg缩放最小比例
       svgMagMax: 20, //svg缩放最大比例
-      attributeSetData: [
-        {
-          id: "borderColor",
-          name: "边框颜色",
-          tyle: "color"
-        },
-        {
-          id: "lineWidth",
-          name: "线条宽度",
-          tyle: "width"
-        },
-        {
-          id: "fillColor",
-          name: "填充颜色",
-          tyle: "color"
-        }
-      ],
       predefineColors: [
         //默认预选颜色
         "#ff4500",
@@ -95,8 +87,6 @@ export default {
         "#c7158577"
       ],
       bgRect: null, //背景svg占位对象
-      initRectMain: null, //主体svg占位对象
-      curpelType: "", //当前点击图元类型
       optionPanlBool: false, //操作弹窗bool
       svgOpt: {
         width: "100%",
@@ -113,14 +103,18 @@ export default {
         KG_FHKG_H: null, //负荷开关（合）
         KG_FHKG_F: null //负荷开关（分）
       },
-      curOptPel: null,
-      lineOrid: [],
+      curOptPel: null, //当前操作的图元对象
       rotateNum: 0, //旋转角度
       curPoint: {
+        //当前操作图元对象的坐标
         x: 0,
         y: 0
       },
-      scaleNum: 1
+      aheadPoint: {
+        x: 0,
+        y: 0
+      },
+      scaleNum: 1 //svg缩放倍数
     };
   },
   created() {
@@ -140,15 +134,18 @@ export default {
     },
     //画笔颜色
     strokeColor() {
-      return this.$store.state.lineColor;
+      return this.$store.state.strokeColor;
     },
     //画笔粗细
     strokeWidth() {
-      return this.$store.state.lineWidth;
+      return this.$store.state.strokeWidth;
     },
     //填充颜色
     fillColor() {
       return this.$store.state.fillColor;
+    },
+    attrPalToggle() {
+      return this.$store.state.attrPalToggle;
     }
   },
   methods: {
@@ -440,24 +437,23 @@ export default {
     },
     createSvgDom() {
       //清楚所有svg元素
-      let el = document.querySelector(".drawMain");
-      let svgList = el.childNodes;
-      for (var i = svgList.length - 1; i >= 0; i--) {
-        el.removeChild(svgList[i]);
-      }
-      // debugger;
+      // let el = document.querySelector(".drawMain");
+      // let svgList = el.childNodes;
+      // for (var i = svgList.length - 1; i >= 0; i--) {
+      //   el.removeChild(svgList[i]);
+      // }
+      // // debugger;
       //重新创建svg Dom节点
-      let svg = document.createElement("svg");
-      svg.id = "svg";
-      svg.width = "100%";
-      svg.height = "100%";
-      document.querySelector(".drawMain").appendChild(svg);
-      this.svgContent = Snap("#svg");
+      // let svg = document.createElement("svg");
+      // svg.id = "svg";
+      // svg.width = "100%";
+      // svg.height = "100%";
+      // document.querySelector(".drawMain").appendChild(svg);
+      // this.svgContent = Snap("#svg");
     },
     //创建图形
     create() {
       let that = this;
-      let svgroot = document.querySelector("#svgroot");
       let e = event || window.event;
       let x = e.pageX - 320;
       let y = e.pageY - 140;
@@ -472,22 +468,17 @@ export default {
             y: y + 100,
             text: "snap",
             attr: {
-              stroke: "#000",
-              strokeWidth: 1,
+              stroke: this.strokeColor,
+              strokeWidth: this.strokeWidth,
               cursor: "pointer",
               optionType: "text"
             }
           };
           pel = new common.Text(option).create();
-          pel.mouseover(function() {
-            document.oncontextmenu = function(e) {
-              e.preventDefault();
-              console.log(pel);
-              that.curOptPel = pel;
-              that.optionPanlBool = true;
-            };
-          });
           pel
+            .mouseover(function() {
+              that.contextMenu(pel);
+            })
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -509,24 +500,19 @@ export default {
             x2: x + 150,
             y2: y,
             attr: {
-              stroke: "#000",
-              strokeWidth: 2,
+              stroke: this.strokeColor,
+              strokeWidth: this.strokeWidth,
               strokeDasharray: "",
               cursor: "pointer",
-              fill: "red",
+              fill: this.fillColor,
               optionType: "commonline"
             }
           };
           pel = new common.Line(option).create();
-          pel.mouseover(function() {
-            document.oncontextmenu = function(e) {
-              e.preventDefault();
-              console.log(pel);
-              that.curOptPel = pel;
-              that.optionPanlBool = true;
-            };
-          });
           pel
+            .mouseover(function() {
+              that.contextMenu(pel);
+            })
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -548,24 +534,19 @@ export default {
             x2: x + 150,
             y2: y,
             attr: {
-              stroke: "#000",
-              strokeWidth: 2,
+              stroke: this.strokeColor,
+              strokeWidth: this.strokeWidth,
+              fill: this.fillColor,
               strokeDasharray: "5,5",
               cursor: "pointer",
-              fill: "red",
               optionType: "dashLine1"
             }
           };
           pel = new common.Line(option).create();
-          pel.mouseover(function() {
-            document.oncontextmenu = function(e) {
-              e.preventDefault();
-              console.log(pel);
-              that.curOptPel = pel;
-              that.optionPanlBool = true;
-            };
-          });
           pel
+            .mouseover(function() {
+              that.contextMenu(pel);
+            })
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -587,24 +568,19 @@ export default {
             x2: x + 150,
             y2: y,
             attr: {
-              stroke: "#000",
-              strokeWidth: 2,
+              stroke: this.strokeColor,
+              strokeWidth: this.strokeWidth,
+              fill: this.fillColor,
               strokeDasharray: "10,10",
               cursor: "pointer",
-              fill: "red",
               optionType: "dashLine2"
             }
           };
           pel = new common.Line(option).create();
-          pel.mouseover(function() {
-            document.oncontextmenu = function(e) {
-              e.preventDefault();
-              console.log(pel);
-              that.curOptPel = pel;
-              that.optionPanlBool = true;
-            };
-          });
           pel
+            .mouseover(function() {
+              that.contextMenu(pel);
+            })
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -626,24 +602,19 @@ export default {
             x2: x + 150,
             y2: y,
             attr: {
-              stroke: "#000",
-              strokeWidth: 2,
+              stroke: this.strokeColor,
+              strokeWidth: this.strokeWidth,
+              fill: this.fillColor,
               strokeDasharray: "20,10,5,5,5,10",
               cursor: "pointer",
-              fill: "red",
               optionType: "dashLine3"
             }
           };
           pel = new common.Line(option).create();
-          pel.mouseover(function() {
-            document.oncontextmenu = function(e) {
-              e.preventDefault();
-              console.log(pel);
-              that.curOptPel = pel;
-              that.optionPanlBool = true;
-            };
-          });
           pel
+            .mouseover(function() {
+              that.contextMenu(pel);
+            })
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -662,23 +633,18 @@ export default {
             svgObj: this.svgContent,
             data: [x + 80, y + 40, x + 80, y + 100, x + 150, y + 100],
             attr: {
-              stroke: "#000",
-              fill: "rgba(0,0,0,0)",
-              strokeWidth: 1,
+              stroke: this.strokeColor,
+              strokeWidth: this.strokeWidth,
+              fill: this.fillColor,
               cursor: "pointer",
               optionType: "polyline"
             }
           };
           pel = new common.Polyline(option).create();
-          pel.mouseover(function() {
-            document.oncontextmenu = function(e) {
-              e.preventDefault();
-              console.log(pel);
-              that.curOptPel = pel;
-              that.optionPanlBool = true;
-            };
-          });
           pel
+            .mouseover(function() {
+              that.contextMenu(pel);
+            })
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -699,23 +665,18 @@ export default {
             cy: y + 50,
             r: 20,
             attr: {
-              stroke: "#b94842",
-              strokeWidth: 1,
-              fill: "rgba(0,0,0,0)",
+              stroke: this.strokeColor,
+              strokeWidth: this.strokeWidth,
+              fill: this.fillColor,
               cursor: "pointer",
               id: ""
             }
           };
           pel = new common.Circle(option).create();
-          pel.mouseover(function() {
-            document.oncontextmenu = function(e) {
-              e.preventDefault();
-              console.log(pel);
-              that.curOptPel = pel;
-              that.optionPanlBool = true;
-            };
-          });
           pel
+            .mouseover(function() {
+              that.contextMenu(pel);
+            })
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -757,24 +718,19 @@ export default {
             rx: 100,
             ry: 40,
             attr: {
-              stroke: "#000",
-              strokeWidth: 1,
-              fill: "rgba(0,0,0,0)",
+              stroke: this.strokeColor,
+              strokeWidth: this.strokeWidth,
+              fill: this.fillColor,
               cursor: "pointer",
               optionType: "ellipse"
               // transform:new Snap.Matrix(2,0,0,1,50,50)
             }
           };
           pel = new common.Ellipse(option).create();
-          pel.mouseover(function() {
-            document.oncontextmenu = function(e) {
-              e.preventDefault();
-              console.log(pel);
-              that.curOptPel = pel;
-              that.optionPanlBool = true;
-            };
-          });
           pel
+            .mouseover(function() {
+              that.contextMenu(pel);
+            })
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -798,23 +754,29 @@ export default {
             rx: 0,
             ry: 0,
             attr: {
-              stroke: "#000",
-              strokeWidth: 1,
-              fill: "rgba(0,0,0,0)",
+              stroke: this.strokeColor,
+              strokeWidth: this.strokeWidth,
+              fill: this.fillColor,
               cursor: "pointer",
               optionType: "rect"
             }
           };
           pel = new common.Rect(option).create();
-          pel.mouseover(function() {
-            document.oncontextmenu = function(e) {
-              e.preventDefault();
-              console.log(pel);
-              that.curOptPel = pel;
-              that.optionPanlBool = true;
-            };
-          });
           pel
+            .mouseover(function() {
+              that.contextMenu(pel);
+            })
+            // .mousemove(function(e) {
+            //   let m = new Snap.Matrix();
+            //   that.curPoint.x = e.pageX;
+            //   that.curPoint.y = e.pageY;
+            //   console.log(that.curPoint.x, that.aheadPoint.x);
+            //   console.log(that.curPoint.y, that.aheadPoint.y);
+            //   m.translate(that.curPoint.x, that.curPoint.y);
+            //   this.transform(m);
+            // that.aheadPoint.x = that.curPoint.x;
+            // that.aheadPoint.y = that.curPoint.y;
+            // })
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -834,17 +796,10 @@ export default {
             width: 20,
             height: 100
           });
-          pel.mouseover(function() {
-            document.oncontextmenu = function(e) {
-              e.preventDefault();
-              that.curOptPel = pel;
-              that.openAttrOptionPanl(e);
-              that.curPoint.x = pel.getBBox().cx;
-              that.curPoint.y = pel.getBBox().cy;
-              that.optionPanlBool = true;
-            };
-          });
           pel
+            .mouseover(function() {
+              that.contextMenu(pel);
+            })
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -877,15 +832,10 @@ export default {
               width: 20,
               height: 100
             });
-          pel.mouseover(function() {
-            document.oncontextmenu = function(e) {
-              e.preventDefault();
-              console.log(pel);
-              that.curOptPel = pel;
-              that.optionPanlBool = true;
-            };
-          });
           pel
+            .mouseover(function() {
+              that.contextMenu(pel);
+            })
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -908,15 +858,10 @@ export default {
               width: 20,
               height: 100
             });
-          pel.mouseover(function() {
-            document.oncontextmenu = function(e) {
-              e.preventDefault();
-              console.log(pel);
-              that.curOptPel = pel;
-              that.optionPanlBool = true;
-            };
-          });
           pel
+            .mouseover(function() {
+              that.contextMenu(pel);
+            })
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -938,14 +883,10 @@ export default {
               width: 20,
               height: 100
             });
-          pel.mouseover(function() {
-            document.oncontextmenu = function(e) {
-              e.preventDefault();
-              that.curOptPel = pel;
-              that.optionPanlBool = true;
-            };
-          });
           pel
+            .mouseover(function() {
+              that.contextMenu(pel);
+            })
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -967,15 +908,10 @@ export default {
             width: 20,
             height: 100
           });
-          pel.mouseover(function() {
-            document.oncontextmenu = function(e) {
-              e.preventDefault();
-              console.log(pel);
-              that.curOptPel = pel;
-              that.optionPanlBool = true;
-            };
-          });
           pel
+            .mouseover(function() {
+              that.contextMenu(pel);
+            })
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -997,15 +933,10 @@ export default {
             width: 20,
             height: 100
           });
-          pel.mouseover(function() {
-            document.oncontextmenu = function(e) {
-              e.preventDefault();
-              console.log(pel);
-              that.curOptPel = pel;
-              that.optionPanlBool = true;
-            };
-          });
           pel
+            .mouseover(function() {
+              that.contextMenu(pel);
+            })
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -1026,15 +957,10 @@ export default {
             width: 20,
             height: 100
           });
-          pel.mouseover(function() {
-            document.oncontextmenu = function(e) {
-              e.preventDefault();
-              console.log(pel);
-              that.curOptPel = pel;
-              that.optionPanlBool = true;
-            };
-          });
           pel
+            .mouseover(function() {
+              that.contextMenu(pel);
+            })
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -1055,15 +981,10 @@ export default {
             width: 20,
             height: 100
           });
-          pel.mouseover(function() {
-            document.oncontextmenu = function(e) {
-              e.preventDefault();
-              console.log(pel);
-              that.curOptPel = pel;
-              that.optionPanlBool = true;
-            };
-          });
           pel
+            .mouseover(function() {
+              that.contextMenu(pel);
+            })
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -1090,10 +1011,14 @@ export default {
     //导入svg图
     snapLoad(svgUrl) {
       let that = this;
-      Snap.load(svgUrl, function(g) {
-        that.svgContent.clear(); //导出事清空svg
-        that.svgContent.append(g);
-      });
+      Snap.load(
+        svgUrl,
+        function(g) {
+          that.svgContent.clear(); //导出事清空svg
+          that.svgContent.append(g);
+        },
+        that.importClick()
+      );
     },
     //获取导入svg图片本地路径
     preview() {
@@ -1165,6 +1090,7 @@ export default {
       this.curOptPel.transform(m);
       this.optionPanlBool = !this.optionPanlBool;
     },
+    //缩放
     scale(num) {
       let m = new Snap.Matrix();
       if (num === 2) {
@@ -1176,11 +1102,26 @@ export default {
       m.scale(this.scaleNum, this.scaleNum, this.curPoint.x, this.curPoint.y);
       this.curOptPel.transform(m);
       this.optionPanlBool = !this.optionPanlBool;
+    },
+    contextMenu(obj) {
+      let that = this;
+      document.oncontextmenu = function(e) {
+        e.preventDefault();
+        that.curOptPel = obj;
+        that.optionPanlBool = true;
+        that.openAttrOptionPanl(e);
+      };
+    },
+    changeAttrPalToggle() {
+      this.$store.commit("changeAttrPalToggle", true);
+    },
+    importClick() {
+      let PD_30500000_543224 = document.querySelector("#PD_30500000_543224");
+      console.log(PD_30500000_543224);
     }
   },
   watch: {
     bgColor() {
-      console.log(123);
       this.bgRect.attr({
         fill: this.bgColor
       });
@@ -1249,5 +1190,29 @@ svg {
       }
     }
   }
+}
+.downLoad {
+  background: #2a353d;
+  border-color: #121a1f;
+  color: #fff;
+  display: inline-block;
+  height: 30px;
+  line-height: 35px;
+  padding: 0 6px;
+  position: absolute;
+  top: 5px;
+  border: 1px solid #121a1f;
+  cursor: pointer;
+  img {
+    position: relative;
+    top: 3px;
+    margin-right: 3px;
+  }
+}
+.toggle {
+  color: #fff;
+  line-height: 40px;
+  margin-right: 20px;
+  cursor: pointer;
 }
 </style>

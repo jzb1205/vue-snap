@@ -16,6 +16,12 @@ body {
 li{
     list-style: none;
 }
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
 /* el */
 .el-container {
     height: 100%;
@@ -80,9 +86,4 @@ li{
 /* el-input-number*/
 .el-input-number--mini{
     width: 100px;
-}
-.el-button--mini{
-    background: #2A353D;
-    border-color: #121A1F;
-    color: #fff;
 }

@@ -9,7 +9,8 @@ export default new Vuex.Store({
     bgColor: "#000", //svg背景颜色
     strokeColor: "red", //画笔颜色
     strokeWidth: 1, //画笔粗细
-    fillColor: "#000" //填充颜色
+    fillColor: "#000", //填充颜色
+    attrPalToggle: true //属性面板切换
   },
   mutations: {
     changePencelType(state, pload) {
@@ -26,6 +27,9 @@ export default new Vuex.Store({
     },
     changeFillColor(state, pload) {
       state.fillColor = pload;
+    },
+    changeAttrPalToggle(state, pload) {
+      state.attrPalToggle = pload;
     }
   },
   actions: {},
