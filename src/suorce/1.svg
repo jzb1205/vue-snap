@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1272.6000001977" height="900" viewBox="0 0 1272.6000001977 900" coordinateExtent="119.99883653741 29.9969463000312 120.00668763559 30.0024987032688" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  xmlns:cge="http://iec.ch/TC57/2005/SVG-schema#" preserveAspectRatio="xMidYMid">
+<svg width="1272.6000001977" height="900" viewBox="0 0 1272.6000001977 900"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
 <defs>
 <style type="text/css">
 <![CDATA[
@@ -46,36 +46,104 @@
 <symbol id="terminal" >
     <circle style="fill:none" stroke="rgb(0,200,255)" stroke-width="0.02" cx="0" cy="0" r="0.08"/>
 </symbol>
-<!-- 定义图元4100013:手车开关（分/冷备）--> 
-<symbol id="Breaker_30500000_4100013@2" viewBox="0 0 0.95 0.20">
-    <line stroke="4343993" stroke-width="0.020000" x1="-0.400000" y1="0.000000" x2="-0.230000" y2="0.000000" transform="translate(0.95, 0.20) " />
-    <line stroke="4343993" stroke-width="0.020000" x1="0.230000" y1="0.000000" x2="0.420000" y2="0.000000" transform="translate(0.95, 0.20) " />
-    <rect style="fill:none" stroke="4343993" stroke-width="0.020000" x="-0.100000" y="-0.220000" width="0.200000" height="0.440000" transform="translate(0.95, 0.20) rotate(90.00)" />
-    <line stroke="4343993" stroke-width="0.020000" x1="-0.340000" y1="0.000000" x2="-0.400000" y2="0.090000" transform="translate(0.95, 0.20) " />
-    <line stroke="4343993" stroke-width="0.020000" x1="-0.340000" y1="0.000000" x2="-0.390000" y2="-0.080000" transform="translate(0.95, 0.20) " />
-    <line stroke="4343993" stroke-width="0.020000" x1="-0.410000" y1="0.000000" x2="-0.470000" y2="0.090000" transform="translate(0.95, 0.20) " />
-    <line stroke="4343993" stroke-width="0.020000" x1="-0.410000" y1="0.000000" x2="-0.470000" y2="-0.080000" transform="translate(0.95, 0.20) " />
-    <line stroke="4343993" stroke-width="0.020000" x1="0.420000" y1="0.000000" x2="0.480000" y2="-0.090000" transform="translate(0.95, 0.20) " />
-    <line stroke="4343993" stroke-width="0.020000" x1="0.420000" y1="0.000000" x2="0.480000" y2="0.090000" transform="translate(0.95, 0.20) " />
-    <line stroke="4343993" stroke-width="0.020000" x1="0.340000" y1="0.000000" x2="0.400000" y2="-0.090000" transform="translate(0.95, 0.20) " />
-    <line stroke="4343993" stroke-width="0.020000" x1="0.340000" y1="0.000000" x2="0.400000" y2="0.090000" transform="translate(0.95, 0.20) " />
+<!-- 定义图元2030010:柱上变压器（专用变）--> 
+<symbol id="PowerTransformer_11000001_2030010" viewBox="0 0 3 1.21">
+    <ellipse style="fill:none" stroke="16763904" stroke-linecap="round" stroke-width="0.1" cx="0" cy="0" rx="0.6" ry="0.6" transform="translate(3,1.21) translate(-0.4,-0.01) rotate(-89.595999) " />
+    <line stroke="4343993" stroke-linecap="round" stroke-width="0.1" x1="1" y1="0" x2="1.5" y2="0" transform="translate(3,1.21)" />
+    <line stroke="16763904" stroke-linecap="round" stroke-width="0.1" x1="-1" y1="0.01" x2="-1.5" y2="0.01" transform="translate(3,1.21)" />
+    <ellipse style="fill:none" stroke="4343993" stroke-linecap="round" stroke-width="0.1" cx="0" cy="0" rx="0.6" ry="0.6" transform="translate(3,1.21) translate(0.4,0) rotate(-89.595999) " />
     <!-- 定义端子位置 -->
-    <use x="0.4275" y="0" terminal-index="1" type="0" transform="translate(0.95,0.20)" xlink:href="#terminal"/>
-    <use x="-0.4275" y="0" terminal-index="2" type="0" transform="translate(0.95,0.20)" xlink:href="#terminal"/>
+    <use x="1.35" y="0" terminal-index="1" type="0" transform="translate(3,1.21)" xlink:href="#terminal"/>
+    <use x="-1.35" y="0" terminal-index="2" type="0" transform="translate(3,1.21)" xlink:href="#terminal"/>
 </symbol>
 </defs>
 <g id="BackGround_Layer">
     <rect x="0" y="0" width="1272.6000001977" height="900" fill="rgb(0,0,0)" />
 </g>
- <g id="PD_30500000_543224">
-     <use class="kv10" x="276.850528474627" y="508.861127878473" width="100.95" height="100.2" transform="rotate(-90,276.850528474627,508.861127878473) translate(276.850528474627,508.861127878473) scale(3.45511838844823,3.45511838844823) translate(-277.800528474627,-509.061127878473)" xlink:href="#Breaker_30500000_4100013@2" bound="276.850528474627,508.861127878473,277.800528474627,509.061127878473"/>
-     <polyline class="lkv10" stroke-width="10.125" points="276.850528474627,507.384064767411 276.850528474627,507.037593173455" visibility="visible" />
-     <polyline class="lkv10" stroke-width="10.125" points="276.850528474627,510.338190989534 276.850528474627,510.68466258349" visibility="visible" />
+ <g id="PD_11000001_423809">
+     <use class="kv10" x="480.568305462142" y="670.77503632998" width="3" height="1.21" transform="rotate(-90,480.568305462142,670.77503632998) translate(480.568305462142,670.77503632998) scale(1.75059331681377,1.75059331681377) translate(-483.568305462142,-671.98503632998)" xlink:href="#PowerTransformer_11000001_2030010" bound="480.568305462142,670.77503632998,483.568305462142,671.98503632998"/>
+     <polyline class="lkv10" stroke-width="0.125" points="480.568305462142,668.411735352282 480.568305462142,667.857380802413" visibility="visible" />
+     <polyline class="lkv10" stroke-width="0.125" points="480.568305462142,673.138337307679 480.568305462142,673.692691858123" visibility="visible" />
       <metadata>
-      <cge:PSR_Ref ObjectID="PD_30500000_543224" ObjectName="10kV 大旺桥开闭所分段920开关" PSRType="0305" GlobeID="3972613aaf8a398aa366b186db0167397191313ef0" LineType="Branch" />
-      <cge:GLink_Ref ObjectID="PD_36000000_7825550"/>
-      <cge:GLink_Ref ObjectID="PD_36000000_7900806"/>
-      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+      <cge:PSR_Ref ObjectID="PD_11000001_423809" ObjectName="10kV璧山区聚峰鞋底厂专用柱上变1562185727" PSRType="0110" GlobeID="8379" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_11500000_383229"/>
+      <cge:Layer_Ref ObjectName="PowerTransformer_Layer"/>
+      </metadata>
+ </g>
+ <g id="PD_11500000_383229">
+     <use class="kv10" x="480.568305462142" y="665.669139156162" width="3" height="1.46" transform="rotate(-90,480.568305462142,665.669139156162) translate(480.568305462142,665.669139156162) scale(1.31294498761033,1.31294498761033) translate(-483.568305462142,-667.129139156162)" xlink:href="#Fuse_11500000_2090010@1" bound="480.568305462142,665.669139156162,483.568305462142,667.129139156162"/>
+     <polyline class="lkv10" stroke-width="0.125" points="480.568305462142,663.896663422888 480.568305462142,663.480897509911" visibility="visible" />
+     <polyline class="lkv10" stroke-width="0.125" points="480.568305462142,667.441614889436 480.568305462142,667.857380802413" visibility="visible" />
+      <metadata>
+      <cge:PSR_Ref ObjectID="PD_11500000_383229" ObjectName="专用跌落式熔断器" PSRType="0115" GlobeID="SBID000000EB47951307994FD5B8677E27D8DAE7AE" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_10100000_1014893"/>
+      <cge:GLink_Ref ObjectID="PD_10200001_2667552"/>
+      <cge:GLink_Ref ObjectID="PD_11000001_423809"/>
+      <cge:Layer_Ref ObjectName="Fuse_Layer"/>
+      </metadata>
+ </g>
+
+ 
+ <g id="PD_10100000_1014893">
+     <polyline class="lkv10"  stroke-width="0.0455883676253586" points="480.568305462142,657.291674838738 480.568305462142,663.480897509911 " />
+      <metadata>
+      <cge:PSR_Ref ObjectID="PD_10100000_1014893" ObjectName="10kV旺I大分支1#杆-10kV旺I大分支2#杆" PSRType="none_dxd" GlobeID="SBID000000336E199EFE574FD9AA5470A42A58A50D" LeadGlobeID="SBID000000F9AC08190BAA4AFB98506BA9CD732977" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_10200001_2667551"/>
+      <cge:GLink_Ref ObjectID="PD_13000000_7863494"/>
+      <cge:GLink_Ref ObjectID="PD_10200001_2667552"/>
+      <cge:GLink_Ref ObjectID="PD_11500000_383229"/>
+      <cge:Layer_Ref ObjectName="ACLineSegment_Layer"/>
+      </metadata>
+ </g>
+ 
+ <g id="PD_10200001_2667551">
+     <use class="kv10" x="480.568305462142" y="657.291674838738" width="1.6" height="1.6" transform="rotate(0,480.568305462142,657.291674838738) translate(480.568305462142,657.291674838738) scale(0.136765102876076,0.136765102876076) translate(-482.168305462142,-658.891674838738)" xlink:href="#PoleCode_10200001_311" bound="480.568305462142,657.291674838738,482.168305462142,658.891674838738"/>
+      <metadata>
+      <cge:PSR_Ref ObjectID="PD_10200001_2667551" ObjectName="10kV旺I大分支1#杆" PSRType="0103" GlobeID="SBID000000E55B8300EC2C4032ADA44022CE475F52" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_10100000_1014893"/>
+      <cge:GLink_Ref ObjectID="PD_13000000_7863494"/>
+      <cge:Layer_Ref ObjectName="PoleCode_Layer"/>
+      </metadata>
+ </g>
+ <g id="PD_13000000_7863494">
+     <polyline class="lkv10"  stroke-width="0.0455883676253586" points="480.568305462142,656.124612627136 480.568305462142,657.291674838738 " />
+      <metadata>
+      <cge:PSR_Ref ObjectID="PD_13000000_7863494" ObjectName="" PSRType="130000" GlobeID="SBID0000000D8D68B068CC47C1B10EA3B53B0E9F5D" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_20100000_281123"/>
+      <cge:GLink_Ref ObjectID="PD_10100000_1014893"/>
+      <cge:GLink_Ref ObjectID="PD_10200001_2667551"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+      </metadata>
+ </g>
+ <g id="PD_10200001_2667552">
+     <use class="kv10" x="480.568305462142" y="663.480897509911" width="1.6" height="1.6" transform="rotate(0,480.568305462142,663.480897509911) translate(480.568305462142,663.480897509911) scale(0.136765102876076,0.136765102876076) translate(-482.168305462142,-665.080897509911)" xlink:href="#PoleCode_10200001_311" bound="480.568305462142,663.480897509911,482.168305462142,665.080897509911"/>
+      <metadata>
+      <cge:PSR_Ref ObjectID="PD_10200001_2667552" ObjectName="10kV旺I大分支2#杆" PSRType="0103" GlobeID="SBID000000E09DAB16F5034DC79FB57D5BE3C56A3D" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_10100000_1014893"/>
+      <cge:GLink_Ref ObjectID="PD_11500000_383229"/>
+      <cge:Layer_Ref ObjectName="PoleCode_Layer"/>
+      </metadata>
+ </g>
+ <g id="PD_11500000_383229">
+     <use class="kv10" x="480.568305462142" y="665.669139156162" width="3" height="1.46" transform="rotate(-90,480.568305462142,665.669139156162) translate(480.568305462142,665.669139156162) scale(1.31294498761033,1.31294498761033) translate(-483.568305462142,-667.129139156162)" xlink:href="#Fuse_11500000_2090010@1" bound="480.568305462142,665.669139156162,483.568305462142,667.129139156162"/>
+     <polyline class="lkv10" stroke-width="0.125" points="480.568305462142,663.896663422888 480.568305462142,663.480897509911" visibility="visible" />
+     <polyline class="lkv10" stroke-width="0.125" points="480.568305462142,667.441614889436 480.568305462142,667.857380802413" visibility="visible" />
+      <metadata>
+      <cge:PSR_Ref ObjectID="PD_11500000_383229" ObjectName="专用跌落式熔断器" PSRType="0115" GlobeID="SBID000000EB47951307994FD5B8677E27D8DAE7AE" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_10100000_1014893"/>
+      <cge:GLink_Ref ObjectID="PD_10200001_2667552"/>
+      <cge:GLink_Ref ObjectID="PD_11000001_423809"/>
+      <cge:Layer_Ref ObjectName="Fuse_Layer"/>
+      </metadata>
+ </g>
+
+ <g id="PD_10200001_2667552">
+     <use class="kv10" x="480.568305462142" y="663.480897509911" width="1.6" height="1.6" transform="rotate(0,480.568305462142,663.480897509911) translate(480.568305462142,663.480897509911) scale(0.136765102876076,0.136765102876076) translate(-482.168305462142,-665.080897509911)" xlink:href="#PoleCode_10200001_311" bound="480.568305462142,663.480897509911,482.168305462142,665.080897509911"/>
+      <metadata>
+      <cge:PSR_Ref ObjectID="PD_10200001_2667552" ObjectName="10kV旺I大分支2#杆" PSRType="0103" GlobeID="SBID000000E09DAB16F5034DC79FB57D5BE3C56A3D" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_10100000_1014893"/>
+      <cge:GLink_Ref ObjectID="PD_11500000_383229"/>
+      <cge:Layer_Ref ObjectName="PoleCode_Layer"/>
       </metadata>
  </g>
 </svg>

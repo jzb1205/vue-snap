@@ -6,7 +6,10 @@ let a = [];
  * @param {Object} obj  当前点击对象
  * @returns
  */
-const click = function(svgContent, obj) {
+const click = function(svgContent, obj, lineStyle) {
+  if (!lineStyle) {
+    return;
+  }
   if (a.length > 2) {
     a.shift();
     a.shift();
@@ -34,16 +37,17 @@ const click = function(svgContent, obj) {
       svgObj: svgContent,
       data: a,
       attr: {
-        stroke: "#000",
-        fill: "rgba(0,0,0,0)",
+        stroke: "red",
+        fill: "",
         strokeWidth: 1,
         cursor: "pointer",
-        optionType: "polyline"
+        optionType: "polyline",
+        strokeDasharray:
+          lineStyle && lineStyle.id === "commonLine" && lineStyle.dasharray
       }
     };
     new common.Polyline(option).create().click(function(e) {
       e.preventDefault();
-
       this.drag();
       svgContent.undrag();
     });

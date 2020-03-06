@@ -354,18 +354,18 @@
     <use x="-1.35" y="0" terminal-index="2" type="0" transform="translate(3.00,0.80)" xlink:href="#terminal"/>
 </symbol>
 <!-- 定义图元2090010:跌落式熔断器（合）--> 
-<symbol id="Fuse_11500000_2090010@1" viewBox="0 0 3 1.46">
+<!-- <symbol id="Fuse_11500000_2090010@1" viewBox="0 0 3 1.46">
     <line stroke="4343993" stroke-linecap="round" stroke-width="0.15" x1="1.49" y1="0" x2="0.49" y2="0" transform="translate(3,1.46)" />
     <line stroke="4343993" stroke-linecap="round" stroke-width="0.15" x1="0.48" y1="-0.35" x2="0.48" y2="0.34" transform="translate(3,1.46)" />
     <line stroke="4343993" stroke-linecap="round" stroke-width="0.15" x1="-1.51" y1="0" x2="-0.66" y2="0" transform="translate(3,1.46)" />
     <line stroke="4343993" stroke-linecap="round" stroke-width="0.15" x1="-0.57" y1="-0.03" x2="0.57" y2="-0.79" transform="translate(3,1.46)" />
     <line stroke="4343993" stroke-linecap="round" stroke-width="0.12" x1="-0.07" y1="-0.59" x2="-0.17" y2="-0.76" transform="translate(3,1.46)" />
     <rect style="fill:none" stroke="4343993" stroke-linecap="round" stroke-width="0.12" x="-0.42" y="-0.2" width="0.84" height="0.4" transform="translate(3,1.46) translate(0.05,-0.44) rotate(-34.303068) " />
-    <polygon fill="4343993" stroke="4343993" stroke-linecap="round" stroke-width="0.01" points="-0.37,-1.07 -0.32,-0.72 -0.07,-0.87 " transform="translate(3,1.46)" />
+    <polygon fill="4343993" stroke="4343993" stroke-linecap="round" stroke-width="0.01" points="-0.37,-1.07 -0.32,-0.72 -0.07,-0.87 " transform="translate(3,1.46)" /> -->
     <!-- 定义端子位置 -->
-    <use x="1.35" y="0" terminal-index="1" type="0" transform="translate(3,1.46)" xlink:href="#terminal"/>
+    <!-- <use x="1.35" y="0" terminal-index="1" type="0" transform="translate(3,1.46)" xlink:href="#terminal"/>
     <use x="-1.35" y="0" terminal-index="2" type="0" transform="translate(3,1.46)" xlink:href="#terminal"/>
-</symbol>
+</symbol> -->
 <!-- 定义图元2090011:跌落式熔断器（分）--> 
 <symbol id="Fuse_11500000_2090011@0" viewBox="0 0 3 1.46">
     <line stroke="4343993" stroke-linecap="round" stroke-width="0.15" x1="1.49" y1="0" x2="0.49" y2="0" transform="translate(3,1.46)" />
@@ -1002,9 +1002,9 @@
       </metadata>
  </g>
  <g id="PD_30700000_223084">
-     <use class="kv10" x="433.811191165867" y="615.483151654312" width="0.98" height="0.25" transform="rotate(-270,433.811191165867,615.483151654312) translate(433.811191165867,615.483151654312) scale(3.34934945818961,3.34934945818961) translate(-434.791191165867,-615.733151654312)" xlink:href="#LoadBreakSwitch_30700000_4040011@0" bound="433.811191165867,615.483151654312,434.791191165867,615.733151654312"/>
-     <polyline class="lkv10" stroke-width="0.125" points="433.811191165867,616.960214765374 433.811191165867,617.306686358753" visibility="visible" />
-     <polyline class="lkv10" stroke-width="0.125" points="433.811191165867,614.00608854325 433.811191165867,613.659616949295" visibility="visible" />
+     <use class="kv10" x="433.811191165867" y="615.483151654312" width="100.98" height="100.25" transform="rotate(-270,433.811191165867,615.483151654312) translate(433.811191165867,615.483151654312) scale(3.34934945818961,3.34934945818961) translate(-434.791191165867,-615.733151654312)" xlink:href="#LoadBreakSwitch_30700000_4040011@0" bound="433.811191165867,615.483151654312,434.791191165867,615.733151654312"/>
+     <polyline class="lkv10" stroke-width="10.125" points="433.811191165867,616.960214765374 433.811191165867,617.306686358753" visibility="visible" />
+     <polyline class="lkv10" stroke-width="10.125" points="433.811191165867,614.00608854325 433.811191165867,613.659616949295" visibility="visible" />
       <metadata>
       <cge:PSR_Ref ObjectID="PD_30700000_223084" ObjectName="10kV 旺I皮分支962负荷开关" PSRType="0307" GlobeID="63858AD1-39EF-476E-ABC3-EBAA5282EF72-28107" LineType="Branch" />
       <cge:GLink_Ref ObjectID="PD_36000000_5213970"/>
@@ -4718,7 +4718,7 @@
       <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
       </metadata>
  </g>
- <g id="PD_36000000_5213954">
+ <!-- <g id="PD_36000000_5213954">
      <polyline class="lkv10"  stroke-width="0.0455883676253586" points="438.439148321422,576.823914303461 438.439148321422,578.282742067245 " />
       <metadata>
       <cge:PSR_Ref ObjectID="PD_36000000_5213954" ObjectName="未命名站内-链接线" PSRType="360000" GlobeID="4257562a-8060-f069-e053-360ab90a5bbdffxids" LineType="Branch" />
@@ -4728,7 +4728,7 @@
       <cge:GLink_Ref ObjectID="PD_32000000_1253475"/>
       <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
       </metadata>
- </g>
+ </g> -->
  <g id="PD_36000000_7734780">
      <polyline class="lkv10"  stroke-width="0.0455883676253586" points="438.439148321422,571.718017129643 438.439148321422,573.176844893426 " />
       <metadata>
@@ -8661,33 +8661,33 @@
  <g id="PD_36000000_6294193">
      <polyline class="lkv10"  stroke-width="0.0455883676253586" points="425.309698446219,433.042585439153 423.850870681284,433.042585439153 " />
       <metadata>
-        <cge:PSR_Ref ObjectID="PD_36000000_6294193" ObjectName="未命名站内-链接线" PSRType="360000" GlobeID="42575632-2eac-f069-e053-360ab90a5bbd2qynb7" LineType="Branch" />
-        <cge:GLink_Ref ObjectID="PD_30700000_243729"/>
-        <cge:GLink_Ref ObjectID="PD_36000000_6294196"/>
-        <cge:GLink_Ref ObjectID="PD_30600001_534823"/>
-        <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+      <cge:PSR_Ref ObjectID="PD_36000000_6294193" ObjectName="未命名站内-链接线" PSRType="360000" GlobeID="42575632-2eac-f069-e053-360ab90a5bbd2qynb7" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_30700000_243729"/>
+      <cge:GLink_Ref ObjectID="PD_36000000_6294196"/>
+      <cge:GLink_Ref ObjectID="PD_30600001_534823"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
       </metadata>
  </g>
  <g id="PD_36000000_7735459">
      <polyline class="lkv10"  stroke-width="0.273530205752152" points="425.309698446219,427.936688265335 425.309698446219,429.395516029694 " />
       <metadata>
-        <cge:PSR_Ref ObjectID="PD_36000000_7735459" ObjectName="10kV 璧第分支962" PSRType="360000" GlobeID="SBID000000FF9714BE6BA645FBAE92A6087995A132" LineType="Trunk" />
-        <cge:GLink_Ref ObjectID="PD_31100000_193606"/>
-        <cge:GLink_Ref ObjectID="PD_36000000_7735463"/>
-        <cge:GLink_Ref ObjectID="PD_36000000_7735461"/>
-        <cge:GLink_Ref ObjectID="PD_36000000_7735453"/>
-        <cge:GLink_Ref ObjectID="PD_30700000_243729"/>
-        <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+      <cge:PSR_Ref ObjectID="PD_36000000_7735459" ObjectName="10kV 璧第分支962" PSRType="360000" GlobeID="SBID000000FF9714BE6BA645FBAE92A6087995A132" LineType="Trunk" />
+      <cge:GLink_Ref ObjectID="PD_31100000_193606"/>
+      <cge:GLink_Ref ObjectID="PD_36000000_7735463"/>
+      <cge:GLink_Ref ObjectID="PD_36000000_7735461"/>
+      <cge:GLink_Ref ObjectID="PD_36000000_7735453"/>
+      <cge:GLink_Ref ObjectID="PD_30700000_243729"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
       </metadata>
  </g>
  <g id="PD_36000000_6294203">
      <polyline class="lkv10"  stroke-width="0.0455883676253586" points="420.933215153717,422.830791091517 422.392042918652,422.830791091517 " />
       <metadata>
-        <cge:PSR_Ref ObjectID="PD_36000000_6294203" ObjectName="未命名站内-链接线" PSRType="360000" GlobeID="4257562b-622b-f069-e053-360ab90a5bbdr3vpde" LineType="Branch" />
-        <cge:GLink_Ref ObjectID="PD_30700000_243728"/>
-        <cge:GLink_Ref ObjectID="PD_36000000_6294195"/>
-        <cge:GLink_Ref ObjectID="PD_30600001_534826"/>
-        <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+      <cge:PSR_Ref ObjectID="PD_36000000_6294203" ObjectName="未命名站内-链接线" PSRType="360000" GlobeID="4257562b-622b-f069-e053-360ab90a5bbdr3vpde" LineType="Branch" />
+      <cge:GLink_Ref ObjectID="PD_30700000_243728"/>
+      <cge:GLink_Ref ObjectID="PD_36000000_6294195"/>
+      <cge:GLink_Ref ObjectID="PD_30600001_534826"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
       </metadata>
  </g>
  <g id="PD_36000000_6294195">
@@ -10313,7 +10313,7 @@
       <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
       </metadata>
  </g>
- <g id="PD_13000000_7379141">
+ <!-- <g id="PD_13000000_7379141">
      <polyline class="lkv10"  stroke-width="0.0455883676253586" points="493.921469168021,667.857380802413 493.921469168021,669.02444301344 " />
       <metadata>
       <cge:PSR_Ref ObjectID="PD_13000000_7379141" ObjectName="未命名配电连接线730232" PSRType="130000" GlobeID="42575636-9b46-f069-e053-360ab90a5bbdnqqlv7" LineType="Branch" />
@@ -10321,8 +10321,8 @@
       <cge:GLink_Ref ObjectID="PD_11000000_236014"/>
       <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
       </metadata>
- </g>
- <g id="PD_13000000_7379140">
+ </g> -->
+ <!-- <g id="PD_13000000_7379140">
      <polyline class="lkv10"  stroke-width="0.0455883676253586" points="493.921469168021,662.313835298884 493.921469168021,663.480897509911 " />
       <metadata>
       <cge:PSR_Ref ObjectID="PD_13000000_7379140" ObjectName="未命名配电连接线730231" PSRType="130000" GlobeID="42575636-9b45-f069-e053-360ab90a5bbd0bp6wy" LineType="Branch" />
@@ -10331,8 +10331,8 @@
       <cge:GLink_Ref ObjectID="PD_11500000_218861"/>
       <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
       </metadata>
- </g>
- <g id="PD_13000000_7379139">
+ </g> -->
+ <!-- <g id="PD_13000000_7379139">
      <polyline class="lkv10"  stroke-width="0.0455883676253586" points="493.921469168021,661.146773087857 493.921469168021,662.313835298884 " />
       <metadata>
       <cge:PSR_Ref ObjectID="PD_13000000_7379139" ObjectName="未命名配电连接线730230" PSRType="130000" GlobeID="42575636-9b44-f069-e053-360ab90a5bbdynczw5" LineType="Branch" />
@@ -10341,7 +10341,7 @@
       <cge:GLink_Ref ObjectID="PD_13000000_7379140"/>
       <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
       </metadata>
- </g>
+ </g> -->
  <g id="PD_13000000_7863494">
      <polyline class="lkv10"  stroke-width="0.0455883676253586" points="480.568305462142,656.124612627136 480.568305462142,657.291674838738 " />
       <metadata>
@@ -10877,7 +10877,7 @@
  </g>
 </g>
 <g id="ACLineSegment_Layer">
- <g id="PD_20100000_199069">
+ <!-- <g id="PD_20100000_199069">
      <polyline class="lkv10" stroke-dasharray="2 1" stroke-width="0.0911767352507172" points="438.439148321422,578.282742067245 438.439148321422,588.051435214551 493.921469168021,588.051435214551 493.921469168021,661.146773087857 " />
       <metadata>
       <cge:PSR_Ref ObjectID="PD_20100000_199069" ObjectName="璧渝路4#电缆" PSRType="0201" GlobeID="63858AD1-39EF-476E-ABC3-EBAA5282EF72-24107" LineType="Branch" />
@@ -10886,7 +10886,7 @@
       <cge:GLink_Ref ObjectID="PD_13000000_7379139"/>
       <cge:Layer_Ref ObjectName="ACLineSegment_Layer"/>
       </metadata>
- </g>
+ </g> -->
  <g id="PD_20100000_281123">
      <polyline class="lkv10" stroke-dasharray="2 1" stroke-width="0.0911767352507172" points="434.062665031224,578.282742067245 434.062665031224,596.707366459777 480.568305462142,596.707366459777 480.568305462142,656.124612627136 " />
       <metadata>
@@ -11770,7 +11770,7 @@
       </metadata>
  </g>
 </g>
-<g id="Fuse_Layer">
+<!-- <g id="Fuse_Layer">
  <g id="PD_11500000_218861">
      <use class="kv10" x="493.921469168021" y="665.669139156162" width="3" height="1.46" transform="rotate(-90,493.921469168021,665.669139156162) translate(493.921469168021,665.669139156162) scale(1.31294498761033,1.31294498761033) translate(-496.921469168021,-667.129139156162)" xlink:href="#Fuse_11500000_2090010@1" bound="493.921469168021,665.669139156162,496.921469168021,667.129139156162"/>
      <polyline class="lkv10" stroke-width="0.125" points="493.921469168021,663.896663422888 493.921469168021,663.480897509911" visibility="visible" />
@@ -11782,117 +11782,7 @@
       <cge:Layer_Ref ObjectName="Fuse_Layer"/>
       </metadata>
  </g>
- <g id="PD_11500000_383229">
-     <use class="kv10" x="480.568305462142" y="665.669139156162" width="3" height="1.46" transform="rotate(-90,480.568305462142,665.669139156162) translate(480.568305462142,665.669139156162) scale(1.31294498761033,1.31294498761033) translate(-483.568305462142,-667.129139156162)" xlink:href="#Fuse_11500000_2090010@1" bound="480.568305462142,665.669139156162,483.568305462142,667.129139156162"/>
-     <polyline class="lkv10" stroke-width="0.125" points="480.568305462142,663.896663422888 480.568305462142,663.480897509911" visibility="visible" />
-     <polyline class="lkv10" stroke-width="0.125" points="480.568305462142,667.441614889436 480.568305462142,667.857380802413" visibility="visible" />
-      <metadata>
-      <cge:PSR_Ref ObjectID="PD_11500000_383229" ObjectName="专用跌落式熔断器" PSRType="0115" GlobeID="SBID000000EB47951307994FD5B8677E27D8DAE7AE" LineType="Branch" />
-      <cge:GLink_Ref ObjectID="PD_10100000_1014893"/>
-      <cge:GLink_Ref ObjectID="PD_10200001_2667552"/>
-      <cge:GLink_Ref ObjectID="PD_11000001_423809"/>
-      <cge:Layer_Ref ObjectName="Fuse_Layer"/>
-      </metadata>
- </g>
- <g id="PD_11500000_218730">
-     <use class="kv10" x="458.695388889811" y="628.595256035877" width="3" height="1.46" transform="rotate(-181.48316761,458.695388889811,628.595256035877) translate(458.695388889811,628.595256035877) scale(1.31294498761033,1.31294498761033) translate(-461.695388889811,-630.055256035877)" xlink:href="#Fuse_11500000_2090010@1" bound="458.695388889811,628.595256035877,461.695388889811,630.055256035877"/>
-     <polyline class="lkv10" stroke-width="0.125" points="456.923506985329,628.641133498935 456.507880384797,628.651894877696" visibility="visible" />
-     <polyline class="lkv10" stroke-width="0.125" points="460.467270794292,628.549378572818 460.882897392521,628.538617193482" visibility="visible" />
-      <metadata>
-      <cge:PSR_Ref ObjectID="PD_11500000_218730" ObjectName="110kV璧山变电站璧渝路3#跌落保险" PSRType="0115" GlobeID="7B015DFF-6681-B53E-E043-0AB90240B53E-00001" LineType="Branch" />
-      <cge:GLink_Ref ObjectID="PD_13000000_7379143"/>
-      <cge:GLink_Ref ObjectID="PD_13000000_7379144"/>
-      <cge:Layer_Ref ObjectName="Fuse_Layer"/>
-      </metadata>
- </g>
- <g id="PD_11500000_257446">
-     <use class="kv10" x="458.695388889811" y="634.739718856341" width="3" height="1.46" transform="rotate(-180,458.695388889811,634.739718856341) translate(458.695388889811,634.739718856341) scale(1.31294498761033,1.31294498761033) translate(-461.695388889811,-636.199718856341)" xlink:href="#Fuse_11500000_2090010@1" bound="458.695388889811,634.739718856341,461.695388889811,636.199718856341"/>
-     <polyline class="lkv10" stroke-width="0.125" points="456.922913156537,634.739718856341 456.507147242408,634.739718856341" visibility="visible" />
-     <polyline class="lkv10" stroke-width="0.125" points="460.467864623084,634.739718856341 460.88363053491,634.739718856341" visibility="visible" />
-      <metadata>
-      <cge:PSR_Ref ObjectID="PD_11500000_257446" ObjectName="长城运输公司1#跌落保险" PSRType="0115" GlobeID="519D45A5-8241-4295-95DD-6C7DF2A150CC-59286" LineType="Branch" />
-      <cge:GLink_Ref ObjectID="PD_13000000_7359742"/>
-      <cge:GLink_Ref ObjectID="PD_13000000_7642152"/>
-      <cge:Layer_Ref ObjectName="Fuse_Layer"/>
-      </metadata>
- </g>
- <g id="PD_11500000_442211">
-     <use class="kv10" x="297.061128316007" y="602.943854178897" width="3" height="1.46" transform="rotate(-180,297.061128316007,602.943854178897) translate(297.061128316007,602.943854178897) scale(1.31294498761033,1.31294498761033) translate(-300.061128316007,-604.403854178897)" xlink:href="#Fuse_11500000_2090010@1" bound="297.061128316007,602.943854178897,300.061128316007,604.403854178897"/>
-     <polyline class="lkv10" stroke-width="0.125" points="295.288652582733,602.943854178897 294.872886670907,602.943854178897" visibility="visible" />
-     <polyline class="lkv10" stroke-width="0.125" points="298.833604049281,602.943854178897 299.24936996341,602.943854178897" visibility="visible" />
-      <metadata>
-      <cge:PSR_Ref ObjectID="PD_11500000_442211" ObjectName="马联支线3-1#杆跌落保险" PSRType="0115" GlobeID="SBID00000048C68D3CB21D4AF8ADB2D9F4B0422C1D" LineType="Branch" />
-      <cge:GLink_Ref ObjectID="PD_10200001_2866278"/>
-      <cge:GLink_Ref ObjectID="PD_13000000_7924792"/>
-      <cge:GLink_Ref ObjectID="PD_11000001_490872"/>
-      <cge:Layer_Ref ObjectName="Fuse_Layer"/>
-      </metadata>
- </g>
- <g id="PD_11500000_442179">
-     <use class="kv10" x="291.517582812478" y="602.943854178897" width="3" height="1.46" transform="rotate(-180,291.517582812478,602.943854178897) translate(291.517582812478,602.943854178897) scale(1.31294498761033,1.31294498761033) translate(-294.517582812478,-604.403854178897)" xlink:href="#Fuse_11500000_2090010@1" bound="291.517582812478,602.943854178897,294.517582812478,604.403854178897"/>
-     <polyline class="lkv10" stroke-width="0.125" points="289.745107079204,602.943854178897 289.329341167379,602.943854178897" visibility="visible" />
-     <polyline class="lkv10" stroke-width="0.125" points="293.290058545752,602.943854178897 293.705824459881,602.943854178897" visibility="visible" />
-      <metadata>
-      <cge:PSR_Ref ObjectID="PD_11500000_442179" ObjectName="马联支线3#杆跌落保险" PSRType="0115" GlobeID="SBID000000F45B4808385543E4A2CA348F4A189A87" LineType="Branch" />
-      <cge:GLink_Ref ObjectID="PD_10100000_1180233"/>
-      <cge:GLink_Ref ObjectID="PD_10100000_623940"/>
-      <cge:GLink_Ref ObjectID="PD_10200000_2864907"/>
-      <cge:GLink_Ref ObjectID="PD_13000000_7924792"/>
-      <cge:Layer_Ref ObjectName="Fuse_Layer"/>
-      </metadata>
- </g>
- <g id="PD_11500000_414749">
-     <use class="kv10" x="300.315773056726" y="570.401345598648" width="3" height="1.46" transform="rotate(-270,300.315773056726,570.401345598648) translate(300.315773056726,570.401345598648) scale(1.31294498761033,1.31294498761033) translate(-303.315773056726,-571.861345598648)" xlink:href="#Fuse_11500000_2090010@1" bound="300.315773056726,570.401345598648,303.315773056726,571.861345598648"/>
-     <polyline class="lkv10" stroke-width="0.125" points="300.315773056726,572.173821331922 300.315773056726,572.589587244323" visibility="visible" />
-     <polyline class="lkv10" stroke-width="0.125" points="300.315773056726,568.628869865374 300.315773056726,568.213103952396" visibility="visible" />
-      <metadata>
-      <cge:PSR_Ref ObjectID="PD_11500000_414749" ObjectName="桥马线4-1#保险" PSRType="0115" GlobeID="SBID00000056BA9339A522438EB48EC2341E1B8B7C" LineType="Branch" />
-      <cge:GLink_Ref ObjectID="PD_10100000_1109976"/>
-      <cge:GLink_Ref ObjectID="PD_10200001_2783176"/>
-      <cge:GLink_Ref ObjectID="PD_11000001_454329"/>
-      <cge:Layer_Ref ObjectName="Fuse_Layer"/>
-      </metadata>
- </g>
- <g id="PD_11500000_457213">
-     <use class="kv10" x="339.927323333148" y="570.401345598648" width="3" height="1.46" transform="rotate(-270,339.927323333148,570.401345598648) translate(339.927323333148,570.401345598648) scale(1.31294498761033,1.31294498761033) translate(-342.927323333148,-571.861345598648)" xlink:href="#Fuse_11500000_2090010@1" bound="339.927323333148,570.401345598648,342.927323333148,571.861345598648"/>
-     <polyline class="lkv10" stroke-width="0.125" points="339.927323333148,572.173821331922 339.927323333148,572.589587244323" visibility="visible" />
-     <polyline class="lkv10" stroke-width="0.125" points="339.927323333148,568.628869865374 339.927323333148,568.213103952396" visibility="visible" />
-      <metadata>
-      <cge:PSR_Ref ObjectID="PD_11500000_457213" ObjectName="跌落保险" PSRType="0115" GlobeID="SBID00000003124BD383774EE39EDA0C5164932847" LineType="Branch" />
-      <cge:GLink_Ref ObjectID="PD_10100000_1215878"/>
-      <cge:GLink_Ref ObjectID="PD_10200001_2904804"/>
-      <cge:GLink_Ref ObjectID="PD_13000000_7940498"/>
-      <cge:Layer_Ref ObjectName="Fuse_Layer"/>
-      </metadata>
- </g>
- <g id="PD_11500000_416134">
-     <use class="kv10" x="339.927323333148" y="580.967197444823" width="3" height="1.46" transform="rotate(-90,339.927323333148,580.967197444823) translate(339.927323333148,580.967197444823) scale(1.31294498761033,1.31294498761033) translate(-342.927323333148,-582.427197444823)" xlink:href="#Fuse_11500000_2090010@1" bound="339.927323333148,580.967197444823,342.927323333148,582.427197444823"/>
-     <polyline class="lkv10" stroke-width="0.125" points="339.927323333148,579.194721711549 339.927323333148,578.778955798572" visibility="visible" />
-     <polyline class="lkv10" stroke-width="0.125" points="339.927323333148,582.739673178097 339.927323333148,583.155439090498" visibility="visible" />
-      <metadata>
-      <cge:PSR_Ref ObjectID="PD_11500000_416134" ObjectName="中铁二十四局集团福建铁路建设有限公司熔断器" PSRType="0115" GlobeID="SBID000000AF766A585E614320AAF5EB8FC6074E65" LineType="Branch" />
-      <cge:GLink_Ref ObjectID="PD_10100000_1215878"/>
-      <cge:GLink_Ref ObjectID="PD_10100000_1109860"/>
-      <cge:GLink_Ref ObjectID="PD_10200001_2782671"/>
-      <cge:GLink_Ref ObjectID="PD_13000000_7950231"/>
-      <cge:GLink_Ref ObjectID="PD_11000001_464216"/>
-      <cge:Layer_Ref ObjectName="Fuse_Layer"/>
-      </metadata>
- </g>
- <g id="PD_11500000_426435">
-     <use class="kv10" x="306.505579259628" y="580.967197444823" width="3" height="1.46" transform="rotate(-90,306.505579259628,580.967197444823) translate(306.505579259628,580.967197444823) scale(1.31294498761033,1.31294498761033) translate(-309.505579259628,-582.427197444823)" xlink:href="#Fuse_11500000_2090010@1" bound="306.505579259628,580.967197444823,309.505579259628,582.427197444823"/>
-     <polyline class="lkv10" stroke-width="0.125" points="306.505579259628,579.194721711549 306.505579259628,578.778955798572" visibility="visible" />
-     <polyline class="lkv10" stroke-width="0.125" points="306.505579259628,582.739673178097 306.505579259628,583.155439090498" visibility="visible" />
-      <metadata>
-      <cge:PSR_Ref ObjectID="PD_11500000_426435" ObjectName="重庆市璧山区交通项目建设指挥部熔断器" PSRType="0115" GlobeID="SBID000000EF3717C915E44DD6AA09663188CC7E70" LineType="Branch" />
-      <cge:GLink_Ref ObjectID="PD_10100000_1109860"/>
-      <cge:GLink_Ref ObjectID="PD_10100000_1109552"/>
-      <cge:GLink_Ref ObjectID="PD_10200001_2782670"/>
-      <cge:GLink_Ref ObjectID="PD_20100000_348444"/>
-      <cge:Layer_Ref ObjectName="Fuse_Layer"/>
-      </metadata>
- </g>
-</g>
+</g> -->
 <g id="Junction_Layer">
  <g id="PD_32000000_1246067">
      <use class="kv10" x="455.268980306505" y="662.064397455157" width="1.15" height="0.4" transform="rotate(-270,455.268980306505,662.064397455157) translate(455.268980306505,662.064397455157) scale(1.26854588174911,1.26854588174911) translate(-456.418980306505,-662.464397455157)" xlink:href="#Junction_32000000_4300010" bound="455.268980306505,662.064397455157,456.418980306505,662.464397455157"/>
@@ -12775,7 +12665,7 @@
         <cge:Layer_Ref ObjectName="Text_Layer"/>
       </metadata>
   </g>
-  <!-- <g id="TXT-PD_30500000_534950">
+  <g id="TXT-PD_30500000_534950">
       <text style="text-anchor:middle" x="806.329728544072" y="516.507718906914" font-size="0.924313271277671" font-family="宋体" fill="rgb(192,192,192)">备</text>
       <text style="text-anchor:middle" x="806.329728544072" y="518.050638402534" font-size="0.924313271277671" font-family="宋体" fill="rgb(192,192,192)">用</text>
       <text style="text-anchor:middle" x="806.329728544072" y="519.593557898729" font-size="0.924313271277671" font-family="宋体" fill="rgb(192,192,192)">964</text>
@@ -12783,7 +12673,7 @@
         <cge:PSR_Ref ObjectID="TXT-PD_30500000_534950"/>
         <cge:Layer_Ref ObjectName="Text_Layer"/>
       </metadata>
-  </g> -->
+  </g>
   <g id="TXT-PD_30500000_543221">
       <text style="text-anchor:middle" x="308.892483073983" y="508.175953629304" font-size="0.924313271277671" font-family="宋体" fill="rgb(255,255,255)">桥</text>
       <text style="text-anchor:middle" x="308.892483073983" y="509.718873124923" font-size="0.924313271277671" font-family="宋体" fill="rgb(255,255,255)">东</text>
@@ -14210,13 +14100,13 @@
         <cge:Layer_Ref ObjectName="Text_Layer"/>
       </metadata>
   </g>
-  <!-- <g id="TXT-PD_30600001_896486">
+  <g id="TXT-PD_30600001_896486">
       <text style="text-anchor:middle" x="803.552473451152" y="527.983092755794" font-size="0.693234953458253" font-family="宋体" fill="rgb(192,192,192)">96460</text>
       <metadata>
         <cge:PSR_Ref ObjectID="TXT-PD_30600001_896486"/>
         <cge:Layer_Ref ObjectName="Text_Layer"/>
       </metadata>
-  </g> -->
+  </g>
   <g id="TXT-PD_30600001_534825">
       <text style="text-anchor:middle" x="432.634626643718" y="435.407923003094" font-size="0.693234953458253" font-family="宋体" fill="rgb(192,192,192)">9640</text>
       <metadata>
@@ -14252,13 +14142,13 @@
         <cge:Layer_Ref ObjectName="Text_Layer"/>
       </metadata>
   </g>
-  <!-- <g id="TXT-PD_30600001_924214">
+  <g id="TXT-PD_30600001_924214">
       <text style="text-anchor:middle" x="373.386518000885" y="593.094295481635" font-size="0.693234953458253" font-family="宋体" fill="rgb(255,255,255)">96460</text>
       <metadata>
         <cge:PSR_Ref ObjectID="TXT-PD_30600001_924214"/>
         <cge:Layer_Ref ObjectName="Text_Layer"/>
       </metadata>
-  </g> -->
+  </g>
   <g id="TXT-PD_30600001_924213">
       <text style="text-anchor:middle" x="368.757759513451" y="593.094295481635" font-size="0.693234953458253" font-family="宋体" fill="rgb(255,255,255)">96360</text>
       <metadata>
@@ -14870,13 +14760,13 @@
         <cge:Layer_Ref ObjectName="Text_Layer"/>
       </metadata>
   </g>
-  <!-- <g id="TXT-PD_30600000_924278">
+  <g id="TXT-PD_30600000_924278">
       <text style="text-anchor:middle" x="376.163773093806" y="587.790599616384" font-size="0.924313271277671" font-family="宋体" fill="rgb(255,255,255)">9646</text>
       <metadata>
         <cge:PSR_Ref ObjectID="TXT-PD_30600000_924278"/>
         <cge:Layer_Ref ObjectName="Text_Layer"/>
       </metadata>
-  </g> -->
+  </g>
   <g id="TXT-PD_30600000_924212">
       <text style="text-anchor:middle" x="372.152182405311" y="587.790599616384" font-size="0.924313271277671" font-family="宋体" fill="rgb(255,255,255)">9636</text>
       <metadata>
@@ -15683,8 +15573,8 @@
       </metadata>
   </g>
   <g id="TXT-PD_11300000_211365">
-      <text style="text-anchor:middle" x="222.797575204957" y="503.855779040764" font-size="0.924313271277671" font-family="宋体" fill="rgb(255,255,255)">璧旺I回21#</text>
-      <text style="text-anchor:middle" x="222.797575204957" y="505.09011463749" font-size="0.924313271277671" font-family="宋体" fill="rgb(255,255,255)">刀闸</text>
+      <text style="text-anchor:middle" x="222.797575204957" y="503.855779040764" font-size="240.924313271277671" font-family="宋体" fill="rgb(255,255,255)">璧旺I回21#</text>
+      <text style="text-anchor:middle" x="222.797575204957" y="505.09011463749" font-size="240.924313271277671" font-family="宋体" fill="rgb(255,255,255)">刀闸</text>
       <metadata>
         <cge:PSR_Ref ObjectID="TXT-PD_11300000_211365"/>
         <cge:Layer_Ref ObjectName="Text_Layer"/>
@@ -15850,12 +15740,12 @@
 <a xlink:href="10kV 璧一线629单线图" target="PD_20100000_251613">
 <text style="text-anchor:middle" x="444.093842678032" y="532.227521711082"  font-size="1.31294498761033" font-family="宋体" fill="rgb(0,128,0)">10kV 璧一线629</text>
 </a>
-<a xlink:href="10kV泉吉线单线图" target="PD_20100000_373378">
+<!-- <a xlink:href="10kV泉吉线单线图" target="PD_20100000_373378">
 <text style="text-anchor:middle" x="793.072147468091" y="543.991771762106"  font-size="1.31294498761033" font-family="宋体" fill="rgb(0,128,0)">10kV泉吉线</text>
 </a>
 <a xlink:href="10kV泉吉线单线图" target="PD_20100000_393912">
 <text style="text-anchor:middle" x="801.825114050792" y="543.532941116181"  font-size="1.31294498761033" font-family="宋体" fill="rgb(0,128,0)">10kV泉吉线</text>
-</a>
+</a> -->
 <a xlink:href="10kV 璧旺Ⅱ回619单线图" target="PD_20100000_200163">
 <text style="text-anchor:middle" x="317.51708909524" y="544.270053254602"  font-size="1.31294498761033" font-family="宋体" fill="rgb(0,128,0)">10kV 璧旺Ⅱ回619</text>
 </a>

@@ -42,6 +42,59 @@
         >
         </el-color-picker>
       </li>
+      <li>
+        <span>连接线类型：</span>
+        <el-popover placement="bottom" width="400" trigger="click">
+          <el-button slot="reference">类型</el-button>
+          <div v-for="it in joinLine" :key="it.id" class="commonItem">
+            <svg
+              width="145"
+              height="15"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              @click="getJoinLineType(it)"
+            >
+              <line
+                v-if="it.id === 'commonline'"
+                :x1="it.x1"
+                :y1="it.y1"
+                :x2="it.x2"
+                :y2="it.y2"
+                :stroke="it.style.stroke"
+                :strokeWidth="it.style.strokeWidth"
+                :fill="it.style.fill"
+              />
+              <line
+                v-if="it.id === 'dashLine1'"
+                :x1="it.x1"
+                :y1="it.y1"
+                :x2="it.x2"
+                :stroke-dasharray="it.dasharray"
+                :y2="it.y2"
+                :style="it.style"
+              />
+              <line
+                v-if="it.id === 'dashLine2'"
+                :x1="it.x1"
+                :y1="it.y1"
+                :x2="it.x2"
+                :stroke-dasharray="it.dasharray"
+                :y2="it.y2"
+                :style="it.style"
+              />
+              <line
+                v-if="it.id === 'dashLine3'"
+                :x1="it.x1"
+                :y1="it.y1"
+                :x2="it.x2"
+                :stroke-dasharray="it.dasharray"
+                :y2="it.y2"
+                :style="it.style"
+              />
+            </svg>
+          </div>
+        </el-popover>
+      </li>
     </ul>
   </div>
 </template>
@@ -70,6 +123,59 @@ export default {
         "hsl(181, 100%, 37%)",
         "hsla(209, 100%, 56%, 0.73)",
         "#c7158577"
+      ],
+      joinLine: [
+        {
+          id: "commonline",
+          x1: 5,
+          y1: 5,
+          x2: 200,
+          y2: 5,
+          style: {
+            stroke: "#fff",
+            strokeWidth: 1,
+            fill: "#1f272f"
+          }
+        },
+        {
+          id: "dashLine1",
+          x1: 5,
+          y1: 5,
+          x2: 200,
+          y2: 5,
+          style: {
+            stroke: "#fff",
+            strokeWidth: 1,
+            fill: "#1f272f"
+          },
+          dasharray: "5,5"
+        },
+        {
+          id: "dashLine2",
+          x1: 5,
+          y1: 5,
+          x2: 200,
+          y2: 5,
+          style: {
+            stroke: "#fff",
+            strokeWidth: 1,
+            fill: "#1f272f"
+          },
+          dasharray: "10,10"
+        },
+        {
+          id: "dashLine3",
+          x1: 5,
+          y1: 5,
+          x2: 200,
+          y2: 5,
+          style: {
+            stroke: "#fff",
+            strokeWidth: 1,
+            fill: "#1f272f"
+          },
+          dasharray: "20,10,5,10,20,10"
+        }
       ]
     };
   },
@@ -79,6 +185,9 @@ export default {
     },
     changeAttrPalToggle() {
       this.$store.commit("changeAttrPalToggle", false);
+    },
+    getJoinLineType(it) {
+      this.$store.commit("changeJoinLineType", it);
     }
   },
   computed: {
@@ -126,6 +235,15 @@ export default {
       font-size: 14px;
       line-height: 50px;
     }
+  }
+  /deep/.commonItem {
+    display: inline-block;
+    margin-left: 90px;
+    width: 100%;
+    height: 5px;
+    margin: 2px;
+    position: relative;
+    cursor: pointer;
   }
 }
 </style>

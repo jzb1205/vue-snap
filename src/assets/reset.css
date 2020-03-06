@@ -78,6 +78,15 @@ li{
     width:200px;
     height:auto;
 }
+.el-button--mini{
+    background: #2A353D;
+    color:#fff;
+    border: 1px solid #121a1f;
+}
+.el-popover.el-popper{
+    background: #2A353D;
+    width:auto!important;
+}
 /* 取色器 */
 .el-color-picker--mini{
     position: relative;

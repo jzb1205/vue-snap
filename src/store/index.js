@@ -10,7 +10,20 @@ export default new Vuex.Store({
     strokeColor: "red", //画笔颜色
     strokeWidth: 1, //画笔粗细
     fillColor: "#000", //填充颜色
-    attrPalToggle: true //属性面板切换
+    attrPalToggle: true, //属性面板切换
+    joinLineType: {
+      id: "common",
+      x1: 5,
+      y1: 55,
+      x2: 55,
+      y2: 5,
+      style: {
+        stroke: "#fff",
+        strokeWidth: 1,
+        fill: "#1f272f"
+      },
+      dasharray: ""
+    } //连接类型
   },
   mutations: {
     changePencelType(state, pload) {
@@ -30,6 +43,10 @@ export default new Vuex.Store({
     },
     changeAttrPalToggle(state, pload) {
       state.attrPalToggle = pload;
+    },
+    changeJoinLineType(state, pload) {
+      console.log(pload);
+      state.joinLineType = Object.assign({}, pload);
     }
   },
   actions: {},

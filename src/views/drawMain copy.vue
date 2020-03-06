@@ -65,7 +65,7 @@
 import common from "./../draw/basePel/index";
 import Event from "./../event/index";
 import Symbol from "./../draw/symbol/index";
-import { setTimeout } from "timers";
+import { setInterval, clearInterval } from "timers";
 export default {
   name: "drawMainWrap",
   data() {
@@ -74,7 +74,7 @@ export default {
       svgBg: null, //svg背景对象
       svgMag: 1, //svg放大倍数
       svgMagMin: 0.1, //svg缩放最小比例
-      svgMagMax: 100, //svg缩放最大比例
+      svgMagMax: 20, //svg缩放最大比例
       predefineColors: [
         //默认预选颜色
         "#ff4500",
@@ -122,7 +122,8 @@ export default {
       },
       scaleNum: 1, //svg缩放倍数
       loading: false, //导入svg时样式
-      importBgObj: null //导入时 的背景对象
+      importBgObj: null, //导入时 的背景对象
+      timer: null
     };
   },
   created() {
@@ -152,8 +153,13 @@ export default {
     fillColor() {
       return this.$store.state.fillColor;
     },
+    //属性面板切换
     attrPalToggle() {
       return this.$store.state.attrPalToggle;
+    },
+    //连接线样式
+    joinLineType() {
+      return this.$store.state.joinLineType;
     }
   },
   methods: {
@@ -447,25 +453,8 @@ export default {
       this.bgRect = new common.Rect(option).create();
       g.add(this.bgRect);
     },
-    createSvgDom() {
-      //清楚所有svg元素
-      // let el = document.querySelector(".drawMain");
-      // let svgList = el.childNodes;
-      // for (var i = svgList.length - 1; i >= 0; i--) {
-      //   el.removeChild(svgList[i]);
-      // }
-      // // debugger;
-      //重新创建svg Dom节点
-      // let svg = document.createElement("svg");
-      // svg.id = "svg";
-      // svg.width = "100%";
-      // svg.height = "100%";
-      // document.querySelector(".drawMain").appendChild(svg);
-      // this.svgContent = Snap("#svg");
-    },
     //创建图形
     create() {
-      debugger;
       let that = this;
       let e = event || window.event;
       let x = e.pageX - 320;
@@ -779,26 +768,6 @@ export default {
             .mouseover(function() {
               that.contextMenu(pel);
             })
-            // .mousemove(function(e) {
-            //   let m = new Snap.Matrix();
-            //   that.curPoint.x = e.pageX;
-            //   that.curPoint.y = e.pageY;
-            //   console.log(that.curPoint.x, that.aheadPoint.x);
-            //   console.log(that.curPoint.y, that.aheadPoint.y);
-            //   let x = 0;
-            //   let y = 0;
-            //   if (that.svgMag > 0) {
-            //     x = (that.curPoint.x - that.aheadPoint.x) * that.svgMag;
-            //     y = (that.curPoint.y - that.aheadPoint.y) * that.svgMag;
-            //   } else {
-            //     x = (that.curPoint.x - that.aheadPoint.x) / that.svgMag;
-            //     y = (that.curPoint.y - that.aheadPoint.y) / that.svgMag;
-            //   }
-            //   m.translate(x, y);
-            //   this.transform(m);
-            //   that.aheadPoint.x = that.curPoint.x;
-            //   that.aheadPoint.y = that.curPoint.y;
-            // })
             .mousedown(function(e) {
               e.stopPropagation();
               that.svgContent.undrag();
@@ -806,7 +775,8 @@ export default {
             })
             .click(function() {
               that.curOptPel = this;
-              Event.click(that.svgContent, this);
+              console.log(that.joinLineType);
+              Event.click(that.svgContent, this, that.joinLineType);
             })
             .dblclick(function(e) {
               that.openAttrOptionPanl(e);
@@ -1047,38 +1017,68 @@ export default {
           let gL = g.selectAll("g");
           that.svgContent.clear();
           gL.items.map(it => {
+            //背景层
             if (it.node.id === "BackGround_Layer") {
               that.importBgObj = it.select("rect");
+            } else {
+              return that.EventWrap(it);
             }
-            return that.EventWrap(it);
           });
-          // document.querySelector("#svgroot").removeChild("svg");
           this.appendChild(g.node);
           that.svgContent.clear(); //导出事清空svg
         },
         document.querySelector("#svgroot")
       );
+      // that.timer = setInterval(() => {
+      //   let importSvgContent = svgroot.querySelector("svg");
+      //   if (importSvgContent !== null) {
+      //     that.loading = false;
+      //     importSvgContent.id = "svgContent";
+      //     that.svgContent = Snap("#svgContent");
+      //     that.svgContent.mousemove(function() {
+      //       this.drag();
+      //       this.attr({
+      //         cursor: "pointer",
+      //         fill: "red"
+      //       });
+      //     });
+      //     that.cancelBH();
+      //     let svgContent = document.querySelector("#svgContent");
+      //     if (document.attachEvent) {
+      //       svgContent.attachEvent("onmousewheel", that.svgScaleOption);
+      //     } else {
+      //       svgContent.addEventListener(
+      //         "mousewheel",
+      //         that.svgScaleOption,
+      //         false
+      //       );
+      //     }
+      //   }
+      // }, 1000);
       setTimeout(() => {
-        //导入完成时 给新的svg加上id=svgroot 并转化为svg对象
-        let svgroot = document.querySelector("#svgroot");
         let importSvgContent = svgroot.querySelector("svg");
-        importSvgContent.id = "svgContent";
-
-        that.loading = false;
-        that.svgContent = Snap("#svgContent").drag();
-        console.log(that.svgContent);
-        this.svgContent.mousemove(function() {
-          this.attr({
-            cursor: "move",
-            fill: "red"
+        if (importSvgContent !== null) {
+          that.loading = false;
+          importSvgContent.id = "svgContent";
+          that.svgContent = Snap("#svgContent");
+          that.svgContent.mousemove(function() {
+            this.drag();
+            this.attr({
+              cursor: "pointer",
+              fill: "red"
+            });
           });
-        });
-        this.cancelBH();
-        let svgContent = document.querySelector("#svgContent");
-        if (document.attachEvent) {
-          svgContent.attachEvent("onmousewheel", that.svgScaleOption);
-        } else {
-          svgContent.addEventListener("mousewheel", that.svgScaleOption, false);
+          that.cancelBH();
+          let svgContent = document.querySelector("#svgContent");
+          if (document.attachEvent) {
+            svgContent.attachEvent("onmousewheel", that.svgScaleOption);
+          } else {
+            svgContent.addEventListener(
+              "mousewheel",
+              that.svgScaleOption,
+              false
+            );
+          }
         }
       }, 5000);
     },
@@ -1185,7 +1185,6 @@ export default {
     EventWrap(obj) {
       let that = this;
       obj
-        .drag()
         .mouseover(function() {
           that.contextMenu(this);
         })
@@ -1219,6 +1218,11 @@ export default {
         });
       }
     }
+    // loading() {
+    //   if (!this.loading) {
+    //     clearInterval(this.timer);
+    //   }
+    // }
   }
 };
 </script>
