@@ -1,0 +1,2364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="3326" height="900" viewBox="0 0 3326 900" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  xmlns:cge="http://iec.ch/TC57/2005/SVG-schema#" preserveAspectRatio="xMidYMid">
+<defs>
+<style type="text/css">
+<![CDATA[
+	symbol{overflow:visible}
+	.lkv1000 {fill:none;stroke:rgb(0,0,255)}
+	.kv1000 {fill:rgb(0,0,255);stroke:rgb(0,0,255);stroke-width:1}
+	.lkv750 {fill:none;stroke:rgb(250,128,10)}
+	.kv750 {fill:rgb(250,128,10);stroke:rgb(250,128,10);stroke-width:1}
+	.lkv500 {fill:none;stroke:rgb(255,0,0)}
+	.kv500 {fill:rgb(255,0,0);stroke:rgb(255,0,0);stroke-width:1}
+	.lkv330 {fill:none;stroke:rgb(30,144,255)}
+	.kv330 {fill:rgb(30,144,255);stroke:rgb(30,144,255);stroke-width:1}
+	.lkv220 {fill:none;stroke:rgb(128,0,128)}
+	.kv220 {fill:rgb(128,0,128);stroke:rgb(128,0,128);stroke-width:1}
+	.lkv110 {fill:none;stroke:rgb(240,65,85)}
+	.kv110 {fill:rgb(240,65,85);stroke:rgb(240,65,85);stroke-width:1}
+	.lkv66 {fill:none;stroke:rgb(255,204,0)}
+	.kv66 {fill:rgb(255,204,0);stroke:rgb(255,204,0);stroke-width:1}
+	.lkv35 {fill:none;stroke:rgb(255,255,0)}
+	.kv35 {fill:rgb(255,255,0);stroke:rgb(255,255,0);stroke-width:1}
+	.lkv20 {fill:none;stroke:rgb(226,172,6)}
+	.kv20 {fill:rgb(226,172,6);stroke:rgb(226,172,6);stroke-width:1}
+	.lkv15.75 {fill:none;stroke:rgb(0,128,0)}
+	.kv15.75 {fill:rgb(0,128,0);stroke:rgb(0,128,0);stroke-width:1}
+	.lkv13.8 {fill:none;stroke:rgb(0,210,0)}
+	.kv13.8 {fill:rgb(0,210,0);stroke:rgb(0,210,0);stroke-width:1}
+	.lkv10 {fill:none;stroke:rgb(185,72,66)}
+	.kv10 {fill:rgb(185,72,66);stroke:rgb(185,72,66);stroke-width:1}
+	.lkv6 {fill:none;stroke:rgb(0,0,139)}
+	.kv6 {fill:rgb(0,0,139);stroke:rgb(0,0,139);stroke-width:1}
+	.lkv3 {fill:none;stroke:rgb(0,100,0)}
+	.kv3 {fill:rgb(0,100,0);stroke:rgb(0,100,0);stroke-width:1}
+	.lv380 {fill:none;stroke:rgb(0,204,255)}
+	.v380 {fill:rgb(0,204,255);stroke:rgb(0,204,255);stroke-width:1}
+	.lv220 {fill:none;stroke:rgb(176,164,227)}
+	.v220 {fill:rgb(176,164,227);stroke:rgb(176,164,227);stroke-width:1}
+	.lv110 {fill:none;stroke:rgb(192,192,192)}
+	.v110 {fill:rgb(192,192,192);stroke:rgb(192,192,192);stroke-width:1}
+	.lvdc {fill:none;stroke:rgb(98,49,49)}
+	.vdc {fill:rgb(98,49,49);stroke:rgb(98,49,49);stroke-width:1}
+	]]>
+</style>
+<!-- 定义图元4100011:手车开关（分/热备） -->
+<symbol id="Breaker_4100011" viewBox="0 0 0.97 0.44">
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.48" y1="0" x2="-0.23" y2="0" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.23" y1="0" x2="0.48" y2="0" transform="translate(0.97,0.44)" />
+    <rect fill="4343993" stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x="-0.1" y="-0.22" width="0.2" height="0.44" transform="translate(0.97,0.44) rotate(-89.595999) " />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.48" y1="0" x2="0.42" y2="-0.09" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.48" y1="0" x2="0.43" y2="0.08" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.41" y1="0" x2="0.35" y2="-0.09" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.41" y1="0" x2="0.35" y2="0.08" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.41" y1="0" x2="-0.35" y2="0.09" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.41" y1="0" x2="-0.35" y2="-0.09" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.49" y1="0" x2="-0.43" y2="0.09" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.49" y1="0" x2="-0.43" y2="-0.09" transform="translate(0.97,0.44)" />
+    <!-- 定义端子位置 -->
+    <circle style="fill:none" stroke="rgb(0,200,255)" stroke-width="0.02" cx="-0.4365" cy="0" r="0.08" transform="translate(0.97,0.44)"/>
+    <circle style="fill:none" stroke="rgb(0,200,255)" stroke-width="0.02" cx="0.4365" cy="0" r="0.08" transform="translate(0.97,0.44)"/>
+</symbol>
+<!-- 定义图元4100013:手车开关（分/冷备） -->
+<symbol id="Breaker_4100013" viewBox="0 0 0.95 0.44">
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.4" y1="0" x2="-0.23" y2="0" transform="translate(0.95,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.23" y1="0" x2="0.42" y2="0" transform="translate(0.95,0.44)" />
+    <rect fill="4343993" stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x="-0.1" y="-0.22" width="0.2" height="0.44" transform="translate(0.95,0.44) rotate(-89.595999) " />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.34" y1="0" x2="-0.4" y2="-0.09" transform="translate(0.95,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.34" y1="0" x2="-0.39" y2="0.08" transform="translate(0.95,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.41" y1="0" x2="-0.47" y2="-0.09" transform="translate(0.95,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.41" y1="0" x2="-0.47" y2="0.08" transform="translate(0.95,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.42" y1="0" x2="0.48" y2="0.09" transform="translate(0.95,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.42" y1="0" x2="0.48" y2="-0.09" transform="translate(0.95,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.34" y1="0" x2="0.4" y2="0.09" transform="translate(0.95,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.34" y1="0" x2="0.4" y2="-0.09" transform="translate(0.95,0.44)" />
+</symbol>
+<!-- 定义图元4100012:手车开关（试验/检修） -->
+<symbol id="Breaker_4100012" viewBox="0 0 0.97 0.44">
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.34" y1="-0.06" x2="-0.34" y2="0.06" transform="translate(0.97,0.44)" />
+    <rect fill="4343993" stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x="-0.1" y="-0.22" width="0.2" height="0.44" transform="translate(0.97,0.44) rotate(-89.595999) " />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.34" y1="-0.07" x2="-0.42" y2="0" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.34" y1="-0.07" x2="-0.26" y2="0" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.48" y1="0" x2="0.42" y2="-0.09" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.48" y1="0" x2="0.43" y2="0.08" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.49" y1="0" x2="-0.43" y2="0.09" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.49" y1="0" x2="-0.43" y2="-0.09" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.34" y1="-0.06" x2="0.34" y2="0.06" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.34" y1="-0.07" x2="0.26" y2="0" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.34" y1="-0.07" x2="0.42" y2="0" transform="translate(0.97,0.44)" />
+</symbol>
+<!-- 定义图元4100010:手车开关（合/运行） -->
+<symbol id="Breaker_4100010" viewBox="0 0 0.97 0.44">
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.48" y1="0" x2="-0.23" y2="0" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.23" y1="0" x2="0.48" y2="0" transform="translate(0.97,0.44)" />
+    <rect fill="4343993" stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x="-0.1" y="-0.22" width="0.2" height="0.44" transform="translate(0.97,0.44) rotate(-89.595999) " />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.41" y1="0" x2="-0.35" y2="-0.09" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.49" y1="0" x2="-0.43" y2="-0.09" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.41" y1="0" x2="-0.35" y2="0.09" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.49" y1="0" x2="-0.43" y2="0.09" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.48" y1="0" x2="0.42" y2="-0.09" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.48" y1="0" x2="0.43" y2="0.08" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.41" y1="0" x2="0.35" y2="-0.09" transform="translate(0.97,0.44)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.41" y1="0" x2="0.35" y2="0.08" transform="translate(0.97,0.44)" />
+    <!-- 定义端子位置 -->
+    <circle style="fill:none" stroke="rgb(0,200,255)" stroke-width="0.02" cx="-0.4365" cy="0" r="0.08" transform="translate(0.97,0.44)"/>
+    <circle style="fill:none" stroke="rgb(0,200,255)" stroke-width="0.02" cx="0.4365" cy="0" r="0.08" transform="translate(0.97,0.44)"/>
+</symbol>
+<!-- 定义图元4030011:断路器（分） -->
+<symbol id="Breaker_4030011@0" viewBox="0 0 0.94 0.7">
+    <rect style="fill:none" stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x="-0.15" y="-0.35" width="0.3" height="0.7" transform="translate(0.94,0.7) rotate(-89.595999) " />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.47" y1="0" x2="-0.37" y2="0" transform="translate(0.94,0.7)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.37" y1="0" x2="0.47" y2="0" transform="translate(0.94,0.7)" />
+    <!-- 定义端子位置 -->
+    <circle style="fill:none" stroke="rgb(0,200,255)" stroke-width="0.02" cx="-0.423" cy="0" r="0.08" transform="translate(0.94,0.7)"/>
+    <circle style="fill:none" stroke="rgb(0,200,255)" stroke-width="0.02" cx="0.423" cy="0" r="0.08" transform="translate(0.94,0.7)"/>
+</symbol>
+<!-- 定义图元4030010:断路器（合） -->
+<symbol id="Breaker_4030010@1" viewBox="0 0 0.94 0.7">
+    <rect fill="4343993" stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x="-0.15" y="-0.35" width="0.3" height="0.7" transform="translate(0.94,0.7) rotate(-89.595999) " />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.47" y1="0" x2="-0.37" y2="0" transform="translate(0.94,0.7)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.37" y1="0" x2="0.47" y2="0" transform="translate(0.94,0.7)" />
+    <!-- 定义端子位置 -->
+    <circle style="fill:none" stroke="rgb(0,200,255)" stroke-width="0.02" cx="-0.423" cy="0" r="0.08" transform="translate(0.94,0.7)"/>
+    <circle style="fill:none" stroke="rgb(0,200,255)" stroke-width="0.02" cx="0.423" cy="0" r="0.08" transform="translate(0.94,0.7)"/>
+</symbol>
+<!-- 定义图元4050011:隔离开关（分） -->
+<symbol id="Disconnector_4050011@0" viewBox="0 0 0.98 0.51">
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.49" y1="0" x2="0.24" y2="0" transform="translate(0.98,0.51)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.24" y1="0" x2="-0.49" y2="0" transform="translate(0.98,0.51)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.24" y1="-0.2" x2="0.24" y2="0.2" transform="translate(0.98,0.51)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.23" y1="0" x2="0.15" y2="-0.31" transform="translate(0.98,0.51)" />
+    <!-- 定义端子位置 -->
+    <circle style="fill:none" stroke="rgb(0,200,255)" stroke-width="0.02" cx="-0.441" cy="0" r="0.08" transform="translate(0.98,0.51)"/>
+    <circle style="fill:none" stroke="rgb(0,200,255)" stroke-width="0.02" cx="0.441" cy="0" r="0.08" transform="translate(0.98,0.51)"/>
+</symbol>
+<!-- 定义图元4050010:隔离开关（合） -->
+<symbol id="Disconnector_4050010@1" viewBox="0 0 0.98 0.51">
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.49" y1="0" x2="0.24" y2="0" transform="translate(0.98,0.51)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.24" y1="0" x2="-0.49" y2="0" transform="translate(0.98,0.51)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="0.24" y1="-0.2" x2="0.24" y2="0.2" transform="translate(0.98,0.51)" />
+    <line stroke="rgb(185,72,66)" stroke-linecap="round" stroke-width="0.02" x1="-0.23" y1="0" x2="0.24" y2="-0.2" transform="translate(0.98,0.51)" />
+    <!-- 定义端子位置 -->
+    <circle style="fill:none" stroke="rgb(0,200,255)" stroke-width="0.02" cx="-0.441" cy="0" r="0.08" transform="translate(0.98,0.51)"/>
+    <circle style="fill:none" stroke="rgb(0,200,255)" stroke-width="0.02" cx="0.441" cy="0" r="0.08" transform="translate(0.98,0.51)"/>
+</symbol>
+<!-- 定义图元4300010:站内终端头 -->
+<symbol id="Junction_4300010" viewBox="0 0 1.15 0.4">
+    <polygon style="fill:none" stroke="168" stroke-linecap="round" stroke-width="0.02" points="0,0.2 0,-0.2 -0.45,0 " transform="translate(1.15,0.4)" />
+    <line stroke="168" stroke-linecap="round" stroke-width="0.02" x1="0" y1="0" x2="0.3" y2="0" transform="translate(1.15,0.4)" />
+    <!-- 定义端子位置 -->
+    <circle style="fill:none" stroke="rgb(0,200,255)" stroke-width="0.02" cx="0" cy="0" r="0.08" transform="translate(1.15,0.4)"/>
+</symbol>
+</defs>
+<g id="BackGround_Layer">
+  <rect x="0" y="0" width="3326" height="900" fill="rgb(0,0,0)" />
+</g>
+<g id="Substation_Layer">
+ <g id="9BF0C26A56CC4C0CABE70A8A653D91B941140102140">
+      <polygon class="lkv10"  stroke-width="0.2" fill="rgb(255,255,255)" points="1608.48,309.6 1608.48,67.68 2167.2,67.68 2167.2,309.6 1608.48,309.6" visibility="visible" />
+      <metadata>
+      <cge:PSR_Ref ObjectID="9BF0C26A56CC4C0CABE70A8A653D91B941140102140" ObjectName="中山路8#箱变X1054" PSRType="04032300000" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Substation_Layer"/>
+  </metadata>
+  </g>
+</g>
+<g id="BusbarSection_Layer">
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81050204410">
+      <polyline class="lkv10"  stroke-width="1.08" points="403.2,102.24 950.4,102.24 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300127"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300129"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300131"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300133"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300135"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300137"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300139"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300141"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300143"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300145"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204410" ObjectName="10kV母线" PSRType="04031100000" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="BusbarSection_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81050204696">
+      <polyline class="lkv10"  stroke-width="1.08" points="1048.32,102.24 1537.92,102.24 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300191"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300193"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300195"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300197"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300199"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300201"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300203"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300205"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300207"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204696" ObjectName="10kV母线" PSRType="04031100000" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="BusbarSection_Layer"/>
+  </metadata>
+  </g>
+  <g id="1CED57EACC894E6F8811684DE82EB96781050202822">
+      <polyline class="lkv10"  stroke-width="1.08" points="1643.04,102.24 2132.64,102.24 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300245"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300247"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300249"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300251"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300253"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300255"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300257"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300259"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300261"/>
+      <cge:PSR_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781050202822" ObjectName="10kV母线" PSRType="04031100000" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="BusbarSection_Layer"/>
+  </metadata>
+  </g>
+  <g id="D538B950CB3B4486BCF66761A1164AC381050204698">
+      <polyline class="lkv10"  stroke-width="1.08" points="129.6,381.6 129.6,295.2 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300323"/>
+      <cge:PSR_Ref ObjectID="D538B950CB3B4486BCF66761A1164AC381050204698" ObjectName="10kVI母线" PSRType="04031100000" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="BusbarSection_Layer"/>
+  </metadata>
+  </g>
+</g>
+<g id="Breaker_Layer">
+  <g id="D538B950CB3B4486BCF66761A1164AC381040505162">
+      <use class="kv10"   x="187.2" y="338.4" visibility="visible" width="0.97" height="0.44" transform="rotate(-180,187.2,338.4) translate(187.2,338.4) scale(29.6907216494845,29.6907216494845) translate(-188.17,-338.84) " xlink:href="#Breaker_4100010" bound="187.2,338.4,216,367.2" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300323"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300119"/>
+      <cge:PSR_Ref ObjectID="D538B950CB3B4486BCF66761A1164AC381040505162" ObjectName="10kV南中线1013断路器" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040504514">
+      <use class="kv10"   x="417.6" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,417.6,217.44) translate(417.6,217.44) scale(30.6382978723404,30.6382978723404) translate(-418.54,-218.14) " xlink:href="#Breaker_4030010@1" bound="417.6,217.44,446.4,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300123"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300125"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504514" ObjectName="10kV南中线进线开关（111）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040504420">
+      <use class="kv10"   x="475.2" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,475.2,217.44) translate(475.2,217.44) scale(30.6382978723404,30.6382978723404) translate(-476.14,-218.14) " xlink:href="#Breaker_4030010@1" bound="475.2,217.44,504,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300147"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300163"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504420" ObjectName="返出地下街开闭所开关（112）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040504454">
+      <use class="kv10"   x="532.8" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,532.8,217.44) translate(532.8,217.44) scale(30.6382978723404,30.6382978723404) translate(-533.74,-218.14) " xlink:href="#Breaker_4030010@1" bound="532.8,217.44,561.6,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300149"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300165"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504454" ObjectName="返出百花村开关（113）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040504548">
+      <use class="kv10"   x="648" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,648,217.44) translate(648,217.44) scale(30.6382978723404,30.6382978723404) translate(-648.94,-218.14) " xlink:href="#Breaker_4030010@1" bound="648,217.44,676.8,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300151"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300167"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504548" ObjectName="6#至5#箱变联络开关（114）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040504620">
+      <use class="kv10"   x="705.6" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,705.6,217.44) translate(705.6,217.44) scale(30.6382978723404,30.6382978723404) translate(-706.54,-218.14) " xlink:href="#Breaker_4030010@1" bound="705.6,217.44,734.4,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300153"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300169"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504620" ObjectName="6#至7#箱变联络开关（115）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040504642">
+      <use class="kv10"   x="763.2" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,763.2,217.44) translate(763.2,217.44) scale(30.6382978723404,30.6382978723404) translate(-764.14,-218.14) " xlink:href="#Breaker_4030010@1" bound="763.2,217.44,792,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300155"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300171"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504642" ObjectName="返出停车场开闭所开关（116）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040504662">
+      <use class="kv10"   x="820.8" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,820.8,217.44) translate(820.8,217.44) scale(30.6382978723404,30.6382978723404) translate(-821.74,-218.14) " xlink:href="#Breaker_4030010@1" bound="820.8,217.44,849.6,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300157"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300173"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504662" ObjectName="返出红旗商场开关（117）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81040500294">
+      <use class="kv10"   x="936" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,936,217.44) translate(936,217.44) scale(30.6382978723404,30.6382978723404) translate(-936.94,-218.14) " xlink:href="#Breaker_4030010@1" bound="936,217.44,964.8,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300159"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300175"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040500294" ObjectName="返出1#配变开关（101）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81040500302">
+      <use class="kv10"   x="878.4" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,878.4,217.44) translate(878.4,217.44) scale(30.6382978723404,30.6382978723404) translate(-879.34,-218.14) " xlink:href="#Breaker_4030010@1" bound="878.4,217.44,907.2,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300161"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300177"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040500302" ObjectName="返出备用一开关（118）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040504930">
+      <use class="kv10"   x="1062.72" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,1062.72,217.44) translate(1062.72,217.44) scale(30.6382978723404,30.6382978723404) translate(-1063.66,-218.14) " xlink:href="#Breaker_4030010@1" bound="1062.72,217.44,1091.52,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300187"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300189"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504930" ObjectName="7#至6#箱变联络开关（111）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040504864">
+      <use class="kv10"   x="1120.32" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,1120.32,217.44) translate(1120.32,217.44) scale(30.6382978723404,30.6382978723404) translate(-1121.26,-218.14) " xlink:href="#Breaker_4030010@1" bound="1120.32,217.44,1149.12,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300209"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300223"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504864" ObjectName="返出通宝开闭所开关（112）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040504834">
+      <use class="kv10"   x="1177.92" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,1177.92,217.44) translate(1177.92,217.44) scale(30.6382978723404,30.6382978723404) translate(-1178.86,-218.14) " xlink:href="#Breaker_4030010@1" bound="1177.92,217.44,1206.72,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300211"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300231"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504834" ObjectName="返出电信局开关（113）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040504784">
+      <use class="kv10"   x="1293.12" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,1293.12,217.44) translate(1293.12,217.44) scale(30.6382978723404,30.6382978723404) translate(-1294.06,-218.14) " xlink:href="#Breaker_4030010@1" bound="1293.12,217.44,1321.92,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300213"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300225"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504784" ObjectName="7#至8#箱变联络开关（114）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040504782">
+      <use class="kv10"   x="1350.72" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,1350.72,217.44) translate(1350.72,217.44) scale(30.6382978723404,30.6382978723404) translate(-1351.66,-218.14) " xlink:href="#Breaker_4030010@1" bound="1350.72,217.44,1379.52,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300215"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300233"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504782" ObjectName="返出备用一开关（115）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040504880">
+      <use class="kv10"   x="1408.32" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,1408.32,217.44) translate(1408.32,217.44) scale(30.6382978723404,30.6382978723404) translate(-1409.26,-218.14) " xlink:href="#Breaker_4030010@1" bound="1408.32,217.44,1437.12,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300217"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300227"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504880" ObjectName="返出中山大厦开关（116）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040504918">
+      <use class="kv10"   x="1465.92" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,1465.92,217.44) translate(1465.92,217.44) scale(30.6382978723404,30.6382978723404) translate(-1466.86,-218.14) " xlink:href="#Breaker_4030010@1" bound="1465.92,217.44,1494.72,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300219"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300229"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504918" ObjectName="返出备用二开关（117）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81040500338">
+      <use class="kv10"   x="1523.52" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,1523.52,217.44) translate(1523.52,217.44) scale(30.6382978723404,30.6382978723404) translate(-1524.46,-218.14) " xlink:href="#Breaker_4030010@1" bound="1523.52,217.44,1552.32,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300221"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300235"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040500338" ObjectName="返出1#配变开关（101）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="FFB01C0DBBD8482089D83B64C1D78A8981040500666">
+      <use class="kv10"   x="619.2" y="460.8" visibility="visible" width="0.94" height="0.7" transform="rotate(-270,619.2,460.8) translate(619.2,460.8) scale(30.6382978723404,30.6382978723404) translate(-620.14,-461.5) " xlink:href="#Breaker_4030011@0" bound="619.2,460.8,648,489.6" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300237"/>
+      <cge:PSR_Ref ObjectID="FFB01C0DBBD8482089D83B64C1D78A8981040500666" ObjectName="5#至6#箱变联络开关（114）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="1CED57EACC894E6F8811684DE82EB96781040502964">
+      <use class="kv10"   x="1830.24" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,1830.24,217.44) translate(1830.24,217.44) scale(30.6382978723404,30.6382978723404) translate(-1831.18,-218.14) " xlink:href="#Breaker_4030010@1" bound="1830.24,217.44,1859.04,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300241"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300243"/>
+      <cge:PSR_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781040502964" ObjectName="8#至7#箱变联络开关（114）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="D569BFC8DB40428EAC43B3448F46863F81040507643">
+      <use class="kv10"   x="1715.04" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,1715.04,217.44) translate(1715.04,217.44) scale(30.6382978723404,30.6382978723404) translate(-1715.98,-218.14) " xlink:href="#Breaker_4030010@1" bound="1715.04,217.44,1743.84,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300263"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300279"/>
+      <cge:PSR_Ref ObjectID="D569BFC8DB40428EAC43B3448F46863F81040507643" ObjectName="返出夏梦投资公司开关（112）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="D569BFC8DB40428EAC43B3448F46863F81040507635">
+      <use class="kv10"   x="1945.44" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,1945.44,217.44) translate(1945.44,217.44) scale(30.6382978723404,30.6382978723404) translate(-1946.38,-218.14) " xlink:href="#Breaker_4030010@1" bound="1945.44,217.44,1974.24,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300265"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300281"/>
+      <cge:PSR_Ref ObjectID="D569BFC8DB40428EAC43B3448F46863F81040507635" ObjectName="返出丹璐开关（116）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="1CED57EACC894E6F8811684DE82EB96781040502734">
+      <use class="kv10"   x="1887.84" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,1887.84,217.44) translate(1887.84,217.44) scale(30.6382978723404,30.6382978723404) translate(-1888.78,-218.14) " xlink:href="#Breaker_4030011@0" bound="1887.84,217.44,1916.64,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300267"/>
+      <cge:PSR_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781040502734" ObjectName="8#至1#箱变联络开关（115）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="D569BFC8DB40428EAC43B3448F46863F81040507639">
+      <use class="kv10"   x="1772.64" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,1772.64,217.44) translate(1772.64,217.44) scale(30.6382978723404,30.6382978723404) translate(-1773.58,-218.14) " xlink:href="#Breaker_4030010@1" bound="1772.64,217.44,1801.44,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300269"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300283"/>
+      <cge:PSR_Ref ObjectID="D569BFC8DB40428EAC43B3448F46863F81040507639" ObjectName="返出中山西路支线开关（113）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="D569BFC8DB40428EAC43B3448F46863F81040507631">
+      <use class="kv10"   x="1657.44" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,1657.44,217.44) translate(1657.44,217.44) scale(30.6382978723404,30.6382978723404) translate(-1658.38,-218.14) " xlink:href="#Breaker_4030011@0" bound="1657.44,217.44,1686.24,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300271"/>
+      <cge:PSR_Ref ObjectID="D569BFC8DB40428EAC43B3448F46863F81040507631" ObjectName="10kV安华二线进线开关（111）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="1CED57EACC894E6F8811684DE82EB96781040502968">
+      <use class="kv10"   x="2003.04" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,2003.04,217.44) translate(2003.04,217.44) scale(30.6382978723404,30.6382978723404) translate(-2003.98,-218.14) " xlink:href="#Breaker_4030010@1" bound="2003.04,217.44,2031.84,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300273"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300285"/>
+      <cge:PSR_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781040502968" ObjectName="返出国信开关（117）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="1CED57EACC894E6F8811684DE82EB96781040502752">
+      <use class="kv10"   x="2060.64" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,2060.64,217.44) translate(2060.64,217.44) scale(30.6382978723404,30.6382978723404) translate(-2061.58,-218.14) " xlink:href="#Breaker_4030010@1" bound="2060.64,217.44,2089.44,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300275"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300287"/>
+      <cge:PSR_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781040502752" ObjectName="返出备用二开关（118）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81040500394">
+      <use class="kv10"   x="2118.24" y="217.44" visibility="visible" width="0.94" height="0.7" transform="rotate(-90,2118.24,217.44) translate(2118.24,217.44) scale(30.6382978723404,30.6382978723404) translate(-2119.18,-218.14) " xlink:href="#Breaker_4030010@1" bound="2118.24,217.44,2147.04,246.24" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300277"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300289"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040500394" ObjectName="返出1#配变开关（101）" PSRType="04030500002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Breaker_Layer"/>
+  </metadata>
+  </g>
+</g>
+<g id="Disconnector_Layer">
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040704512">
+      <use class="kv10"   x="417.6" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,417.6,159.84) translate(417.6,159.84) scale(29.3877551020408,29.3877551020408) translate(-418.58,-160.35) " xlink:href="#Disconnector_4050010@1" bound="417.6,159.84,446.4,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300125"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300127"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704512" ObjectName="10kV南中线进线刀闸（1111）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040704416">
+      <use class="kv10"   x="475.2" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,475.2,159.84) translate(475.2,159.84) scale(29.3877551020408,29.3877551020408) translate(-476.18,-160.35) " xlink:href="#Disconnector_4050010@1" bound="475.2,159.84,504,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300129"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300147"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704416" ObjectName="返出地下街开闭所刀闸（1121）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040704450">
+      <use class="kv10"   x="532.8" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,532.8,159.84) translate(532.8,159.84) scale(29.3877551020408,29.3877551020408) translate(-533.78,-160.35) " xlink:href="#Disconnector_4050010@1" bound="532.8,159.84,561.6,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300131"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300149"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704450" ObjectName="返出百花村刀闸（1131）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040704522">
+      <use class="kv10"   x="590.4" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,590.4,159.84) translate(590.4,159.84) scale(29.3877551020408,29.3877551020408) translate(-591.38,-160.35) " xlink:href="#Disconnector_4050010@1" bound="590.4,159.84,619.2,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300133"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704522" ObjectName="11V" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040704544">
+      <use class="kv10"   x="648" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,648,159.84) translate(648,159.84) scale(29.3877551020408,29.3877551020408) translate(-648.98,-160.35) " xlink:href="#Disconnector_4050010@1" bound="648,159.84,676.8,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300135"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300151"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704544" ObjectName="6#至5#箱变联络刀闸（1141）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040704604">
+      <use class="kv10"   x="705.6" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,705.6,159.84) translate(705.6,159.84) scale(29.3877551020408,29.3877551020408) translate(-706.58,-160.35) " xlink:href="#Disconnector_4050010@1" bound="705.6,159.84,734.4,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300137"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300153"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704604" ObjectName="6#至7#箱变联络刀闸（1151）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040704650">
+      <use class="kv10"   x="763.2" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,763.2,159.84) translate(763.2,159.84) scale(29.3877551020408,29.3877551020408) translate(-764.18,-160.35) " xlink:href="#Disconnector_4050010@1" bound="763.2,159.84,792,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300139"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300155"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704650" ObjectName="返出停车场开闭所刀闸（1161）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040704670">
+      <use class="kv10"   x="820.8" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,820.8,159.84) translate(820.8,159.84) scale(29.3877551020408,29.3877551020408) translate(-821.78,-160.35) " xlink:href="#Disconnector_4050010@1" bound="820.8,159.84,849.6,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300141"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300157"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704670" ObjectName="返出红旗商场刀闸（1171）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81040700310">
+      <use class="kv10"   x="936" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,936,159.84) translate(936,159.84) scale(29.3877551020408,29.3877551020408) translate(-936.98,-160.35) " xlink:href="#Disconnector_4050010@1" bound="936,159.84,964.8,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300143"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300159"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700310" ObjectName="返出1#配变刀闸（1011）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81040700304">
+      <use class="kv10"   x="878.4" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,878.4,159.84) translate(878.4,159.84) scale(29.3877551020408,29.3877551020408) translate(-879.38,-160.35) " xlink:href="#Disconnector_4050010@1" bound="878.4,159.84,907.2,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300145"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300161"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700304" ObjectName="返出备用一刀闸（1181）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040704936">
+      <use class="kv10"   x="1062.72" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,1062.72,159.84) translate(1062.72,159.84) scale(29.3877551020408,29.3877551020408) translate(-1063.7,-160.35) " xlink:href="#Disconnector_4050010@1" bound="1062.72,159.84,1091.52,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300189"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300191"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704936" ObjectName="7#至6#箱变联络刀闸（1111）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040704912">
+      <use class="kv10"   x="1120.32" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,1120.32,159.84) translate(1120.32,159.84) scale(29.3877551020408,29.3877551020408) translate(-1121.3,-160.35) " xlink:href="#Disconnector_4050010@1" bound="1120.32,159.84,1149.12,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300193"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300209"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704912" ObjectName="返出通宝开闭所刀闸（1121）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040704832">
+      <use class="kv10"   x="1177.92" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,1177.92,159.84) translate(1177.92,159.84) scale(29.3877551020408,29.3877551020408) translate(-1178.9,-160.35) " xlink:href="#Disconnector_4050010@1" bound="1177.92,159.84,1206.72,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300195"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300211"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704832" ObjectName="返出电信局刀闸（1131）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040704830">
+      <use class="kv10"   x="1235.52" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,1235.52,159.84) translate(1235.52,159.84) scale(29.3877551020408,29.3877551020408) translate(-1236.5,-160.35) " xlink:href="#Disconnector_4050010@1" bound="1235.52,159.84,1264.32,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300197"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704830" ObjectName="11V" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040704786">
+      <use class="kv10"   x="1293.12" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,1293.12,159.84) translate(1293.12,159.84) scale(29.3877551020408,29.3877551020408) translate(-1294.1,-160.35) " xlink:href="#Disconnector_4050010@1" bound="1293.12,159.84,1321.92,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300199"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300213"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704786" ObjectName="7#至8#箱变联络刀闸（1141）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040704780">
+      <use class="kv10"   x="1350.72" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,1350.72,159.84) translate(1350.72,159.84) scale(29.3877551020408,29.3877551020408) translate(-1351.7,-160.35) " xlink:href="#Disconnector_4050010@1" bound="1350.72,159.84,1379.52,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300201"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300215"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704780" ObjectName="返出备用一刀闸（1151）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040704878">
+      <use class="kv10"   x="1408.32" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,1408.32,159.84) translate(1408.32,159.84) scale(29.3877551020408,29.3877551020408) translate(-1409.3,-160.35) " xlink:href="#Disconnector_4050010@1" bound="1408.32,159.84,1437.12,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300203"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300217"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704878" ObjectName="返出中山大厦刀闸（1161）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81040704920">
+      <use class="kv10"   x="1465.92" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,1465.92,159.84) translate(1465.92,159.84) scale(29.3877551020408,29.3877551020408) translate(-1466.9,-160.35) " xlink:href="#Disconnector_4050010@1" bound="1465.92,159.84,1494.72,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300205"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300219"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704920" ObjectName="返出备用二刀闸（1171）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81040700346">
+      <use class="kv10"   x="1523.52" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,1523.52,159.84) translate(1523.52,159.84) scale(29.3877551020408,29.3877551020408) translate(-1524.5,-160.35) " xlink:href="#Disconnector_4050010@1" bound="1523.52,159.84,1552.32,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300207"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300221"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700346" ObjectName="返出1#配变刀闸（1011）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81040700412">
+      <use class="kv10"   x="1830.24" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,1830.24,159.84) translate(1830.24,159.84) scale(29.3877551020408,29.3877551020408) translate(-1831.22,-160.35) " xlink:href="#Disconnector_4050010@1" bound="1830.24,159.84,1859.04,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300243"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300245"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700412" ObjectName="8#至7#箱变联络刀闸（1141）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81040700434">
+      <use class="kv10"   x="1715.04" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,1715.04,159.84) translate(1715.04,159.84) scale(29.3877551020408,29.3877551020408) translate(-1716.02,-160.35) " xlink:href="#Disconnector_4050010@1" bound="1715.04,159.84,1743.84,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300247"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300263"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700434" ObjectName="返出夏梦投资公司开关（1121）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81040700408">
+      <use class="kv10"   x="1945.44" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,1945.44,159.84) translate(1945.44,159.84) scale(29.3877551020408,29.3877551020408) translate(-1946.42,-160.35) " xlink:href="#Disconnector_4050010@1" bound="1945.44,159.84,1974.24,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300249"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300265"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700408" ObjectName="返出丹璐刀闸（1161）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81040700410">
+      <use class="kv10"   x="1887.84" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,1887.84,159.84) translate(1887.84,159.84) scale(29.3877551020408,29.3877551020408) translate(-1888.82,-160.35) " xlink:href="#Disconnector_4050010@1" bound="1887.84,159.84,1916.64,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300251"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300267"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700410" ObjectName="8#至1#箱变联络刀闸（1151）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81040700430">
+      <use class="kv10"   x="1772.64" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,1772.64,159.84) translate(1772.64,159.84) scale(29.3877551020408,29.3877551020408) translate(-1773.62,-160.35) " xlink:href="#Disconnector_4050010@1" bound="1772.64,159.84,1801.44,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300253"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300269"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700430" ObjectName="返出中山西路支线开关（1131）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81040700406">
+      <use class="kv10"   x="1657.44" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,1657.44,159.84) translate(1657.44,159.84) scale(29.3877551020408,29.3877551020408) translate(-1658.42,-160.35) " xlink:href="#Disconnector_4050010@1" bound="1657.44,159.84,1686.24,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300255"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300271"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700406" ObjectName="10kV安华二线进线开关（1111）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81040700438">
+      <use class="kv10"   x="2003.04" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,2003.04,159.84) translate(2003.04,159.84) scale(29.3877551020408,29.3877551020408) translate(-2004.02,-160.35) " xlink:href="#Disconnector_4050010@1" bound="2003.04,159.84,2031.84,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300257"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300273"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700438" ObjectName="返出国信刀闸（1171）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81040700414">
+      <use class="kv10"   x="2060.64" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,2060.64,159.84) translate(2060.64,159.84) scale(29.3877551020408,29.3877551020408) translate(-2061.62,-160.35) " xlink:href="#Disconnector_4050010@1" bound="2060.64,159.84,2089.44,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300259"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300275"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700414" ObjectName="返出备用二刀闸（1181）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81040700416">
+      <use class="kv10"   x="2118.24" y="159.84" visibility="visible" width="0.98" height="0.51" transform="rotate(-90,2118.24,159.84) translate(2118.24,159.84) scale(29.3877551020408,29.3877551020408) translate(-2119.22,-160.35) " xlink:href="#Disconnector_4050010@1" bound="2118.24,159.84,2147.04,188.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300261"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300277"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700416" ObjectName="返出1#配变刀闸（1011）" PSRType="04030600002" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Disconnector_Layer"/>
+  </metadata>
+  </g>
+</g>
+<g id="Junction_Layer">
+  <g id="D538B950CB3B4486BCF66761A1164AC381070205188">
+      <use class="kv10"   x="244.8" y="338.4" visibility="visible" width="1.15" height="0.4" transform="rotate(-180,244.8,338.4) translate(244.8,338.4) scale(18.7826086956522,18.7826086956522) translate(-245.95,-338.8) " xlink:href="#Junction_4300010" bound="244.8,338.4,266.4,360" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300119"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100121"/>
+      <cge:PSR_Ref ObjectID="D538B950CB3B4486BCF66761A1164AC381070205188" ObjectName="南中线" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81070204508">
+      <use class="kv10"   x="417.6" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,417.6,275.04) translate(417.6,275.04) scale(18.7826086956522,18.7826086956522) translate(-418.75,-275.44) " xlink:href="#Junction_4300010" bound="417.6,275.04,439.2,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300123"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100121"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204508" ObjectName="南中线进线" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81070204446">
+      <use class="kv10"   x="532.8" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,532.8,275.04) translate(532.8,275.04) scale(18.7826086956522,18.7826086956522) translate(-533.95,-275.44) " xlink:href="#Junction_4300010" bound="532.8,275.04,554.4,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300165"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204446" ObjectName="百花村" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81070204540">
+      <use class="kv10"   x="648" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,648,275.04) translate(648,275.04) scale(18.7826086956522,18.7826086956522) translate(-649.15,-275.44) " xlink:href="#Junction_4300010" bound="648,275.04,669.6,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300167"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100181"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204540" ObjectName="6#至5#箱变联络" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81070204624">
+      <use class="kv10"   x="705.6" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,705.6,275.04) translate(705.6,275.04) scale(18.7826086956522,18.7826086956522) translate(-706.75,-275.44) " xlink:href="#Junction_4300010" bound="705.6,275.04,727.2,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300169"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100183"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204624" ObjectName="6#至7#箱变联络" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81070204648">
+      <use class="kv10"   x="763.2" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,763.2,275.04) translate(763.2,275.04) scale(18.7826086956522,18.7826086956522) translate(-764.35,-275.44) " xlink:href="#Junction_4300010" bound="763.2,275.04,784.8,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300171"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204648" ObjectName="停车场开闭所" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81070204680">
+      <use class="kv10"   x="820.8" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,820.8,275.04) translate(820.8,275.04) scale(18.7826086956522,18.7826086956522) translate(-821.95,-275.44) " xlink:href="#Junction_4300010" bound="820.8,275.04,842.4,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300173"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204680" ObjectName="红旗商场" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81070200312">
+      <use class="kv10"   x="936" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,936,275.04) translate(936,275.04) scale(18.7826086956522,18.7826086956522) translate(-937.15,-275.44) " xlink:href="#Junction_4300010" bound="936,275.04,957.6,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300175"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81070200312" ObjectName="1#配变" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81070200274">
+      <use class="kv10"   x="878.4" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,878.4,275.04) translate(878.4,275.04) scale(18.7826086956522,18.7826086956522) translate(-879.55,-275.44) " xlink:href="#Junction_4300010" bound="878.4,275.04,900,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300177"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81070200274" ObjectName="备用一" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81070204412">
+      <use class="kv10"   x="475.2" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,475.2,275.04) translate(475.2,275.04) scale(18.7826086956522,18.7826086956522) translate(-476.35,-275.44) " xlink:href="#Junction_4300010" bound="475.2,275.04,496.8,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300163"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204412" ObjectName="地下街开闭所" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81070204922">
+      <use class="kv10"   x="1062.72" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,1062.72,275.04) translate(1062.72,275.04) scale(18.7826086956522,18.7826086956522) translate(-1063.87,-275.44) " xlink:href="#Junction_4300010" bound="1062.72,275.04,1084.32,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300187"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100183"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204922" ObjectName="7#至6#箱变联络" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81070204884">
+      <use class="kv10"   x="1177.92" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,1177.92,275.04) translate(1177.92,275.04) scale(18.7826086956522,18.7826086956522) translate(-1179.07,-275.44) " xlink:href="#Junction_4300010" bound="1177.92,275.04,1199.52,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300231"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204884" ObjectName="电信局" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81070204896">
+      <use class="kv10"   x="1293.12" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,1293.12,275.04) translate(1293.12,275.04) scale(18.7826086956522,18.7826086956522) translate(-1294.27,-275.44) " xlink:href="#Junction_4300010" bound="1293.12,275.04,1314.72,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300225"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100239"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204896" ObjectName="7#至8#箱变联络" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81070204904">
+      <use class="kv10"   x="1350.72" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,1350.72,275.04) translate(1350.72,275.04) scale(18.7826086956522,18.7826086956522) translate(-1351.87,-275.44) " xlink:href="#Junction_4300010" bound="1350.72,275.04,1372.32,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300233"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204904" ObjectName="备用一" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81070204690">
+      <use class="kv10"   x="1408.32" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,1408.32,275.04) translate(1408.32,275.04) scale(18.7826086956522,18.7826086956522) translate(-1409.47,-275.44) " xlink:href="#Junction_4300010" bound="1408.32,275.04,1429.92,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300227"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204690" ObjectName="中山大厦" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81070204800">
+      <use class="kv10"   x="1465.92" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,1465.92,275.04) translate(1465.92,275.04) scale(18.7826086956522,18.7826086956522) translate(-1467.07,-275.44) " xlink:href="#Junction_4300010" bound="1465.92,275.04,1487.52,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300229"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204800" ObjectName="备用二" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81070200336">
+      <use class="kv10"   x="1523.52" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,1523.52,275.04) translate(1523.52,275.04) scale(18.7826086956522,18.7826086956522) translate(-1524.67,-275.44) " xlink:href="#Junction_4300010" bound="1523.52,275.04,1545.12,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300235"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81070200336" ObjectName="1#配变" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="8B483A2978E54BCD9AC5383EAA9BB4BA81070204908">
+      <use class="kv10"   x="1120.32" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,1120.32,275.04) translate(1120.32,275.04) scale(18.7826086956522,18.7826086956522) translate(-1121.47,-275.44) " xlink:href="#Junction_4300010" bound="1120.32,275.04,1141.92,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300223"/>
+      <cge:PSR_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204908" ObjectName="通宝开闭所" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="FFB01C0DBBD8482089D83B64C1D78A8981070200810">
+      <use class="kv10"   x="619.2" y="403.2" visibility="visible" width="1.15" height="0.4" transform="rotate(-270,619.2,403.2) translate(619.2,403.2) scale(18.7826086956522,18.7826086956522) translate(-620.35,-403.6) " xlink:href="#Junction_4300010" bound="619.2,403.2,640.8,424.8" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300237"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100181"/>
+      <cge:PSR_Ref ObjectID="FFB01C0DBBD8482089D83B64C1D78A8981070200810" ObjectName="5#至6#箱变联络" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="1CED57EACC894E6F8811684DE82EB96781070202960">
+      <use class="kv10"   x="1830.24" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,1830.24,275.04) translate(1830.24,275.04) scale(18.7826086956522,18.7826086956522) translate(-1831.39,-275.44) " xlink:href="#Junction_4300010" bound="1830.24,275.04,1851.84,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300241"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100239"/>
+      <cge:PSR_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781070202960" ObjectName="8#至7#箱变联络" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="1CED57EACC894E6F8811684DE82EB96781070202916">
+      <use class="kv10"   x="1715.04" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,1715.04,275.04) translate(1715.04,275.04) scale(18.7826086956522,18.7826086956522) translate(-1716.19,-275.44) " xlink:href="#Junction_4300010" bound="1715.04,275.04,1736.64,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300279"/>
+      <cge:PSR_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781070202916" ObjectName="夏梦投资公司" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="1CED57EACC894E6F8811684DE82EB96781070202742">
+      <use class="kv10"   x="1945.44" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,1945.44,275.04) translate(1945.44,275.04) scale(18.7826086956522,18.7826086956522) translate(-1946.59,-275.44) " xlink:href="#Junction_4300010" bound="1945.44,275.04,1967.04,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300281"/>
+      <cge:PSR_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781070202742" ObjectName="丹璐" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="1CED57EACC894E6F8811684DE82EB96781070202890">
+      <use class="kv10"   x="1772.64" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,1772.64,275.04) translate(1772.64,275.04) scale(18.7826086956522,18.7826086956522) translate(-1773.79,-275.44) " xlink:href="#Junction_4300010" bound="1772.64,275.04,1794.24,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300283"/>
+      <cge:PSR_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781070202890" ObjectName="中山西路支线" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="1CED57EACC894E6F8811684DE82EB96781070202888">
+      <use class="kv10"   x="2003.04" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,2003.04,275.04) translate(2003.04,275.04) scale(18.7826086956522,18.7826086956522) translate(-2004.19,-275.44) " xlink:href="#Junction_4300010" bound="2003.04,275.04,2024.64,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300285"/>
+      <cge:PSR_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781070202888" ObjectName="国信" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="1CED57EACC894E6F8811684DE82EB96781070202896">
+      <use class="kv10"   x="2060.64" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,2060.64,275.04) translate(2060.64,275.04) scale(18.7826086956522,18.7826086956522) translate(-2061.79,-275.44) " xlink:href="#Junction_4300010" bound="2060.64,275.04,2082.24,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300287"/>
+      <cge:PSR_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781070202896" ObjectName="备用二" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+  <g id="73527CDF8FEB4D08BF6F4FF75D0E347F81070200382">
+      <use class="kv10"   x="2118.24" y="275.04" visibility="visible" width="1.15" height="0.4" transform="rotate(-90,2118.24,275.04) translate(2118.24,275.04) scale(18.7826086956522,18.7826086956522) translate(-2119.39,-275.44) " xlink:href="#Junction_4300010" bound="2118.24,275.04,2139.84,296.64" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300289"/>
+      <cge:PSR_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81070200382" ObjectName="配变" PSRType="04020200001" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="Junction_Layer"/>
+  </metadata>
+  </g>
+</g>
+<g id="ConnLine_Layer">
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300119">
+      <polyline class="lkv10"  stroke-width="0.72" points="200.16,338.4 244.8,338.4 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="D538B950CB3B4486BCF66761A1164AC381040505162"/>
+      <cge:GLink_Ref ObjectID="D538B950CB3B4486BCF66761A1164AC381070205188"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100121"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300119" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300123">
+      <polyline class="lkv10"  stroke-width="0.72" points="417.6,230.4 417.6,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204508"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100121"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504514"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300123" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300125">
+      <polyline class="lkv10"  stroke-width="0.72" points="417.6,172.8 417.6,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504514"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704512"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300125" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300127">
+      <polyline class="lkv10"  stroke-width="0.72" points="417.6,102.24 417.6,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704512"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204410"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300127" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300129">
+      <polyline class="lkv10"  stroke-width="0.72" points="475.2,102.24 475.2,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204410"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704416"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300129" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300131">
+      <polyline class="lkv10"  stroke-width="0.72" points="532.8,102.24 532.8,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204410"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704450"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300131" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300133">
+      <polyline class="lkv10"  stroke-width="0.72" points="590.4,102.24 590.4,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204410"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704522"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300133" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300135">
+      <polyline class="lkv10"  stroke-width="0.72" points="648,102.24 648,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204410"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704544"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300135" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300137">
+      <polyline class="lkv10"  stroke-width="0.72" points="705.6,102.24 705.6,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204410"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704604"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300137" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300139">
+      <polyline class="lkv10"  stroke-width="0.72" points="763.2,102.24 763.2,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204410"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704650"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300139" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300141">
+      <polyline class="lkv10"  stroke-width="0.72" points="820.8,102.24 820.8,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204410"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704670"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300141" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300143">
+      <polyline class="lkv10"  stroke-width="0.72" points="936,102.24 936,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204410"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700310"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300143" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300145">
+      <polyline class="lkv10"  stroke-width="0.72" points="878.4,102.24 878.4,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204410"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700304"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300145" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300147">
+      <polyline class="lkv10"  stroke-width="0.72" points="475.2,172.8 475.2,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704416"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504420"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300147" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300149">
+      <polyline class="lkv10"  stroke-width="0.72" points="532.8,172.8 532.8,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704450"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504454"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300149" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300151">
+      <polyline class="lkv10"  stroke-width="0.72" points="648,172.8 648,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704544"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504548"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300151" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300153">
+      <polyline class="lkv10"  stroke-width="0.72" points="705.6,172.8 705.6,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704604"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504620"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300153" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300155">
+      <polyline class="lkv10"  stroke-width="0.72" points="763.2,172.8 763.2,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704650"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504642"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300155" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300157">
+      <polyline class="lkv10"  stroke-width="0.72" points="820.8,172.8 820.8,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704670"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504662"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300157" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300159">
+      <polyline class="lkv10"  stroke-width="0.72" points="936,172.8 936,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700310"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040500294"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300159" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300161">
+      <polyline class="lkv10"  stroke-width="0.72" points="878.4,172.8 878.4,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700304"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040500302"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300161" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300163">
+      <polyline class="lkv10"  stroke-width="0.72" points="475.2,230.4 475.2,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504420"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204412"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300163" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300165">
+      <polyline class="lkv10"  stroke-width="0.72" points="532.8,230.4 532.8,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504454"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204446"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300165" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300167">
+      <polyline class="lkv10"  stroke-width="0.72" points="648,230.4 648,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504548"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204540"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100181"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300167" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300169">
+      <polyline class="lkv10"  stroke-width="0.72" points="705.6,230.4 705.6,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504620"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204624"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100183"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300169" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300171">
+      <polyline class="lkv10"  stroke-width="0.72" points="763.2,230.4 763.2,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504642"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204648"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300171" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300173">
+      <polyline class="lkv10"  stroke-width="0.72" points="820.8,230.4 820.8,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504662"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204680"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300173" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300175">
+      <polyline class="lkv10"  stroke-width="0.72" points="936,230.4 936,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040500294"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81070200312"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300175" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300177">
+      <polyline class="lkv10"  stroke-width="0.72" points="878.4,230.4 878.4,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040500302"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81070200274"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300177" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300187">
+      <polyline class="lkv10"  stroke-width="0.72" points="1062.72,230.4 1062.72,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204922"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100183"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504930"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300187" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300189">
+      <polyline class="lkv10"  stroke-width="0.72" points="1062.72,172.8 1062.72,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504930"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704936"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300189" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300191">
+      <polyline class="lkv10"  stroke-width="0.72" points="1062.72,146.88 1062.72,102.24 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704936"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204696"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300191" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300193">
+      <polyline class="lkv10"  stroke-width="0.72" points="1120.32,102.24 1120.32,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204696"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704912"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300193" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300195">
+      <polyline class="lkv10"  stroke-width="0.72" points="1177.92,102.24 1177.92,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204696"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704832"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300195" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300197">
+      <polyline class="lkv10"  stroke-width="0.72" points="1235.52,102.24 1235.52,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204696"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704830"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300197" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300199">
+      <polyline class="lkv10"  stroke-width="0.72" points="1293.12,102.24 1293.12,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204696"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704786"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300199" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300201">
+      <polyline class="lkv10"  stroke-width="0.72" points="1350.72,102.24 1350.72,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204696"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704780"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300201" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300203">
+      <polyline class="lkv10"  stroke-width="0.72" points="1408.32,102.24 1408.32,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204696"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704878"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300203" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300205">
+      <polyline class="lkv10"  stroke-width="0.72" points="1465.92,102.24 1465.92,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204696"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704920"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300205" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300207">
+      <polyline class="lkv10"  stroke-width="0.72" points="1523.52,102.24 1523.52,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81050204696"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700346"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300207" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300209">
+      <polyline class="lkv10"  stroke-width="0.72" points="1120.32,172.8 1120.32,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704912"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504864"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300209" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300211">
+      <polyline class="lkv10"  stroke-width="0.72" points="1177.92,172.8 1177.92,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704832"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504834"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300211" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300213">
+      <polyline class="lkv10"  stroke-width="0.72" points="1293.12,172.8 1293.12,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704786"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504784"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300213" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300215">
+      <polyline class="lkv10"  stroke-width="0.72" points="1350.72,172.8 1350.72,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704780"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504782"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300215" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300217">
+      <polyline class="lkv10"  stroke-width="0.72" points="1408.32,172.8 1408.32,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704878"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504880"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300217" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300219">
+      <polyline class="lkv10"  stroke-width="0.72" points="1465.92,172.8 1465.92,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040704920"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504918"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300219" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300221">
+      <polyline class="lkv10"  stroke-width="0.72" points="1523.52,172.8 1523.52,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700346"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040500338"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300221" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300223">
+      <polyline class="lkv10"  stroke-width="0.72" points="1120.32,230.4 1120.32,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504864"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204908"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300223" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300225">
+      <polyline class="lkv10"  stroke-width="0.72" points="1293.12,230.4 1293.12,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504784"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204896"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100239"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300225" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300227">
+      <polyline class="lkv10"  stroke-width="0.72" points="1408.32,230.4 1408.32,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504880"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204690"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300227" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300229">
+      <polyline class="lkv10"  stroke-width="0.72" points="1465.92,230.4 1465.92,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504918"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204800"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300229" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300231">
+      <polyline class="lkv10"  stroke-width="0.72" points="1177.92,230.4 1177.92,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504834"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204884"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300231" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300233">
+      <polyline class="lkv10"  stroke-width="0.72" points="1350.72,230.4 1350.72,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81040504782"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204904"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300233" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300235">
+      <polyline class="lkv10"  stroke-width="0.72" points="1523.52,230.4 1523.52,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040500338"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81070200336"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300235" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300237">
+      <polyline class="lkv10"  stroke-width="0.72" points="619.2,447.84 619.2,403.2 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="FFB01C0DBBD8482089D83B64C1D78A8981070200810"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100181"/>
+      <cge:GLink_Ref ObjectID="FFB01C0DBBD8482089D83B64C1D78A8981040500666"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300237" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300241">
+      <polyline class="lkv10"  stroke-width="0.72" points="1830.24,230.4 1830.24,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781070202960"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100239"/>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781040502964"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300241" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300243">
+      <polyline class="lkv10"  stroke-width="0.72" points="1830.24,172.8 1830.24,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781040502964"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700412"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300243" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300245">
+      <polyline class="lkv10"  stroke-width="0.72" points="1830.24,102.24 1830.24,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700412"/>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781050202822"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300245" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300247">
+      <polyline class="lkv10"  stroke-width="0.72" points="1715.04,102.24 1715.04,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781050202822"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700434"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300247" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300249">
+      <polyline class="lkv10"  stroke-width="0.72" points="1945.44,102.24 1945.44,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781050202822"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700408"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300249" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300251">
+      <polyline class="lkv10"  stroke-width="0.72" points="1887.84,102.24 1887.84,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781050202822"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700410"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300251" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300253">
+      <polyline class="lkv10"  stroke-width="0.72" points="1772.64,102.24 1772.64,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781050202822"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700430"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300253" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300255">
+      <polyline class="lkv10"  stroke-width="0.72" points="1657.44,102.24 1657.44,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781050202822"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700406"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300255" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300257">
+      <polyline class="lkv10"  stroke-width="0.72" points="2003.04,102.24 2003.04,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781050202822"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700438"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300257" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300259">
+      <polyline class="lkv10"  stroke-width="0.72" points="2060.64,102.24 2060.64,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781050202822"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700414"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300259" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300261">
+      <polyline class="lkv10"  stroke-width="0.72" points="2118.24,102.24 2118.24,146.88 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781050202822"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700416"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300261" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300263">
+      <polyline class="lkv10"  stroke-width="0.72" points="1715.04,172.8 1715.04,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700434"/>
+      <cge:GLink_Ref ObjectID="D569BFC8DB40428EAC43B3448F46863F81040507643"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300263" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300265">
+      <polyline class="lkv10"  stroke-width="0.72" points="1945.44,172.8 1945.44,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700408"/>
+      <cge:GLink_Ref ObjectID="D569BFC8DB40428EAC43B3448F46863F81040507635"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300265" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300267">
+      <polyline class="lkv10"  stroke-width="0.72" points="1887.84,172.8 1887.84,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700410"/>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781040502734"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300267" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300269">
+      <polyline class="lkv10"  stroke-width="0.72" points="1772.64,172.8 1772.64,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700430"/>
+      <cge:GLink_Ref ObjectID="D569BFC8DB40428EAC43B3448F46863F81040507639"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300269" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300271">
+      <polyline class="lkv10"  stroke-width="0.72" points="1657.44,172.8 1657.44,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700406"/>
+      <cge:GLink_Ref ObjectID="D569BFC8DB40428EAC43B3448F46863F81040507631"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300271" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300273">
+      <polyline class="lkv10"  stroke-width="0.72" points="2003.04,172.8 2003.04,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700438"/>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781040502968"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300273" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300275">
+      <polyline class="lkv10"  stroke-width="0.72" points="2060.64,172.8 2060.64,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700414"/>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781040502752"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300275" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300277">
+      <polyline class="lkv10"  stroke-width="0.72" points="2118.24,172.8 2118.24,204.48 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040700416"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040500394"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300277" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300279">
+      <polyline class="lkv10"  stroke-width="0.72" points="1715.04,230.4 1715.04,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="D569BFC8DB40428EAC43B3448F46863F81040507643"/>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781070202916"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300279" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300281">
+      <polyline class="lkv10"  stroke-width="0.72" points="1945.44,230.4 1945.44,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="D569BFC8DB40428EAC43B3448F46863F81040507635"/>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781070202742"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300281" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300283">
+      <polyline class="lkv10"  stroke-width="0.72" points="1772.64,230.4 1772.64,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="D569BFC8DB40428EAC43B3448F46863F81040507639"/>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781070202890"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300283" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300285">
+      <polyline class="lkv10"  stroke-width="0.72" points="2003.04,230.4 2003.04,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781040502968"/>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781070202888"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300285" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300287">
+      <polyline class="lkv10"  stroke-width="0.72" points="2060.64,230.4 2060.64,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781040502752"/>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781070202896"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300287" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300289">
+      <polyline class="lkv10"  stroke-width="0.72" points="2118.24,230.4 2118.24,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81040500394"/>
+      <cge:GLink_Ref ObjectID="73527CDF8FEB4D08BF6F4FF75D0E347F81070200382"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300289" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D681060300323">
+      <polyline class="lkv10"  stroke-width="0.72" points="129.6,338.4 174.24,338.4 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="D538B950CB3B4486BCF66761A1164AC381040505162"/>
+      <cge:GLink_Ref ObjectID="D538B950CB3B4486BCF66761A1164AC381050204698"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300323" ObjectName="" PSRType="04045000002"/>
+      <cge:Layer_Ref ObjectName="ConnLine_Layer"/>
+  </metadata>
+  </g>
+</g>
+<g id="ACLineSegment_Layer">
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D6010C0100121">
+      <polyline class="lkv10" stroke-dasharray="1 0.5"  stroke-width="0.86" points="244.8,338.4 417.6,338.4 417.6,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="D538B950CB3B4486BCF66761A1164AC381070205188"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300119"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204508"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300123"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100121" ObjectName="1013南中线-中山路6#箱变" PSRType="" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="ACLineSegment_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D6010C0100181">
+      <polyline class="lkv10" stroke-dasharray="1 0.5"  stroke-width="0.86" points="619.2,403.2 647.73,403.2 647.73,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204540"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300167"/>
+      <cge:GLink_Ref ObjectID="FFB01C0DBBD8482089D83B64C1D78A8981070200810"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300237"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100181" ObjectName="中山路5箱变-中山路6箱变" PSRType="" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="ACLineSegment_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D6010C0100183">
+      <polyline class="lkv10" stroke-dasharray="1 0.5"  stroke-width="0.86" points="705.6,275.04 704.87,275.04 704.87,387.91 1061.5,387.91 1061.5,275.04 1062.72,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204624"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300169"/>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204922"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300187"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100183" ObjectName="中山路6箱变-中山路7箱变" PSRType="" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="ACLineSegment_Layer"/>
+  </metadata>
+  </g>
+  <g id="DBA68973FBF74DC7A1DF55499C63B9D6010C0100239">
+      <polyline class="lkv10" stroke-dasharray="1 0.5"  stroke-width="0.86" points="1293.12,275.04 1291.71,275.04 1291.71,389.21 1829.4,389.21 1829.4,275.04 1830.24,275.04 " visibility="visible" />
+      <metadata>
+      <cge:GLink_Ref ObjectID="8B483A2978E54BCD9AC5383EAA9BB4BA81070204896"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300225"/>
+      <cge:GLink_Ref ObjectID="1CED57EACC894E6F8811684DE82EB96781070202960"/>
+      <cge:GLink_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D681060300241"/>
+      <cge:PSR_Ref ObjectID="DBA68973FBF74DC7A1DF55499C63B9D6010C0100239" ObjectName="7#至8#箱变联络开关（114）-8#至7#箱变联络开关（114）" PSRType="" GlobeID=""/>
+      <cge:Layer_Ref ObjectName="ACLineSegment_Layer"/>
+  </metadata>
+  </g>
+</g>
+<g id="Text_Layer">
+  <g id="TXT-D538B950CB3B4486BCF66761A1164AC381040505162"> 
+    <text style="text-anchor:middle" x="216" y="356.4" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">1013</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-D538B950CB3B4486BCF66761A1164AC381040505162"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504514"> 
+    <text style="text-anchor:middle" x="442.8" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">111</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504514"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704512"> 
+    <text style="text-anchor:middle" x="446.4" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1111</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704512"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704416"> 
+    <text style="text-anchor:middle" x="504" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1121</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704416"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704450"> 
+    <text style="text-anchor:middle" x="561.6" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1131</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704450"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704522"> 
+    <text style="text-anchor:middle" x="615.6" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">11V</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704522"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704544"> 
+    <text style="text-anchor:middle" x="676.8" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1141</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704544"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704604"> 
+    <text style="text-anchor:middle" x="734.4" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1151</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704604"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704650"> 
+    <text style="text-anchor:middle" x="792" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1161</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704650"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704670"> 
+    <text style="text-anchor:middle" x="849.6" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1171</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704670"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700310"> 
+    <text style="text-anchor:middle" x="964.8" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1011</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700310"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700304"> 
+    <text style="text-anchor:middle" x="907.2" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1181</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700304"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504420"> 
+    <text style="text-anchor:middle" x="500.4" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">112</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504420"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504454"> 
+    <text style="text-anchor:middle" x="558" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">113</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504454"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504548"> 
+    <text style="text-anchor:middle" x="673.2" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">114</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504548"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504620"> 
+    <text style="text-anchor:middle" x="730.8" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">115</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504620"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504642"> 
+    <text style="text-anchor:middle" x="788.4" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">116</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504642"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504662"> 
+    <text style="text-anchor:middle" x="846" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">117</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504662"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040500294"> 
+    <text style="text-anchor:middle" x="961.2" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">101</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040500294"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040500302"> 
+    <text style="text-anchor:middle" x="903.6" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">118</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040500302"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504930"> 
+    <text style="text-anchor:middle" x="1087.92" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">111</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504930"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704936"> 
+    <text style="text-anchor:middle" x="1091.52" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1111</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704936"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704912"> 
+    <text style="text-anchor:middle" x="1149.12" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1121</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704912"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704832"> 
+    <text style="text-anchor:middle" x="1206.72" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1131</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704832"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704830"> 
+    <text style="text-anchor:middle" x="1260.72" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">11V</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704830"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704786"> 
+    <text style="text-anchor:middle" x="1321.92" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1141</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704786"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704780"> 
+    <text style="text-anchor:middle" x="1379.52" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1151</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704780"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704878"> 
+    <text style="text-anchor:middle" x="1437.12" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1161</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704878"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704920"> 
+    <text style="text-anchor:middle" x="1494.72" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1171</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040704920"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700346"> 
+    <text style="text-anchor:middle" x="1552.32" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1011</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700346"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504864"> 
+    <text style="text-anchor:middle" x="1145.52" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">112</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504864"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504834"> 
+    <text style="text-anchor:middle" x="1203.12" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">113</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504834"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504784"> 
+    <text style="text-anchor:middle" x="1318.32" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">114</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504784"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504782"> 
+    <text style="text-anchor:middle" x="1375.92" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">115</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504782"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504880"> 
+    <text style="text-anchor:middle" x="1433.52" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">116</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504880"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504918"> 
+    <text style="text-anchor:middle" x="1491.12" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">117</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81040504918"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040500338"> 
+    <text style="text-anchor:middle" x="1548.72" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">101</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040500338"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-FFB01C0DBBD8482089D83B64C1D78A8981040500666"> 
+    <text style="text-anchor:middle" x="644.4" y="480.6" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">114</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-FFB01C0DBBD8482089D83B64C1D78A8981040500666"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-1CED57EACC894E6F8811684DE82EB96781040502964"> 
+    <text style="text-anchor:middle" x="1855.44" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">114</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-1CED57EACC894E6F8811684DE82EB96781040502964"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700412"> 
+    <text style="text-anchor:middle" x="1859.04" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1141</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700412"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700434"> 
+    <text style="text-anchor:middle" x="1743.84" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1121</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700434"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700408"> 
+    <text style="text-anchor:middle" x="1974.24" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1161</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700408"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700410"> 
+    <text style="text-anchor:middle" x="1916.64" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1151</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700410"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700430"> 
+    <text style="text-anchor:middle" x="1801.44" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1131</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700430"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700406"> 
+    <text style="text-anchor:middle" x="1686.24" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1111</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700406"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700438"> 
+    <text style="text-anchor:middle" x="2031.84" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1171</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700438"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700414"> 
+    <text style="text-anchor:middle" x="2089.44" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1181</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700414"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700416"> 
+    <text style="text-anchor:middle" x="2147.04" y="179.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,0,0)">1011</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040700416"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-D569BFC8DB40428EAC43B3448F46863F81040507643"> 
+    <text style="text-anchor:middle" x="1740.24" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">112</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-D569BFC8DB40428EAC43B3448F46863F81040507643"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-D569BFC8DB40428EAC43B3448F46863F81040507635"> 
+    <text style="text-anchor:middle" x="1970.64" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">116</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-D569BFC8DB40428EAC43B3448F46863F81040507635"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-1CED57EACC894E6F8811684DE82EB96781040502734"> 
+    <text style="text-anchor:middle" x="1913.04" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">115</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-1CED57EACC894E6F8811684DE82EB96781040502734"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-D569BFC8DB40428EAC43B3448F46863F81040507639"> 
+    <text style="text-anchor:middle" x="1797.84" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">113</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-D569BFC8DB40428EAC43B3448F46863F81040507639"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-D569BFC8DB40428EAC43B3448F46863F81040507631"> 
+    <text style="text-anchor:middle" x="1682.64" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">111</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-D569BFC8DB40428EAC43B3448F46863F81040507631"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-1CED57EACC894E6F8811684DE82EB96781040502968"> 
+    <text style="text-anchor:middle" x="2028.24" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">117</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-1CED57EACC894E6F8811684DE82EB96781040502968"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-1CED57EACC894E6F8811684DE82EB96781040502752"> 
+    <text style="text-anchor:middle" x="2085.84" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">118</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-1CED57EACC894E6F8811684DE82EB96781040502752"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040500394"> 
+    <text style="text-anchor:middle" x="2143.44" y="237.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">101</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81040500394"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-D538B950CB3B4486BCF66761A1164AC381070205188"> 
+    <text style="text-anchor:middle" x="270" y="358.2" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">南中</text>
+    <text style="text-anchor:middle" x="270" y="372.6" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">线</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-D538B950CB3B4486BCF66761A1164AC381070205188"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204508"> 
+    <text style="text-anchor:middle" x="442.8" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">南中</text>
+    <text style="text-anchor:middle" x="442.8" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">线进</text>
+    <text style="text-anchor:middle" x="442.8" y="323.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">线</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204508"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204446"> 
+    <text style="text-anchor:middle" x="558" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">百花</text>
+    <text style="text-anchor:middle" x="558" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">村</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204446"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204540"> 
+    <text style="text-anchor:middle" x="666" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">6#</text>
+    <text style="text-anchor:middle" x="666" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">至5#</text>
+    <text style="text-anchor:middle" x="666" y="323.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">箱变</text>
+    <text style="text-anchor:middle" x="666" y="338.04" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">联络</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204540"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204624"> 
+    <text style="text-anchor:middle" x="723.6" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">6#</text>
+    <text style="text-anchor:middle" x="723.6" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">至7#</text>
+    <text style="text-anchor:middle" x="723.6" y="323.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">箱变</text>
+    <text style="text-anchor:middle" x="723.6" y="338.04" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">联络</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204624"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204648"> 
+    <text style="text-anchor:middle" x="788.4" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">停车</text>
+    <text style="text-anchor:middle" x="788.4" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">场开</text>
+    <text style="text-anchor:middle" x="788.4" y="323.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">闭所</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204648"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204680"> 
+    <text style="text-anchor:middle" x="846" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">红旗</text>
+    <text style="text-anchor:middle" x="846" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">商场</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204680"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81070200312"> 
+    <text style="text-anchor:middle" x="954" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">1#</text>
+    <text style="text-anchor:middle" x="954" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">配变</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81070200312"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81070200274"> 
+    <text style="text-anchor:middle" x="903.6" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">备用</text>
+    <text style="text-anchor:middle" x="903.6" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">一</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81070200274"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204412"> 
+    <text style="text-anchor:middle" x="500.4" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">地下</text>
+    <text style="text-anchor:middle" x="500.4" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">街开</text>
+    <text style="text-anchor:middle" x="500.4" y="323.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">闭所</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204412"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204922"> 
+    <text style="text-anchor:middle" x="1080.72" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">7#</text>
+    <text style="text-anchor:middle" x="1080.72" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">至6#</text>
+    <text style="text-anchor:middle" x="1080.72" y="323.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">箱变</text>
+    <text style="text-anchor:middle" x="1080.72" y="338.04" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">联络</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204922"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204884"> 
+    <text style="text-anchor:middle" x="1203.12" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">电信</text>
+    <text style="text-anchor:middle" x="1203.12" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">局</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204884"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204896"> 
+    <text style="text-anchor:middle" x="1311.12" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">7#</text>
+    <text style="text-anchor:middle" x="1311.12" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">至8#</text>
+    <text style="text-anchor:middle" x="1311.12" y="323.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">箱变</text>
+    <text style="text-anchor:middle" x="1311.12" y="338.04" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">联络</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204896"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204904"> 
+    <text style="text-anchor:middle" x="1375.92" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">备用</text>
+    <text style="text-anchor:middle" x="1375.92" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">一</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204904"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204690"> 
+    <text style="text-anchor:middle" x="1433.52" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">中山</text>
+    <text style="text-anchor:middle" x="1433.52" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">大厦</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204690"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204800"> 
+    <text style="text-anchor:middle" x="1491.12" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">备用</text>
+    <text style="text-anchor:middle" x="1491.12" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">二</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204800"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81070200336"> 
+    <text style="text-anchor:middle" x="1541.52" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">1#</text>
+    <text style="text-anchor:middle" x="1541.52" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">配变</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81070200336"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204908"> 
+    <text style="text-anchor:middle" x="1145.52" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">通宝</text>
+    <text style="text-anchor:middle" x="1145.52" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">开闭</text>
+    <text style="text-anchor:middle" x="1145.52" y="323.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">所</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-8B483A2978E54BCD9AC5383EAA9BB4BA81070204908"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-FFB01C0DBBD8482089D83B64C1D78A8981070200810"> 
+    <text style="text-anchor:middle" x="637.2" y="423" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">5#</text>
+    <text style="text-anchor:middle" x="637.2" y="437.4" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">至6#</text>
+    <text style="text-anchor:middle" x="637.2" y="451.8" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">箱变</text>
+    <text style="text-anchor:middle" x="637.2" y="466.2" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">联络</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-FFB01C0DBBD8482089D83B64C1D78A8981070200810"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-1CED57EACC894E6F8811684DE82EB96781070202960"> 
+    <text style="text-anchor:middle" x="1848.24" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">8#</text>
+    <text style="text-anchor:middle" x="1848.24" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">至7#</text>
+    <text style="text-anchor:middle" x="1848.24" y="323.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">箱变</text>
+    <text style="text-anchor:middle" x="1848.24" y="338.04" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">联络</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-1CED57EACC894E6F8811684DE82EB96781070202960"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-1CED57EACC894E6F8811684DE82EB96781070202916"> 
+    <text style="text-anchor:middle" x="1740.24" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">夏梦</text>
+    <text style="text-anchor:middle" x="1740.24" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">投资</text>
+    <text style="text-anchor:middle" x="1740.24" y="323.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">公司</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-1CED57EACC894E6F8811684DE82EB96781070202916"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-1CED57EACC894E6F8811684DE82EB96781070202742"> 
+    <text style="text-anchor:middle" x="1970.64" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">丹璐</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-1CED57EACC894E6F8811684DE82EB96781070202742"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-1CED57EACC894E6F8811684DE82EB96781070202890"> 
+    <text style="text-anchor:middle" x="1797.84" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">中山</text>
+    <text style="text-anchor:middle" x="1797.84" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">西路</text>
+    <text style="text-anchor:middle" x="1797.84" y="323.64" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">支线</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-1CED57EACC894E6F8811684DE82EB96781070202890"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-1CED57EACC894E6F8811684DE82EB96781070202888"> 
+    <text style="text-anchor:middle" x="2028.24" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">国信</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-1CED57EACC894E6F8811684DE82EB96781070202888"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-1CED57EACC894E6F8811684DE82EB96781070202896"> 
+    <text style="text-anchor:middle" x="2085.84" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">备用</text>
+    <text style="text-anchor:middle" x="2085.84" y="309.24" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">二</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-1CED57EACC894E6F8811684DE82EB96781070202896"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81070200382"> 
+    <text style="text-anchor:middle" x="2143.44" y="294.84" visibility="visible" font-size="14.4" font-family="宋体" fill="rgb(255,255,255)">配变</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-73527CDF8FEB4D08BF6F4FF75D0E347F81070200382"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-9BF0C26A56CC4C0CABE70A8A653D91B941140102140"> 
+    <text style="text-anchor:middle" x="1884.24" y="73.44" visibility="visible" font-size="18" font-family="宋体" fill="rgb(255,255,255)">中山路8#</text>
+    <text style="text-anchor:middle" x="1884.24" y="91.44" visibility="visible" font-size="18" font-family="宋体" fill="rgb(255,255,255)">箱变X1054</text>
+  <metadata>
+    <cge:PSR_Ref ObjectID="TXT-9BF0C26A56CC4C0CABE70A8A653D91B941140102140"/>
+    <cge:Layer_Ref ObjectName="Text_Layer"/>
+  </metadata>
+  </g>
+  <g id="TXT-DBA68973FBF74DC7A1DF55499C63B9D601100100008"> 
+    <text style="text-anchor:left" x="79.2" y="280.8"  visibility="visible" font-size="10.8" font-family="宋体" fill="rgb(255,255,255)">110kV南门变电站</text>
+  </g>
+  <g id="TXT-2C610EA978D24965945501A9654E4D5101100100002"> 
+    <text style="text-anchor:left" x="574.4" y="87.48"  visibility="visible" font-size="21.6" font-family="宋体" fill="rgb(255,255,255)">中山路6#箱变X1052</text>
+  </g>
+  <g id="TXT-2C610EA978D24965945501A9654E4D5101100100004"> 
+    <text style="text-anchor:left" x="1217.42" y="89.49"  visibility="visible" font-size="21.6" font-family="宋体" fill="rgb(255,255,255)">中山路7#箱变X1053</text>
+  </g>
+</g>
+</svg>

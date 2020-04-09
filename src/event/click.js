@@ -6,16 +6,16 @@ let a = [];
  * @param {Object} obj  当前点击对象
  * @returns
  */
-const click = function(svgContent, obj, lineStyle) {
-  if (!lineStyle) {
+const click = function(svgContent, obj, joinLineType) {
+  if (!joinLineType) {
     return;
   }
   if (a.length > 2) {
     a.shift();
     a.shift();
   }
-  a.push(obj.getBBox().cx);
-  a.push(obj.getBBox().cy);
+  a.push(obj.getBBox().x);
+  a.push(obj.getBBox().y);
   if (a.length === 4 && a[0] !== a[2] && a[1] !== a[3]) {
     let resetA = [
       a[0],
@@ -38,14 +38,24 @@ const click = function(svgContent, obj, lineStyle) {
       data: a,
       attr: {
         stroke: "red",
-        fill: "",
+        fill: "none",
         strokeWidth: 1,
-        cursor: "pointer",
-        optionType: "polyline",
-        strokeDasharray:
-          lineStyle && lineStyle.id === "commonLine" && lineStyle.dasharray
+        cursor: "pointer"
       }
     };
+    if (joinLineType.id !== "commonLine") {
+      option = {
+        svgObj: svgContent,
+        data: a,
+        attr: {
+          stroke: "red",
+          fill: "none",
+          strokeWidth: 1,
+          cursor: "pointer",
+          strokeDasharray: joinLineType.dasharray
+        }
+      };
+    }
     new common.Polyline(option).create().click(function(e) {
       e.preventDefault();
       this.drag();

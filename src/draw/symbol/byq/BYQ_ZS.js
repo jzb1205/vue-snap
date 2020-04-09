@@ -80,7 +80,25 @@ class BYQ_ZS {
         stroke: this.attr.lStroke,
         strokeWidth: this.attr.lStrokeWidth,
         fill: "rgba(0,0,0,0)"
-      });
+      })
+      .click(function(e) {
+        console.log(this.getPointAtLength());
+        console.log(this.getSubpath());
+        console.log(this.getTotalLength());
+        console.log(this.getBBox());
+      })
+      .hover(
+        function() {
+          console.log("hover");
+          this.attr.strokeWidth = 2;
+          // this.animate({ transform: "t0,0 s1.35" }, 50);
+        },
+        function() {
+          this.attr.strokeWidth = 1;
+          console.log("unhover");
+          // this.animate({ transform: "t0,0 s1" }, 50);
+        }
+      );
     let t2 = this.svgObj.paper
       .circle(this.data.tcx2, this.data.tcy1, this.data.tcr1)
       .attr({
@@ -89,26 +107,26 @@ class BYQ_ZS {
         strokeWidth: this.attr.lStrokeWidth,
         fill: "rgba(0,0,0,0)"
       });
-    let ployLine = this.svgObj.paper
-      .polyline([90, 20, 115, 20, 110, 15, 115, 20, 110, 25])
-      .attr({
-        stroke: "red",
-        strokeWidth: 1,
-        fill: "rgba(0,0,0,0)"
-      })
-      .mousedown(function() {
-        this.parent().undrag();
-        that.svgObj.undrag();
-        this.drag();
-        // console.log();
-      });
+    // let ployLine = this.svgObj.paper
+    //   .polyline([90, 20, 115, 20, 110, 15, 115, 20, 110, 25])
+    //   .attr({
+    //     stroke: "red",
+    //     strokeWidth: 1,
+    //     fill: "rgba(0,0,0,0)"
+    //   })
+    //   .mousedown(function() {
+    //     this.parent().undrag();
+    //     that.svgObj.undrag();
+    //     this.drag();
+    //     // console.log();
+    //   });
     byq_zs.add(lc);
     byq_zs.add(rc);
     byq_zs.add(ll);
     byq_zs.add(lr);
     byq_zs.add(t1);
     byq_zs.add(t2);
-    byq_zs.add(ployLine);
+    // byq_zs.add(ployLine);
     return byq_zs;
   }
 }

@@ -1,15 +1,15 @@
 <template>
   <div id="app">
     <el-container>
-      <el-aside width="240px">
+      <!-- <el-aside width="240px">
         <draw-aside></draw-aside>
-      </el-aside>
+      </el-aside> -->
       <el-container>
         <el-main>
           <draw-main></draw-main>
         </el-main>
       </el-container>
-      <attrOpt></attrOpt>
+      <!-- <attrOpt></attrOpt> -->
     </el-container>
   </div>
 </template>
@@ -28,8 +28,8 @@ export default {
     return {};
   },
   mounted() {
-    document.querySelector(".el-aside").style.height =
-      document.body.clientHeight + "px";
+    // document.querySelector(".el-aside").style.height =
+    //   document.body.clientHeight + "px";
   },
   methods: {}
 };

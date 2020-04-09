@@ -14,7 +14,7 @@
         >
         </el-color-picker>
       </li>
-      <li>
+      <!-- <li>
         <span>线条颜色：</span>
         <el-color-picker
           v-model="strokeColor"
@@ -94,7 +94,7 @@
             </svg>
           </div>
         </el-popover>
-      </li>
+      </li> -->
     </ul>
   </div>
 </template>
