@@ -1,331 +1,127 @@
 <template>
   <div class="drawAside">
-    <el-collapse v-model="activeNames" @change="handleChange">
-      <el-collapse-item title="通用" name="1">
-        <div v-for="it in dataList.common" :key="it.id" class="commonItem">
-          <div v-if="it.id === 'text'" @click="getPicInfo(it)" class="text">
-            T
-          </div>
-          <svg
-            width="60"
-            v-else
-            height="60"
-            version="1.1"
-            @click="getPicInfo(it)"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              v-if="it.id === 'commonline'"
-              :x1="it.x1"
-              :y1="it.y1"
-              :x2="it.x2"
-              :y2="it.y2"
-              :stroke="it.style.stroke"
-              :strokeWidth="it.style.strokeWidth"
-              :fill="it.style.fill"
-            />
-            <line
-              v-if="it.id === 'dashLine1'"
-              :x1="it.x1"
-              :y1="it.y1"
-              :x2="it.x2"
-              :stroke-dasharray="it.dasharray"
-              :y2="it.y2"
-              :style="it.style"
-            />
-            <line
-              v-if="it.id === 'dashLine2'"
-              :x1="it.x1"
-              :y1="it.y1"
-              :x2="it.x2"
-              :stroke-dasharray="it.dasharray"
-              :y2="it.y2"
-              :style="it.style"
-            />
-            <line
-              v-if="it.id === 'dashLine3'"
-              :x1="it.x1"
-              :y1="it.y1"
-              :x2="it.x2"
-              :stroke-dasharray="it.dasharray"
-              :y2="it.y2"
-              :style="it.style"
-            />
-            <polyline
-              v-if="it.id === 'polyline'"
-              :points="it.points"
-              :style="it.style"
-            />
-            <!-- <polygon v-if='it.id==="polygon"' :points="it.points" :style="it.style"/>
-            <polygon v-if='it.id==="path"' :points="it.points" :style="it.style"/> -->
-            <circle
-              v-if="it.id === 'circle'"
-              :cx="it.cx"
-              :cy="it.cy"
-              :r="it.r"
-              :style="it.style"
-            />
-            <ellipse
-              v-if="it.id === 'ellipse'"
-              :cx="it.cx"
-              :cy="it.cy"
-              :rx="it.rx"
-              :ry="it.ry"
-              :style="it.style"
-            />
-            <rect
-              v-if="it.id === 'rect'"
-              :x="it.x"
-              :y="it.y"
-              :width="it.width"
-              :height="it.height"
-              :style="it.style"
-            />
-          </svg>
-        </div>
-      </el-collapse-item>
-      <el-collapse-item title="变压器" name="2">
-        <div
-          v-for="it in dataList.byqList"
-          :key="it.id"
-          @click="getPicInfo(it)"
-          class="pelStyle"
-          @mouseenter="getId(it)"
-          @mouseout="getId"
-        >
-          <img :src="it.img" />
-          <p class="noticeText" v-show="curId === it.id">{{ it.name }}</p>
-        </div>
-      </el-collapse-item>
-      <el-collapse-item title="开关" name="3">
-        <div
-          v-for="it in dataList.kgList"
-          :key="it.id"
-          @click="getPicInfo(it)"
-          class="pelStyle"
-        >
-          <img :src="it.img" />
-        </div>
-      </el-collapse-item>
-    </el-collapse>
+    <el-tree :data="treeDataList" node-key='id' :props="defaultProps" @node-click="handleNodeClick"> </el-tree>
   </div>
 </template>
 
 <script>
+import treeData from "./data.json";
 export default {
   name: "drawAside",
   data() {
     return {
-      activeNames: ["1"],
-      curId: "",
-      dataList: {
-        common: [
-          {
-            id: "text"
-          },
-          {
-            id: "commonline",
-            x1: 5,
-            y1: 55,
-            x2: 55,
-            y2: 5,
-            style: {
-              stroke: "#fff",
-              strokeWidth: 1,
-              fill: "#1f272f"
-            }
-          },
-          {
-            id: "dashLine1",
-            x1: 5,
-            y1: 55,
-            x2: 55,
-            y2: 5,
-            style: {
-              stroke: "#fff",
-              strokeWidth: 1,
-              fill: "#1f272f"
-            },
-            dasharray: "5,5"
-          },
-          {
-            id: "dashLine2",
-            x1: 5,
-            y1: 55,
-            x2: 55,
-            y2: 5,
-            style: {
-              stroke: "#fff",
-              strokeWidth: 1,
-              fill: "#1f272f"
-            },
-            dasharray: "10,10"
-          },
-          {
-            id: "dashLine3",
-            x1: 5,
-            y1: 55,
-            x2: 55,
-            y2: 5,
-            style: {
-              stroke: "#fff",
-              strokeWidth: 1,
-              fill: "#1f272f"
-            },
-            dasharray: "8,4,1,1,1,4"
-          },
-          {
-            id: "polyline",
-            points: "2,2 2,55 55,55",
-            style: {
-              stroke: "#fff",
-              strokeWidth: 1,
-              fill: "#1f272f"
-            }
-          },
-          {
-            id: "circle",
-            cx: 27,
-            cy: 27,
-            r: 26,
-            style: {
-              stroke: "#fff",
-              strokeWidth: 1,
-              fill: "#1f272f"
-            }
-          },
-          {
-            id: "rect",
-            x: 2,
-            y: 2,
-            width: 52,
-            height: 52,
-            style: {
-              stroke: "#fff",
-              strokeWidth: 1,
-              fill: "#1f272f"
-            }
-          },
-          {
-            id: "ellipse",
-            cx: 27,
-            cy: 27,
-            rx: 26,
-            ry: 18,
-            style: {
-              stroke: "#fff",
-              strokeWidth: 1,
-              fill: "#1f272f"
-            }
-          }
-        ],
-        byqList: [
-          {
-            id: "BYQ_ZS",
-            name: "柱上变压器（公用变）",
-            img: require("../assets/img/byq/BYQ_ZS.png")
-          },
-          {
-            id: "BYQ_SRZ_110_10",
-            name: "110kV-10kV双绕组变压器",
-            img: require("../assets/img/byq/BYQ_SRZ_110_10.png")
-          },
-          {
-            id: "BYQ_SRZ_35_10",
-            name: "35kV-10kV双绕组变压器",
-            img: require("../assets/img/byq/BYQ_SRZ_35_10.png")
-          },
-          {
-            id: "BYQ_SRZ_10_380",
-            name: "10kV-380V双绕组变压器",
-            img: require("../assets/img/byq/BYQ_SRZ_10_380.png")
-          }
-        ],
-        kgList: [
-          {
-            id: "KG_DLQ_H",
-            name: "断路器（合）",
-            img: require("../assets/img/kg/KG_DLQ_H.png")
-          },
-          {
-            id: "KG_DLQ_F",
-            name: "断路器（分）",
-            img: require("../assets/img/kg/KG_DLQ_F.png")
-          },
-          {
-            id: "KG_FHKG_H",
-            name: "断路器（合）",
-            img: require("../assets/img/kg/KG_FHKG_H.png")
-          },
-          {
-            id: "KG_FHKG_F",
-            name: "断路器（分）",
-            img: require("../assets/img/kg/KG_FHKG_F.png")
-          }
-        ]
-      }
+      treeDataList: treeData.result,
+      defaultProps: {
+        children: "children",
+        label: "name"
+      },
+      svgMag: 1, //svg放大倍数
+      svgMagMin: 0.1, //svg缩放最小比例
+      svgMagMax: 20, //svg缩放最大比例
     };
   },
-  created() {},
+  created() {
+
+  },
   methods: {
-    handleChange(val) {
-      console.log(val);
+    handleNodeClick(data) {
+      if (!data.name.endsWith(".svg")) return 
+      console.log(`./svg/${data.name}`)
+      this.snapLoad(`./svg/${data.name}`)
     },
-    //获取图元信息
-    getPicInfo(it) {
-      this.$store.commit("changePencelType", it.id);
+    //导入svg图
+    snapLoad(svgUrl) {
+      // let that = this;
+      // this.loading = true;
+      // // this.bgRect = null; //清空非导入型背景对象
+      // //导入时 先删除已有的 svg#svgContent
+      // let svgroot = document.querySelector("#svgroot");
+      // let svgContent = svgroot.querySelector("#svgContent");
+      // if (svgContent) {
+      //   svgroot.removeChild(svgContent);
+      // }
+      // Snap.load(svgUrl);
+      Snap.load(
+        svgUrl,
+        function(g) {
+          // let gL = g.selectAll("g");
+          // // that.svgContent.clear();
+          // gL.items.map(it => {
+          //   //背景层
+          //   if (it.node.id === "BackGround_Layer") {
+          //     that.importBgObj = it.select("rect");
+          //   } else {
+          //     return that.EventWrap(it);
+          //   }
+          // });
+          // this.appendChild(g.node);
+          // // that.svgContent.clear(); //导出事清空svg
+          console.log(g)
+        },
+        document.querySelector("#svgroot")
+      );
+      // setTimeout(() => {
+        // debugger
+        //导入完成时 给新的svg加上id=svgroot 并转化为svg对象
+        // let svgroot = document.querySelector("#svgroot");
+        // let importSvgContent = svgroot.querySelector("svg");
+        // if (!importSvgContent) {
+        //     importSvgContent = document.createElement('svg')
+        //     importSvgContent.appendChild(svgroot)
+        // }
+        // importSvgContent.id = "svgContent";
+        // importSvgContent.setAttribute("width", this.svgOpt.width);
+        // importSvgContent.setAttribute("height", this.svgOpt.height);
+        // importSvgContent.setAttribute("viewBox", this.svgOpt.viewBox);
+        
+        // importSvgContent.setAttribute("width", 1200);
+        // importSvgContent.setAttribute("height", 800);
+        // importSvgContent.setAttribute("viewBox", '0 0 1200 800');
+        // importSvgContent.addEventListener("click", that.mysvgClick, false);
+
+        // that.loading = false;
+        // that.svgContent = Snap("#svgContent").drag();
+        // this.svgContent.mousemove(function() {
+        //   this.attr({
+        //     cursor: "move",
+        //     fill: "red"
+        //   });
+        // });
+        // this.cancelBH();
+        // let svgContent = document.querySelector("#svgContent");
+        // if (document.attachEvent) {
+        //   svgContent.attachEvent("onmousewheel", that.svgScaleOption);
+        // } else {
+        //   svgContent.addEventListener("mousewheel", that.svgScaleOption, false);
+        // }
+      // }, 1000);
     },
-    getId(it) {
-      this.curId = (it && it.id) || "";
-    }
+    //svg缩放
+    svgScaleOption(e) {
+      let m = new Snap.Matrix();
+      if (e.wheelDelta === -120 || e.detail === 3) {
+        e.preventDefault();
+        this.svgMag -= 0.5;
+        if (this.svgMag < this.svgMagMin) {
+          this.svgMag = this.svgMagMin;
+        }
+      } else if (e.wheelDelta === 120 || e.detail === -3) {
+        e.preventDefault();
+        this.svgMag += 0.5;
+        if (this.svgMag > this.svgMagMax) {
+          this.svgMag = this.svgMagMax;
+        }
+      }
+      let x = $("#workarea").width();
+      let y = $("#workarea").height();
+      m.translate(x / 2, y / 2);
+      m.scale(this.svgMag, this.svgMag);
+      // debugger;
+      this.svgContent.transform(m);
+      console.log(this.svgContent);
+      // this.svgContent.drag();
+    },
   }
 };
 </script>
-<style lang="less" scoped>
-/deep/.el-collapse-item__content {
-  position: relative;
-}
-.commonItem {
-  display: inline-block;
-  width: 55px;
-  height: 55px;
-  cursor: pointer;
-  margin: 2px;
-  position: relative;
-}
-.pelStyle {
-  width: 53px;
-  height: 53px;
-  margin: 2px;
-  display: inline-block;
-  cursor: pointer;
-  img {
-    width: 53px;
-    height: 53px;
-    margin: 2px;
-    z-index: 1;
-  }
-  .noticeText {
-    position: absolute;
-    top: 0;
-    left: 50px;
-    z-index: 2;
-    padding: 4px;
-    background: #f2f2f2;
-    border: 1px solid #ddd;
-    color: #666;
-  }
-}
-.text {
-  cursor: pointer;
-  position: absolute;
-  width: 53px;
-  height: 53px;
-  color: #fff;
-  font-size: 24px;
-  text-align: center;
-  line-height: 60px;
-  border: 1px solid rgba(62, 74, 82);
-  background: #2a353d;
-}
-</style>
+<style lang="less" scoped></style>

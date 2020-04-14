@@ -8,21 +8,12 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@svgdotjs/svg.draggable.js": "^3.0.2",
-    "@svgdotjs/svg.filter.js": "^3.0.7",
-    "@svgdotjs/svg.panzoom.js": "^2.0.3",
-    "@svgdotjs/svg.topath.js": "^2.0.3",
-    "@svgdotjs/svg.topoly.js": "^1.0.3",
     "core-js": "^3.6.4",
     "element-ui": "^2.13.0",
     "jquery": "^3.4.1",
-    "load-svg": "^1.0.0",
     "register-service-worker": "^1.6.2",
-    "svg.colorat.js": "^1.0.0",
-    "svg.select.js": "^3.0.1",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5",
-    "vue-svg-pan-zoom": "^1.1.0",
     "vuex": "^3.1.2"
   },
   "devDependencies": {

@@ -1,32 +1,49 @@
 <template>
-  <div class="drawMainWrap">
-    <div class="importAndExport" @click="optionPanlBool = false">
-      <input
-        type="file"
-        id="svgImport"
-        name="image"
-        @click="snapLoad"
-        @change="preview($event)"
-      />
-      <div @click="downLoad" class="downLoad">
-        <img src="./../assets/img/item/export.png" alt="" />
-        <span>导出</span>
-      </div>
-      <i
-        v-if="!attrPalToggle"
-        @click="changeAttrPalToggle"
-        class="el-icon-d-arrow-left fr toggle"
-      ></i>
-    </div>
-    <div
-      id="workarea"
-      v-loading="loading"
-      element-loading-text="拼命加载中"
-      element-loading-spinner="el-icon-loading"
-      element-loading-background="rgba(0, 0, 0)"
-    >
-      <!-- 放一些属性操作div -->
-      <transition name="el-fade-in">
+  <div id="app">
+    <el-container>
+      <el-aside width="310px" style="background:#0c1631;">
+        <el-tree
+          style="background: #0c1631;color: #fff;"
+          :data="treeDataList"
+          node-key="id"
+          :default-expanded-keys="expanded"
+          :props="defaultProps"
+          @node-click="handleNodeClick"
+        >
+        </el-tree>
+      </el-aside>
+      <el-container>
+        <el-main>
+          <!-- <draw-main></draw-main> -->
+
+          <div class="drawMainWrap">
+            <div class="importAndExport" @click="optionPanlBool = false">
+              <input
+                type="file"
+                id="svgImport"
+                name="image"
+                @click="snapLoad"
+                @change="preview($event)"
+              />
+              <div @click="downLoad" class="downLoad">
+                <img src="./assets/img/item/export.png" alt="" />
+                <span>导出</span>
+              </div>
+              <i
+                v-if="!attrPalToggle"
+                @click="changeAttrPalToggle"
+                class="el-icon-d-arrow-left fr toggle"
+              ></i>
+            </div>
+            <div
+              id="workarea"
+              v-loading="loading"
+              element-loading-text="拼命加载中"
+              element-loading-spinner="el-icon-loading"
+              element-loading-background="rgba(0, 0, 0)"
+            >
+              <!-- 放一些属性操作div -->
+              <!-- <transition name="el-fade-in">
         <div id="editor-container" v-show="optionPanlBool">
           <p>
             <i
@@ -46,53 +63,48 @@
             </li>
           </ul>
         </div>
-      </transition>
-      <!-- 负责显示轮廓线、选中框、拖拽控制点等  svg#canvas-->
-
-      <SvgPanZoom
-        style="width: 100%; height: 100%;"
-        :zoomEnabled="true"
-        :controlIconsEnabled="false"
-        :fit="false"
-        :center="true"
-        :contain="false"
-        :viewportSelector="viewportSelector"
-      >
-        <!-- <svg
-          id="svgContent"
-          :width="svgOpt.width"
-          :height="svgOpt.height"
-          :viewBox="svgOpt.viewBox"
-          preserveaspectratio="xMidYMid meet"
-          @click="mysvgClick"
-        ></svg> -->
-        <svg width="100%" height="100%">
-          <g id="background">
-            <circle x="60" y="10" r="5" fill="#f00" />
-            <circle x="100" y="20" r="5" fill="#f00" />
-            <circle x="300" y="30" r="5" fill="#f00" />
-            <circle x="400" y="50" r="5" fill="#f00" />
-            <circle x="500" y="50" r="5" fill="#f00" />
-            <rect x="0" y="0" width="100%" height="100%" :fill="bgColor" />
-          </g>
-        </svg>
-      </SvgPanZoom>
-    </div>
+      </transition> -->
+              <!-- 负责显示轮廓线、选中框、拖拽控制点等  svg#canvas-->
+              <div id="svgroot">
+                <svg
+                  id="svgContent"
+                  :width="svgOpt.width"
+                  :height="svgOpt.height"
+                  :viewBox="svgOpt.viewBox"
+                  preserveaspectratio="xMidYMid meet"
+                  @click="mysvgClick"
+                ></svg>
+              </div>
+            </div>
+          </div>
+        </el-main>
+      </el-container>
+      <!-- <attrOpt></attrOpt> -->
+    </el-container>
   </div>
 </template>
 
 <script>
-import common from "./../draw/basePel/index";
-import Event from "./../event/index";
-import Symbol from "./../draw/symbol/index";
-import SvgPanZoom from "vue-svg-pan-zoom";
+import treeData from "./views/data.json";
+import drawAside from "./views/drawAside";
+import drawMain from "./views/drawMain";
+import attrOpt from "./views/attrOpt";
+import common from "./draw/basePel/index";
+import Event from "./event/index";
+import Symbol from "./draw/symbol/index";
 export default {
-  name: "drawMainWrap",
   components: {
-    SvgPanZoom
+    drawAside,
+    drawMain,
+    attrOpt
   },
   data() {
     return {
+      treeDataList: treeData.result,
+      defaultProps: {
+        children: "children",
+        label: "name"
+      },
       svgContent: null, //svg内容对象
       svgBg: null, //svg背景对象
       svgMag: 1, //svg放大倍数
@@ -160,13 +172,13 @@ export default {
         x: 0,
         y: 0
       },
-      viewportSelector: ".abc"
+      expanded: ["766-40D7-ACF4-FEA945102112-02703"]
     };
   },
   created() {
     this.$nextTick(function() {
       this.init();
-      this.initSymbol(); //初始化symbol列表
+      // this.initSymbol(); //初始化symbol列表
     });
   },
   computed: {
@@ -199,13 +211,47 @@ export default {
       return this.$store.state.joinLineType;
     }
   },
+  mounted() {
+    document.querySelector(".el-aside").style.height =
+      document.body.clientHeight + "px";
+  },
   methods: {
+   //  handleNodeClick(data) {
+   //    if (!data.name.endsWith(".svg")) return;
+   //    this.svgContent.clear(); //导出事清空svg
+	  // console.log(require(`@/assets/svg/${data.svgUrl}`))
+   //    let blob = require(`@/assets/svg/${data.svgUrl}`)
+   //    this.snapLoad(blob, 1000);
+   //  },
+	handleNodeClick(data) {
+	  if (!data.name.endsWith(".svg")) return;
+	 //  if (this.svgContent) {
+		// this.svgContent.clear(); //导出事清空svg
+	 //  }
+	  let svgroot = $('#svgroot')
+	  let svgContent = svgroot.find('svg')
+	  if (svgContent) {
+		svgContent.remove()
+	  }
+	  this.getSvgSource(data.filepath,data.filename,data.id)
+	},
+	getSvgSource(filepath,filename,attachmentid){
+		let that = this
+		axios.defaults.timeout = 20000
+		axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8'
+		axios.post(req.ip+"/attachment/showImg?attachmentid="+attachmentid,{},{
+			responseType:"blob"
+		}).then(res=>{
+			this.snapLoad(res.config.url,1000);
+		})
+	},
     //初始化symbol列表
     initSymbol() {
       //端子
       let option = {
         svgObj: this.svgContent
       };
+
       /**
        * 柱上变压器（公用变)
        */
@@ -442,24 +488,19 @@ export default {
     },
     //初始化
     init() {
-      // let svgG = document.querySelector(".svg-pan-zoom_viewport");
-      // svgG.width = "100%";
-      // svgG.height = "100%";
-      // document.addEventListener("click", this.mysvgClick, false);
-      this.svgContent = Snap(".svg-pan-zoom_viewport").click(function() {
+      this.svgContent = Snap("#svgContent").click(function() {
         this.attr({
           cursor: "pointer"
         });
       });
-      console.log(this.svgContent);
-      // this.cancelBH();
-      // this.createInitSvg();
-      // let svgContent = document.querySelector("#svgContent");
-      // if (document.attachEvent) {
-      //   svgContent.attachEvent("onmousewheel", this.svgScaleOption);
-      // } else {
-      //   svgContent.addEventListener("mousewheel", this.svgScaleOption, false);
-      // }
+      this.cancelBH();
+      this.createInitSvg();
+      let svgContent = document.querySelector("#svgContent");
+      if (document.attachEvent) {
+        svgContent.attachEvent("onmousewheel", this.svgScaleOption);
+      } else {
+        svgContent.addEventListener("mousewheel", this.svgScaleOption, false);
+      }
     },
     //点击svg外框 添加拖动事件
     cancelBH() {
@@ -486,12 +527,14 @@ export default {
         rx: 0,
         ry: 0,
         attr: {
-          // fill: this.bgColor
-          fill: "#fff"
+          fill: this.bgColor
         }
       };
+      let g = this.svgContent.paper.g().attr({
+        id: "BackGround_Layer"
+      });
       this.bgRect = new common.Rect(option).create();
-      this.svgContent.add(this.bgRect);
+      g.add(this.bgRect);
     },
     //创建图形
     create() {
@@ -668,18 +711,20 @@ export default {
           this.EventWrap(pel);
           break;
         case "BYQ_ZS":
-          pel = this.svgContent.paper.g(that.symbolList.BYQ_ZS.use()).attr({
-            id: "156516",
-            width: 20,
-            height: 100
-          });
+          pel = this.svgContent.paper.g(
+            that.symbolList.BYQ_ZS.use().attr({
+              x: x + 175,
+              y: y + 175,
+              width: 120,
+              height: 100
+            })
+          );
           this.EventWrap(pel);
           break;
         case "BYQ_SRZ_110_10":
           pel = this.svgContent.paper
             .g(that.symbolList.BYQ_SRZ_110_10.use())
             .attr({
-              id: "156516",
               width: 20,
               height: 100
             });
@@ -689,7 +734,6 @@ export default {
           pel = this.svgContent.paper
             .g(that.symbolList.BYQ_SRZ_35_10.use())
             .attr({
-              id: "156516",
               width: 20,
               height: 100
             });
@@ -699,7 +743,6 @@ export default {
           pel = this.svgContent.paper
             .g(that.symbolList.BYQ_SRZ_10_380.use())
             .attr({
-              id: "156516",
               width: 20,
               height: 100
             });
@@ -708,7 +751,6 @@ export default {
 
         case "KG_DLQ_H":
           pel = this.svgContent.paper.g(that.symbolList.KG_DLQ_H.use()).attr({
-            id: "156516",
             width: 20,
             height: 100
           });
@@ -717,7 +759,6 @@ export default {
 
         case "KG_DLQ_F":
           pel = this.svgContent.paper.g(that.symbolList.KG_DLQ_F.use()).attr({
-            id: "156516",
             width: 20,
             height: 100
           });
@@ -726,7 +767,6 @@ export default {
           break;
         case "KG_FHKG_H":
           pel = this.svgContent.paper.g(that.symbolList.KG_FHKG_H.use()).attr({
-            id: "156516",
             width: 20,
             height: 100
           });
@@ -735,7 +775,6 @@ export default {
           break;
         case "KG_FHKG_F":
           pel = this.svgContent.paper.g(that.symbolList.KG_FHKG_F.use()).attr({
-            id: "15651615" + Math.random() * 0.1,
             width: 20,
             height: 100
           });
@@ -748,11 +787,11 @@ export default {
     },
     //创建图形切换
     mysvgClick(event) {
-      this.create(event);
+      // this.create(event);
       this.$store.commit("changePencelType", "");
     },
     //导入svg图
-    snapLoad(svgUrl) {
+    snapLoad(svgUrl, wait = 10000) {
       let that = this;
       this.loading = true;
       this.bgRect = null; //清空非导入型背景对象
@@ -766,7 +805,6 @@ export default {
         svgUrl,
         function(g) {
           let gL = g.selectAll("g");
-          that.svgContent.clear();
           gL.items.map(it => {
             //背景层
             if (it.node.id === "BackGround_Layer") {
@@ -776,47 +814,22 @@ export default {
             }
           });
           this.appendChild(g.node);
-          that.svgContent.clear(); //导出事清空svg
         },
         document.querySelector("#svgroot")
       );
-      // that.timer = setInterval(() => {
-      //   let importSvgContent = svgroot.querySelector("svg");
-      //   if (importSvgContent !== null) {
-      //     console.log(12313);
-      //     clearInterval(that.timer);
-      //     that.loading = false;
-      //     importSvgContent.id = "svgContent";
-      //     that.svgContent = Snap("#svgContent");
-      //     that.svgContent.mousemove(function() {
-      //       this.drag();
-      //       this.attr({
-      //         cursor: "pointer",
-      //         fill: "red"
-      //       });
-      //     });
-      //     that.cancelBH();
-      //     let svgContent = document.querySelector("#svgContent");
-      //     if (document.attachEvent) {
-      //       svgContent.attachEvent("onmousewheel", that.svgScaleOption);
-      //     } else {
-      //       svgContent.addEventListener(
-      //         "mousewheel",
-      //         that.svgScaleOption,
-      //         false
-      //       );
-      //     }
-      //   }
-      // }, 1000);
       setTimeout(() => {
         //导入完成时 给新的svg加上id=svgroot 并转化为svg对象
         let svgroot = document.querySelector("#svgroot");
         let importSvgContent = svgroot.querySelector("svg");
+		if (!importSvgContent) {
+			importSvgContent = document.createElement('svg')
+			svgroot.appendChild(importSvgContent)
+		}
         importSvgContent.id = "svgContent";
         importSvgContent.setAttribute("width", this.svgOpt.width);
         importSvgContent.setAttribute("height", this.svgOpt.height);
         importSvgContent.setAttribute("viewBox", this.svgOpt.viewBox);
-        importSvgContent.addEventListener("click", that.mysvgClick, false);
+        // importSvgContent.addEventListener("click", that.mysvgClick, false);
 
         that.loading = false;
         that.svgContent = Snap("#svgContent").drag();
@@ -833,10 +846,11 @@ export default {
         } else {
           svgContent.addEventListener("mousewheel", that.svgScaleOption, false);
         }
-      }, 10000);
+      }, wait);
     },
     //获取导入svg图片本地路径
     preview() {
+      console.log(document.getElementById("svgImport").files[0]);
       this.snapLoad(
         this.getObjectURL(document.getElementById("svgImport").files[0])
       );
@@ -872,8 +886,13 @@ export default {
           this.svgMag = this.svgMagMax;
         }
       }
+      let x = $("#workarea").width();
+      let y = $("#workarea").height();
+      m.translate(x / 2, y / 2);
       m.scale(this.svgMag, this.svgMag);
+      // debugger;
       this.svgContent.transform(m);
+      console.log(this.svgContent);
       // this.svgContent.drag();
     },
     //导出svg格式图片
@@ -938,117 +957,40 @@ export default {
       this.$store.commit("changeAttrPalToggle", true);
     },
     EventWrap(obj) {
-      let that = this;
-      obj
-        .mouseover(function() {
-          that.contextMenu(this);
-        })
-        .mousedown(function(e) {
-          e.stopPropagation();
-          if (this.node.id !== "BackGround_Layer") {
-            //背景不用拖动
-            that.svgContent.undrag();
-            this
-              .drag
-              // function(dx, dy) {
-              //   this.attr({ cx: this.ox + dx, cy: this.oy + dy });
-              // },
-              // function() {
-              //   if (this.type === "rect") {
-              //     this.ox = parseInt(this.attr("x"));
-              //     this.oy = parseInt(this.attr("y"));
-              //   } else {
-              //     this.ox = parseInt(this.attr("cx"));
-              //     this.oy = parseInt(this.attr("cy"));
-              //   }
-              //   console.log("Start move, ox=" + this.ox + ", oy=" + this.oy);
-              // },
-
-              // function() {
-              //   this.ox = parseInt(this.attr("x"));
-              //   this.oy = parseInt(this.attr("y"));
-              //   console.log("Stop move, ox=" + this.ox + ", oy=" + this.oy);
-              // }
-
-              // function(dx, dy) {
-              //   that.svgOffset = {
-              //     x: $("#svgContent").offset().left,
-              //     y: $("#svgContent").offset().top
-              //   };
-
-              // svg页面缩放系数
-              // that.pageScale = {
-              //   x: document.body.clientWidth / $("#svgContent").width(),
-              //   y: document.body.clientHeight / $("#svgContent").height()
-              // };
-              // 鼠标偏移量 （缩放页面后正确的鼠标位置）
-              //   that.mouseOffset = {
-              //     x: (event.pageX - that.svgOffset.x) * that.pageScale.x,
-              //     y: (event.pageY - that.svgOffset.y) * that.pageScale.y
-              //   };
-              //   console.log(
-              //     "Start move, ox=" +
-              //       that.mouseOffset.x +
-              //       ", oy=" +
-              //       that.mouseOffset.y
-              //   );
-              //   this.attr({
-              //     cx: that.mouseOffset.x + dx,
-              //     cy: that.mouseOffset.y + dy
-              //   });
-              // },
-              // function() {
-              // if (this.type === "rect") {
-              //   this.ox = parseInt(this.attr("x"));
-              //   this.oy = parseInt(this.attr("y"));
-              // } else {
-              //   this.ox = parseInt(this.attr("cx"));
-              //   this.oy = parseInt(this.attr("cy"));
-              // }
-              // console.log("Start move, ox=" + this.ox + ", oy=" + this.oy);
-              // },
-
-              // function() {
-              //   this.ox = parseInt(this.attr("x"));
-              //   this.oy = parseInt(this.attr("y"));
-              //   console.log(
-              //     "Stop move, ox=" +
-              //       that.mouseOffset.x +
-              //       ", oy=" +
-              //       that.mouseOffset.oy
-              //   );
-              // }
-              ();
-          }
-        })
-        .click(function(e) {
-          console.log(obj);
-          console.log(obj.node.id);
-          let elList = obj.selectAll("*");
-          console.log(elList);
-          elList.items.map(it => {
-            it.attr({ stroke: "blue" });
-          });
-          that.curOptPel = this;
-          Event.click(that.svgContent, this);
-        })
-        .dblclick(function(e) {
-          that.openAttrOptionPanl(e);
-        });
+      // let that = this;
+      // obj
+      //   .mouseover(function() {
+      //     that.contextMenu(this);
+      //   })
+      //   .mousedown(function(e) {
+      //     e.stopPropagation();
+      //     if (this.node.id !== "BackGround_Layer") {
+      //       //背景不用拖动
+      //       that.svgContent.undrag();
+      //       this.drag();
+      //     }
+      //   })
+      //   .click(function(e) {
+      //     console.log(obj);
+      //     let gs = null;
+      //     if (obj.node.id) {
+      //       gs = Snap(`#${obj.node.id}`);
+      //     } else {
+      //       gs = obj;
+      //     }
+      //     let set = gs.selectAll("circle");
+      //     set.attr({
+      //       stroke: "#fff",
+      //       strokeWidth: 50,
+      //       fill: "blue"
+      //     });
+      //     that.curOptPel = this;
+      //     Event.click(that.svgContent, this);
+      //   })
+      //   .dblclick(function(e) {
+      //     that.openAttrOptionPanl(e);
+      //   });
     }
-    // startDrag(posx, posy) {
-    //   console.log(posx, posy);
-    //   this.ox = posx - this.cx;
-    //   this.oy = posy - this.cy;
-    // },
-
-    // dragging(dx, dy, posx, posy) {
-    //   console.log(dx, dy, posx, posy);
-    //   this.cx = posx - this.ox;
-    //   this.cy = posy - this.oy;
-    //   let t = "t" + this.cx + "," + this.cy;
-    //   this.transform(t);
-    // }
   },
   watch: {
     bgColor() {
@@ -1071,6 +1013,20 @@ export default {
   }
 };
 </script>
+<style lang="less">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+.el-aside{
+	overflow-y: auto;
+}
+.el-main {
+  overflow: hidden;
+}
+</style>
 <style lang="less" scoped>
 .drawMainWrap {
   position: absolute;
@@ -1080,7 +1036,7 @@ export default {
 .importAndExport {
   height: 40px;
   line-height: 40px;
-  background: #1d272e;
+  background: rgb(12, 22, 49);
 }
 #svgImport {
   margin: 0 20px;
@@ -1097,7 +1053,7 @@ input[type="file"] {
 }
 #svgroot {
   // width: 1200px;
-  height: 900px;
+  height: 100%;
 }
 #svgContent {
   overflow: visible;
@@ -1134,7 +1090,7 @@ svg {
   }
 }
 .downLoad {
-  background: #2a353d;
+  background: rgb(12, 22, 49);
   border-color: #121a1f;
   color: #fff;
   display: inline-block;

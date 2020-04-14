@@ -31,7 +31,7 @@ li{
 
 .el-aside {    
     background: #1f2631;
-    border-right: 1px solid #2A353D;
+    /* border-right: 1px solid #0c1631; */
 }
 .el-collapse-item__wrap{
     border-bottom:none;
@@ -79,7 +79,7 @@ li{
     height:auto;
 }
 .el-button--mini{
-    background: #2A353D;
+    background: rgb(12, 22, 49);
     color:#fff;
     border: 1px solid #121a1f;
 }
@@ -95,4 +95,31 @@ li{
 /* el-input-number*/
 .el-input-number--mini{
     width: 100px;
+}
+.el-tree-node__content{
+	height:40px;
+  }
+.el-tree-node__content:hover {
+    color: #000;
+  }
+.el-tree-node:focus>.el-tree-node__content{
+    line-height: 40px;
+    height: 40px;
+	background: #11233d;
+    color: #a7c3d1;
+}
+.el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content{
+	background: "#144066";
+	color: red;
+}
+.el-tree-node__label{    
+	width: 220px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+	color:#a7c3d1;
+}
+.el-tree-node__label:hover{    
+	color:#a7c3d1;
 }

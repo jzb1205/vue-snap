@@ -1,3 +1,5 @@
+
+const fs = require("fs");
 import Vue from "vue";
 import App from "./App.vue";
 import "./registerServiceWorker";
@@ -11,8 +13,11 @@ Vue.use(ElementUI, { size: "mini", zIndex: 3000 });
 
 import eventReg from "./util/util";
 
+
+console.log(fs)
 //本地封装方法
 Vue.prototype.$eventReg = eventReg; //浏览器事件监听兼容
+Vue.prototype.$fs = fs; 
 
 Vue.config.productionTip = false;
 

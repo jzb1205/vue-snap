@@ -815,8 +815,13 @@ export default {
           this.svgMag = this.svgMagMax;
         }
       }
+      let x = $("#workarea").width();
+      let y = $("#workarea").height();
+      m.translate(x / 2, y / 2);
       m.scale(this.svgMag, this.svgMag);
+      // debugger;
       this.svgContent.transform(m);
+      console.log(this.svgContent);
       // this.svgContent.drag();
     },
     //导出svg格式图片
