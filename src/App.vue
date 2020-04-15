@@ -20,7 +20,7 @@
 						 element-loading-background="rgba(0, 0, 0)">
 							<div id="svgroot">
 								<svg id="svgContent" :width="svgOpt.width" :height="svgOpt.height" :viewBox="svgOpt.viewBox"
-								 preserveaspectratio="xMidYMid meet"></svg>
+								 preserveaspectratio="xMidYMax meet"></svg>
 							</div>
 						</div>
 					</div>
@@ -75,7 +75,9 @@
 				importBgObj: null, //导入时 的背景对象
 				timer: null,
 				expanded: ["766-40D7-ACF4-FEA945102112-02703"],
-				downName:''
+				downName:'',
+				cx:0,
+				cy:0
 			};
 		},
 		created() {
@@ -95,9 +97,7 @@
 				if (svgContent) {
 					svgContent.remove()
 				}
-				console.log(data)
 				this.downName = data.name
-				console.log(this.downName)
 				this.getSvgSource(data.id)
 			},
 			getSvgSource(attachmentid) {
@@ -107,20 +107,26 @@
 				axios.post(req.ip + "/attachment/showImg?attachmentid=" + attachmentid, {}, {
 					responseType: "blob"
 				}).then(res => {
-					this.snapLoad(res.config.url, 1000);
+					that.snapLoad(res.config.url, 1000);
 				})
 			},
 			//初始化
 			init() {
+				let that = this
 				this.svgContent = Snap("#svgContent").drag().click(function() {
 					this.attr({
 						cursor: "pointer"
 					});
 				}).mousemove(function(e) {
-					// console.log("e",e)
-				});
+					// console.log(e)
+					// that.cx = e.offsetX;
+					// that.cy = e.offsetY;
+				})
+				// this.cx = this.svgContent.getBBox().cx
+				// this.cy = this.svgContent.getBBox().cy
 				this.cancelBH();
 				let svgContent = document.querySelector("#svgContent");
+				svgContent.attributes.width.value = document.body.clientWidth - 310
 				if (document.attachEvent) {
 					svgContent.attachEvent("onmousewheel", this.svgScaleOption);
 				} else {
@@ -194,6 +200,7 @@
 			},
 			//svg缩放
 			svgScaleOption(e) {
+				let that = this
 				let m = new Snap.Matrix();
 				if (e.wheelDelta === -120 || e.detail === 3) {
 					e.preventDefault();
@@ -209,8 +216,8 @@
 						this.svgMag = this.svgMagMax;
 					}
 					m.scale(this.svgMag, this.svgMag);
-					// m.e = 
-				}
+				} 
+				// this.translate(this.svgMag, this.svgMag);
 				this.svgContent.transform(m);
 			},
 			//导出svg格式图片
