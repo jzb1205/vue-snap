@@ -74,7 +74,8 @@
 				loading: false, //导入svg时样式
 				importBgObj: null, //导入时 的背景对象
 				timer: null,
-				expanded: ["766-40D7-ACF4-FEA945102112-02703"]
+				expanded: ["766-40D7-ACF4-FEA945102112-02703"],
+				downName:''
 			};
 		},
 		created() {
@@ -94,9 +95,12 @@
 				if (svgContent) {
 					svgContent.remove()
 				}
-				this.getSvgSource(data.filepath, data.filename, data.id)
+				console.log(data)
+				this.downName = data.name
+				console.log(this.downName)
+				this.getSvgSource(data.id)
 			},
-			getSvgSource(filepath, filename, attachmentid) {
+			getSvgSource(attachmentid) {
 				let that = this
 				axios.defaults.timeout = 20000
 				axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8'
@@ -113,7 +117,7 @@
 						cursor: "pointer"
 					});
 				}).mousemove(function(e) {
-					console.log("e",e)
+					// console.log("e",e)
 				});
 				this.cancelBH();
 				let svgContent = document.querySelector("#svgContent");
@@ -167,9 +171,10 @@
 			},
 			//获取导入svg图片本地路径
 			preview() {
-				console.log(document.getElementById("svgImport").files[0]);
+				let file = document.getElementById("svgImport").files[0]
+				this.downName = file.name
 				this.snapLoad(
-					this.getObjectURL(document.getElementById("svgImport").files[0])
+					this.getObjectURL(file)
 				);
 			},
 			//svg图片浏览器兼容
@@ -212,13 +217,12 @@
 			downLoad() {
 				let node = document.querySelector("#svgContent").innerHTML;
 				let start =
-					`
-            <?xml version="1.0" encoding="UTF-8"?>
-            <svg width="1272.6000001977" height="900" viewBox="0 0 1272.6000001977 900" coordinateExtent="119.99883653741 29.9969463000312 120.00668763559 30.0024987032688" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  xmlns:cge="http://iec.ch/TC57/2005/SVG-schema#" preserveAspectRatio="xMidYMid">
-          `;
+					`<?xml version="1.0" encoding="UTF-8"?>
+					<svg width="1272.6000001977" height="900" viewBox="0 0 1272.6000001977 900" coordinateExtent="119.99883653741 29.9969463000312 120.00668763559 30.0024987032688" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  xmlns:cge="http://iec.ch/TC57/2005/SVG-schema#" preserveAspectRatio="xMidYMid">
+					`;
 				let end = "</svg>";
 				let nodeStr = start + node + end;
-				var file = new File([nodeStr], "手机号.svg", {
+				var file = new File([nodeStr], `${this.downName}.svg`, {
 					type: "text/plain;charset=utf-8"
 				});
 				saveAs(file);
