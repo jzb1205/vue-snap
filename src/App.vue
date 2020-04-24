@@ -20,13 +20,12 @@
 						 element-loading-background="rgba(0, 0, 0)">
 							<div id="svgroot">
 								<svg id="svgContent" :width="svgOpt.width" :height="svgOpt.height" :viewBox="svgOpt.viewBox"
-								 preserveaspectratio="xMidYMax meet"></svg>
+								 preserveaspectratio="xMaxYMax meet"></svg>
 							</div>
 						</div>
 					</div>
 				</el-main>
 			</el-container>
-			<!-- <attrOpt></attrOpt> -->
 		</el-container>
 	</div>
 </template>
@@ -34,7 +33,6 @@
 <script>
 	import treeData from "./views/data.json";
 	import axios from "axios"
-	import req from "./config/req.js"
 	export default {
 		data() {
 			return {
@@ -75,9 +73,11 @@
 				importBgObj: null, //导入时 的背景对象
 				timer: null,
 				expanded: ["766-40D7-ACF4-FEA945102112-02703"],
-				downName:'',
-				cx:0,
-				cy:0
+				downName: '',
+				x: 0,
+				y: 0,
+				mouseX: 0,
+				mouseY: 0
 			};
 		},
 		created() {
@@ -104,7 +104,7 @@
 				let that = this
 				axios.defaults.timeout = 20000
 				axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8'
-				axios.post(req.ip + "/attachment/showImg?attachmentid=" + attachmentid, {}, {
+				axios.post(this.$req.ip + "/attachment/showImg?attachmentid=" + attachmentid, {}, {
 					responseType: "blob"
 				}).then(res => {
 					that.snapLoad(res.config.url, 1000);
@@ -113,20 +113,18 @@
 			//初始化
 			init() {
 				let that = this
-				this.svgContent = Snap("#svgContent").drag().click(function() {
+				this.svgContent = Snap("#svgContent").drag().click(function(e) {
+					console.log(e)
+					let el = Snap(e.target).drag()
 					this.attr({
 						cursor: "pointer"
 					});
 				}).mousemove(function(e) {
-					// console.log(e)
-					// that.cx = e.offsetX;
-					// that.cy = e.offsetY;
+					that.mouseX = e.offsetX
+					that.mouseY = e.offsetY
 				})
-				// this.cx = this.svgContent.getBBox().cx
-				// this.cy = this.svgContent.getBBox().cy
 				this.cancelBH();
 				let svgContent = document.querySelector("#svgContent");
-				svgContent.attributes.width.value = document.body.clientWidth - 310
 				if (document.attachEvent) {
 					svgContent.attachEvent("onmousewheel", this.svgScaleOption);
 				} else {
@@ -200,24 +198,27 @@
 			},
 			//svg缩放
 			svgScaleOption(e) {
+				e.preventDefault();
 				let that = this
 				let m = new Snap.Matrix();
 				if (e.wheelDelta === -120 || e.detail === 3) {
-					e.preventDefault();
-					this.svgMag -= 0.05;
+					this.svgMag *= 1.05;
 					if (this.svgMag < this.svgMagMin) {
 						this.svgMag = this.svgMagMin;
 					}
+					// m.e = that.x * 1.05 - that.mouseX;
+					// m.f = that.y * 1.05 - that.mouseY;
 					m.scale(this.svgMag, this.svgMag);
 				} else if (e.wheelDelta === 120 || e.detail === -3) {
-					e.preventDefault();
-					this.svgMag += 0.05;
+					this.svgMag *= 0.95;
 					if (this.svgMag > this.svgMagMax) {
 						this.svgMag = this.svgMagMax;
 					}
+					// m.e = (that.x * 0.95 + that.mouseX)*0.05;
+					// m.f = (that.y * 0.95 + that.mouseY)*0.05;
 					m.scale(this.svgMag, this.svgMag);
-				} 
-				// this.translate(this.svgMag, this.svgMag);
+				}
+				console.log(m)
 				this.svgContent.transform(m);
 			},
 			//导出svg格式图片
@@ -253,6 +254,7 @@
 	.el-main {
 		overflow: hidden;
 	}
+
 	.drawMainWrap {
 		position: absolute;
 		width: 100%;
