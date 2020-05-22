@@ -36,11 +36,11 @@
               element-loading-background="rgba(0, 0, 0)"
             >
               <div id="svgroot">
-                <!-- <svg
+                <svg
                   id="svgContent"
                   :width="svgOpt.width"
                   :height="svgOpt.height"
-                ></svg> -->
+                ></svg>
               </div>
             </div>
           </div>
@@ -61,17 +61,42 @@ export default {
         label: "name"
       },
       svgContent: null, //svg内容对象
+      svgBg: null, //svg背景对象
       svgMag: 1, //svg放大倍数
       svgMagMin: 0.1, //svg缩放最小比例
-      svgMagMax: 20, //svg缩放最大比例\
+      svgMagMax: 20, //svg缩放最大比例
+      predefineColors: [
+        //默认预选颜色
+        "#ff4500",
+        "#ff8c00",
+        "#ffd700",
+        "#90ee90",
+        "#00ced1",
+        "#1e90ff",
+        "#c71585",
+        "rgba(255, 69, 0, 0.68)",
+        "rgb(255, 120, 0)",
+        "hsv(51, 100, 98)",
+        "hsva(120, 40, 94, 0.5)",
+        "hsl(181, 100%, 37%)",
+        "hsla(209, 100%, 56%, 0.73)",
+        "#c7158577"
+      ],
       svgOpt: {
         width: "100%",
         height: "100%",
         viewBox: `0 0 ${document.body.clientWidth} ${document.body.clientHeight}`
       },
+      scaleNum: 1, //svg缩放倍数
       loading: false, //导入svg时样式
+      importBgObj: null, //导入时 的背景对象
+      timer: null,
       expanded: ["766-40D7-ACF4-FEA945102112-02703"],
-      downName: ""
+      downName: "",
+      x: 0,
+      y: 0,
+      mouseX: 0,
+      mouseY: 0
     };
   },
   created() {
@@ -84,6 +109,22 @@ export default {
       document.body.clientHeight + "px";
   },
   methods: {
+    handleNodeClick(data) {
+      if (!data.name.endsWith(".svg")) return;
+      let svgroot = $("#svgroot");
+      let svgContent = svgroot.find("svg");
+      if (svgContent) {
+        svgContent.remove();
+      }
+      this.downName = data.name;
+      this.getSvgSource(data.id);
+    },
+    getSvgSource(attachmentid) {
+      this.snapLoad(
+        this.$req.ip + "/attachment/showImg?attachmentid=" + attachmentid,
+        1000
+      );
+    },
     //初始化
     init() {
       let that = this;
@@ -93,7 +134,12 @@ export default {
           this.attr({
             cursor: "pointer"
           });
+        })
+        .mousemove(function(e) {
+          that.mouseX = e.offsetX;
+          that.mouseY = e.offsetY;
         });
+      this.cancelBH();
       let svgroot = document.querySelector("#svgroot");
       if (document.attachEvent) {
         svgroot.attachEvent("onmousewheel", this.svgScaleOption);
@@ -101,18 +147,26 @@ export default {
         svgroot.addEventListener("mousewheel", this.svgScaleOption, false);
       }
     },
-    handleNodeClick(data) {
-      if (!data.name.endsWith(".svg")) return;
-      this.downName = data.name;
-      this.svgMag = 1;
-      $("#svgroot").empty();
-      this.getSvgSource(data.id);
-    },
-    getSvgSource(attachmentid) {
-      this.snapLoad(
-        this.$req.ip + "/attachment/showImg?attachmentid=" + attachmentid,
-        5000
-      );
+    //svg缩放
+    svgScaleOption(e) {
+      e.preventDefault();
+      let that = this;
+      let m = new Snap.Matrix();
+      if (e.wheelDelta === -120 || e.detail === 3) {
+        this.svgMag += 0.15;
+        if (this.svgMag < this.svgMagMin) {
+          this.svgMag = this.svgMagMin;
+        }
+        m.scale(this.svgMag, this.svgMag);
+      } else if (e.wheelDelta === 120 || e.detail === -3) {
+        this.svgMag -= 0.15;
+        if (this.svgMag < 0.2) return;
+        if (this.svgMag > this.svgMagMax) {
+          this.svgMag = this.svgMagMax;
+        }
+        m.scale(this.svgMag, this.svgMag);
+      }
+      this.svgContent.transform(m);
     },
     //导入svg图
     snapLoad(svgUrl, wait = 10000) {
@@ -132,38 +186,35 @@ export default {
         document.querySelector("#svgroot")
       );
       setTimeout(() => {
-        let importSvg = $("#svgroot").find("svg");
-        importSvg.attr("id", "svgContent");
+        //导入完成时 给新的svg加上id=svgroot 并转化为svg对象
+        let svgroot = document.querySelector("#svgroot");
+        let importSvgContent = svgroot.querySelector("svg");
+        if (!importSvgContent) {
+          importSvgContent = document.createElement("svg");
+          svgroot.appendChild(importSvgContent);
+        }
+        importSvgContent.id = "svgContent";
         that.loading = false;
         that.init();
       }, wait);
-    },
-    //svg缩放
-    svgScaleOption(e) {
-      e.preventDefault();
-      let that = this;
-      let m = new Snap.Matrix();
-      if (e.wheelDelta === -120 || e.detail === 3) {
-        this.svgMag *= 1.15;
-        if (this.svgMag < this.svgMagMin) {
-          this.svgMag = this.svgMagMin;
-        }
-        m.scale(this.svgMag, this.svgMag);
-      } else if (e.wheelDelta === 120 || e.detail === -3) {
-        this.svgMag *= 0.85;
-        // if (this.svgMag < 0.2) return;
-        if (this.svgMag > this.svgMagMax) {
-          this.svgMag = this.svgMagMax;
-        }
-        m.scale(this.svgMag, this.svgMag);
-      }
-      this.svgContent.transform(m);
     },
     //获取导入svg图片本地路径
     preview() {
       let file = document.getElementById("svgImport").files[0];
       this.downName = file.name;
       this.snapLoad(this.getObjectURL(file));
+    },
+    //点击svg外框 添加拖动事件
+    cancelBH() {
+      let that = this;
+      let svg = document.querySelector("#svgContent");
+      svg.addEventListener(
+        "click",
+        function() {
+          that.svgContent.drag();
+        },
+        false
+      );
     },
     //svg图片浏览器兼容
     getObjectURL(file) {

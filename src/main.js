@@ -14,7 +14,7 @@ import req from "./../public/config/req.js";
 
 //本地封装方法
 Vue.prototype.$eventReg = eventReg; //浏览器事件监听兼容
-Vue.prototype.$req = req; 
+Vue.prototype.$req = req;
 
 Vue.config.productionTip = false;
 
